@@ -1,30 +1,13 @@
 import { json } from '@sveltejs/kit';
-import type { Post } from '$lib/types';
+import { getPosts } from '$lib/posts';
 
-async function getPosts() {
-	let posts: Post[] = [];
+export const prerender = true;
 
-	const paths = import.meta.glob('/src/posts/*.md', { eager: true });
+export async function GET({ platform }) {
+	// Example usage:
+	// const value = await platform.env.MY_KV.get('key');
+	// platform.context.waitUntil(someBackgroundTask());
 
-	for (const path in paths) {
-		const file = paths[path];
-		const slug = path.split('/').at(-1)?.replace('.md', '');
-
-		if (file && typeof file === 'object' && 'metadata' in file && slug) {
-			const metadata = file.metadata as Omit<Post, 'slug'>;
-			const post = { ...metadata, slug } satisfies Post;
-			post.published && posts.push(post);
-		}
-	}
-
-	posts = posts.sort(
-		(first, second) => new Date(second.date).getTime() - new Date(first.date).getTime()
-	);
-
-	return posts;
-}
-
-export async function GET() {
 	const posts = await getPosts();
 	return json(posts);
 }
