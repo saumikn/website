@@ -1,5 +1,6 @@
 @import '@fontsource/atkinson-hyperlegible';
 @import '@fontsource/jetbrains-mono';
+@import './lib/styles/layout.css';
 
 html {
 	/* font */
