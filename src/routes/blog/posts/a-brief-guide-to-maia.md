@@ -23,7 +23,7 @@ Then, the input actually repeats this structure for the previous seven board sta
 
 Finally, we have eight metadata channels, which represent things like castling rights, turns, and rule 50 counts.
 
-In total, this gives us 13 + 13*7 + 8 = 112 channels! In general, understanding how channels work for CNNs is very important, so take some time so you understand how it works.
+In total, this gives us 13 + 13\*7 + 8 = 112 channels! In general, understanding how channels work for CNNs is very important, so take some time so you understand how it works.
 
 A [Residual Neural Network](https://en.wikipedia.org/wiki/Residual_neural_network) (ResNet), is a more recent innovation in machine learning. Knowing how exactly it works isn't too important, but the main idea is that using these residual layers allows us to build very deep networks (hundreds or even thousands of layers), instead of the older models which could only train very few layers.
 
@@ -36,4 +36,3 @@ To predict these outputs, Maia was trained on millions of chess games played on 
 As you can see from this graph, the different levels of Maia performed better at their own rating than the other ratings. For example, Maia-4 was the best predictor of 1400-1499 players, and Maia-4 predicted these players better than it predicted 1300 or 1500 rated players.
 
 Overall, Maia had incredibly impressive results. If you're interested in learning more about Maia, check out the [source code](https://github.com/CSSLab/maia-chess), or a blog post published by [Microsoft](https://www.microsoft.com/en-us/research/blog/the-human-side-of-ai-for-chess/).
-

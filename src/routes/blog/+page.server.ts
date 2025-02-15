@@ -4,15 +4,15 @@ export async function load({ fetch }) {
 	const response = await fetch('/api/posts');
 	const posts: Post[] = await response.json();
 
-	// Get all markdown files
-	const markdownFiles = import.meta.glob('../../posts/*.md', {
+	// Update glob pattern to match new post location
+	const markdownFiles = import.meta.glob('../blog/posts/*.md', {
 		query: '?raw',
 		import: 'default'
 	});
 
 	// Add content to each post
 	for (const post of posts) {
-		const filePath = `../../posts/${post.slug}.md`;
+		const filePath = `./posts/${post.slug}.md`;
 		if (filePath in markdownFiles) {
 			const content = (await markdownFiles[filePath]()) as string;
 			// Remove frontmatter (content between --- markers)

@@ -10,7 +10,9 @@ published: true
 In 2022, I published my first ever, first-author publication as a PhD student — [How Does Predictive Information Affect Human Ethical Preferences?](https://saumikn.com/wp-content/uploads/aies22_predictions.pdf), which was published at AIES 2022. Since then, I've been meaning to write a blog post version of the paper (as advocated for by [Rachel Thomas](https://rachel.fast.ai/posts/2019-05-13-blogging-advice) and others) but it's somehow never happened.
 
 This spring, I wrote a follow-up work to the original paper, titled <em>How does
-Value Similarity affect Human Reliance in AI-Assisted Ethical Decision Making?</em><sup id="fnref1:1"><a class="footnote-ref" href="#fn:1">1</a></sup> , and this was just accepted to AIES 2023 a few weeks ago! As a follow up, I decided to apply for the [AIES Student Track](https://www.aies-conference.com/2023/call-for-papers-students), something I didn't do in 2022.
+Value Similarity affect Human Reliance in AI-Assisted Ethical Decision Making? , and this was just accepted to AIES 2023 a few weeks ago! As a follow up, I decided to apply for the [AIES Student Track](https://www.aies-conference.com/2023/call-for-papers-students), something I didn't do in 2022.
+
+<!-- Add footnote </em><sup id="fnref1:1"><a class="footnote-ref" href="#fn:1">1</a></sup> -->
 
 As part of the Student Track application, I needed to write an "extended abstract" on the research I intend to present. This would mainly be on my second publication, but I also decided to put many of the details from my first paper into the extended abstract, as a good way to practice for writing my proposal, but mostly to finally have an excuse to write-up the first paper! The rest of this blog is mostly taken verbatim from my extended abstract, though I'll also add a few graphs into the paper which I didn't have room for in the extended abstract.
 
@@ -97,4 +99,3 @@ One natural question would be to ask how do our results change when we provide m
 **Additional Domains**
 
 Finally, it is important to understand if our results generalize to other ethical decision making domains domains. Both of our previous works have only looked at the kidney transplant domain, but there are many areas of ethical decision making which could use AI. In particular, one domain we plan on analyzing is AI assistance for transit route allocation. This is a natural area to explore, as transit network design is an problem with huge ethical implications, and there is the potential to significantly improve the usefulness of real-world systems. However, AI assistants are currently underutilized by transit agencies, due to the lack of requisite transit algorithms which can combine the elicited value preferences of diverse groups of stakeholders, including governments, transit agencies, and riders. We plan on collaborating with local transit agencies to design ethically-aware AI systems to assist planners with transit network design.
-

@@ -27,8 +27,8 @@
 
 	<p style="color: var(--red-9); font-style: italic;">
 		This section currently is under construction, I am transitioning from Wordpress to Sveltekit and
-		am in the process of moving my prior blog posts over. The following posts are fake data,
-		expressly for the purpose of website development.
+		am in the process of moving my prior blog posts over. The following posts are mostly up to date,
+		but are missing some text, most images, and have formatting issues still.
 	</p>
 
 	<div class="posts-container">

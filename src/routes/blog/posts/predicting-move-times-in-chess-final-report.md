@@ -21,7 +21,9 @@ There are 26 different chess positions embedded in this single game example, one
 
 Since our data is very sparse, using an off-the-shelf data compressor such as GZIP does help, and reduces the storage requirement to only 20TB. However, this is still too large for our storage capabilities. More importantly, loading compressed files is extremely slow and immediately leads to memory shortages, since our files are far too big to load into memory.
 
-**Feature Extraction**<br/>To solve these issues, I employed a number of techniques to reduce the size of the data. First, I took advantage of the binary board representation and the `np.packbits()` function to compress eight boolean values into a single byte of memory. I also used `np.packbits()` to store the 1858-length legal moves feature into a 233-length byte array, and to compress five boolean metadata values for a board position into a single byte of memory. I also extracted the other non-binary numeric metadata from the array and saved them as corresponding arrays with either `uint8` or `uint16` datatypes, rather than the default \pyth{int64}. Finally, I replaced all of the prior board states associated with the current position with pointers to other board states, so we only need to store one 13x64 matrix per position, not eight 13x64 matrices.
+**Feature Extraction**<br/>To solve these issues, I employed a number of techniques to reduce the size of the data. First, I took advantage of the binary board representation and the `np.packbits()` function to compress eight boolean values into a single byte of memory. I also used `np.packbits()` to store the 1858-length legal moves feature into a 233-length byte array, and to compress five boolean metadata values for a board position into a single byte of memory. I also extracted the other non-binary numeric metadata from the array and saved them as corresponding arrays with either `uint8` or `uint16` datatypes, rather than the default int64. Finally, I replaced all of the prior board states associated with the current position with pointers to other board states, so we only need to store one 13x64 matrix per position, not eight 13x64 matrices.
+
+<!-- TODO, make int64 in the above paragraphinline -->
 
 I then saved all of these data pieces into a Hierarchical Data Format (HDF5) file. HDF5 has two main benefits - I can load chunks of compressed data into memory without overfilling the system, and I can group batches of games together to improve saving and loading time. Specifically, I'm loading files into batches of 10,000 games, or about 65,000 positions per batch.
 
@@ -53,7 +55,9 @@ While a number of distributions could potentially model our dataset, I decided t
 
 To train our model with a beta distribution, we can no longer use Mean Absolute Error (MAE), since MAE only works with point estimates. Instead, I trained my beta distribution predictor with the Conditional Ranked Probability Score (CRPS) loss function. The main benefit of CRPS is it can simply be treated as a probabilistic extension of MAE, so we can easily compare losses between our point estimate and distribution estimate.
 
-Initially, I used the `crps_quadrature` method in Python's \pyth{properscoring} module to calculate the CRPS. However, this numerical integration approximation was proving to be quite slow. Instead, I found a closed-form solution for the CRPS of a Beta distribution, provided in the paper Taillardat et al (2016). Below is my implementation of the formula in Python.
+Initially, I used the `crps_quadrature` method in Python's properscoring module to calculate the CRPS. However, this numerical integration approximation was proving to be quite slow. Instead, I found a closed-form solution for the CRPS of a Beta distribution, provided in the paper Taillardat et al (2016). Below is my implementation of the formula in Python.
+
+<!-- TODO Make properscoring in above paragraph inline -->
 
 **Epistemic Uncertainty**
 
@@ -78,4 +82,3 @@ Overall, we found negative results for our investigations on both aleatoric and 
 The obvious next step for this project is to inspect our results from the project in more depth. On the aleatoric side, I would like to try modeling the data using other distribution types, most notably the exponential distribution. On the epistemic side, I would like to explore using different priors for our parameters, rather than just a normal distribution.
 
 More long-term, I would like to explore using a more complicated model like a CNN, so I can include the board information as well. After that, the next steps are to retrain models on personalized datasets, so I can start to develop better teaching tools.
-

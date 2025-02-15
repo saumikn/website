@@ -29,7 +29,9 @@ For a full description of all of the consonants, vowels, and combinations, you c
 
 ## How to Pronounce Tamil Sounds
 
-Unfortunately, there isn't really a standard transliteration scheme which is used in practice<sup id="fnref1:1"><a class="footnote-ref" href="#fn:1">1</a></sup> for Tamil, and different texts tend to use different schemes for transliteration. It's sometimes so confusing that the same source might use multiple schemes in the same text! I want to create a more standardized scheme which makes sense for me and hopefully others, and one which is easy to implement in Python.
+Unfortunately, there isn't really a standard transliteration scheme which is used in practice for Tamil, and different texts tend to use different schemes for transliteration. It's sometimes so confusing that the same source might use multiple schemes in the same text! I want to create a more standardized scheme which makes sense for me and hopefully others, and one which is easy to implement in Python.
+
+<!-- TODO Add footnote <sup id="fnref1:1"><a class="footnote-ref" href="#fn:1">1</a></sup> -->
 
 For transliterating vowels, I chose to just follow the 7-bit [ISO 15919](https://en.wikipedia.org/wiki/ISO_15919) standard. 7-bit means that I use double letters to represent long vowel sounds (e.g. `ஆ` and is `aa`, not `ā`). The reason I chose this is that I think it's just slightly easier to read quickly, as it cuts down the number of diacritics that we have to pay attention to, and highlights the difference between short and long vowels better.
 
@@ -43,7 +45,7 @@ Quickly going over all the vowels, we have `அ` transcribed as `a`, which is pr
 
 `ஒ` and `ொ` are transcribed as `o`, and pronounced like the first half of the English word "oh". `ஓ` and `ோ` are transcribed as `oo`, and pronounced like `ஒ` but longer, so "oooh". `ஔ` and `ௌ` are transcribed as `au`, and pronounced like the English word "cow"
 
-Unlike virtually every other Brahmic language, Tamil doesn't distinguish between [voiced and unvoiced consonants](https://en.wikipedia.org/wiki/Voice_(phonetics)) in their script. So, while Hindi writes `ka` as `क` and `ga` as `ग`, Tamil uses the same letter `க` for both `ka` and `ga`! While this might seem confusing, there's a simple set of rules for determining the pronunciation. When `க` comes at the beginning of a word, or when it's doubled (as in `க்க`) in the middle of a word, the sound is unvoiced (i.e. `ka`). When it's between two vowels, it's pronounced with voicing as as `ga`, and when `க` is preceded by a nasal sound (e.g. `ங்க`), it's also pronounced with voicing as `nga`. All nasal sounds in Tamil are voiced, just like English.
+Unlike virtually every other Brahmic language, Tamil doesn't distinguish between [voiced and unvoiced consonants](<https://en.wikipedia.org/wiki/Voice_(phonetics)>) in their script. So, while Hindi writes `ka` as `क` and `ga` as `ग`, Tamil uses the same letter `க` for both `ka` and `ga`! While this might seem confusing, there's a simple set of rules for determining the pronunciation. When `க` comes at the beginning of a word, or when it's doubled (as in `க்க`) in the middle of a word, the sound is unvoiced (i.e. `ka`). When it's between two vowels, it's pronounced with voicing as as `ga`, and when `க` is preceded by a nasal sound (e.g. `ங்க`), it's also pronounced with voicing as `nga`. All nasal sounds in Tamil are voiced, just like English.
 
 This entire behavior works because in native Tamil words, the sound `g` never appears at the beginning of a word. However, if a foreign word is loaned into Tamil which starts with `g` (e.g. `governor`), it will still be written as `கவர்னர்`, and Tamil speakers would just know to pronounce it as a `g` instead of `k`.
 
@@ -57,9 +59,13 @@ As mentioned, I transcribe `க்` as either `k` or `g` (pronounced as expected
 
 I transcribe `ச்` as `c` or `s`, depending on word location. `c` is really the ch-sound, as in church, but I write `c` for brevity, and because `cc` seems better than `chch` for `ச்ச்`. `ஞ்` by itself is written as `ñ` (similar to the Spanish sound in "Español") and `ஞ்ச்` is written as `nj` (pronounced as in "ninja" or "injure").
 
-I transcribe `ட்` as `ṭ` or `ḍ`<sup id="fnref1:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. These are [retroflex](https://en.wikipedia.org/wiki/Retroflex_consonant) sounds which are not actually found in English, though you can normally just pronounce them as of them as the regular t and d sounds, as in "toy"  or "dine", and the sounds are close enough that everybody will understand you. `ண்` by itself is written as `ṇ`, and `ண்ட்` is `ṇḍ`.
+I transcribe `ட்` as `ṭ` or `ḍ`. These are [retroflex](https://en.wikipedia.org/wiki/Retroflex_consonant) sounds which are not actually found in English, though you can normally just pronounce them as of them as the regular t and d sounds, as in "toy" or "dine", and the sounds are close enough that everybody will understand you. `ண்` by itself is written as `ṇ`, and `ண்ட்` is `ṇḍ`.
 
-I transcribe `த்` as `t` or `d`. These are really actually the "th" and "dh" sounds as in "think" or "they" (which probably should be written as "dhey"). `ந்` by itself is `n` and `ந்த்` is `nd`. Tamil also has the letter `ன்` which I also transcribe as `n`. This letter used to be pronounced differently from `ந்`, with the tongue slightly farther back, but in modern Tamil dialects, the two sounds have merged <sup id="fnref1:3"><a class="footnote-ref" href="#fn:3">3</a></sup> so I use the same transliteration for both.
+<!-- Add footnote <sup id="fnref1:2"><a class="footnote-ref" href="#fn:2">2</a></sup> -->
+
+I transcribe `த்` as `t` or `d`. These are really actually the "th" and "dh" sounds as in "think" or "they" (which probably should be written as "dhey"). `ந்` by itself is `n` and `ந்த்` is `nd`. Tamil also has the letter `ன்` which I also transcribe as `n`. This letter used to be pronounced differently from `ந்`, with the tongue slightly farther back, but in modern Tamil dialects, the two sounds have merged so I use the same transliteration for both.
+
+<!-- Add footnote <sup id="fnref1:3"><a class="footnote-ref" href="#fn:3">3</a></sup> -->
 
 I should note that the distinction between `ṇ` and `n` is very important in Tamil, though there is no such distinction in English. You can think of the difference between `ṇ` and `n` as the same as the difference as `ṭ` and `t`. If you alternate between the English words "tinker" and "thinker", you can feel the difference in tongue location, and you should try to emulate this difference when pronouncing `ṇ` and `n`.
 
@@ -69,7 +75,9 @@ I transcribe `ப்` as either `p` or `b`, pronounced the same way as in Englis
 
 I transcribe `ய்` as `y`, pronounced the same way as in English. I transcribe `வ்` as `v`, pronounced the same way as in English.
 
-I transcribe both `ர்` and `ற்` as `r`. In classical Tamil, these used to be pronounced differently, where `ர்` was tapped (as in the Spanish word "pero") and `ற்` was trilled (as in the Spanish word "perro"). However, in the modern day, most Tamil dialects have merged these two sounds together <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>, so I simply use `r` for both.
+I transcribe both `ர்` and `ற்` as `r`. In classical Tamil, these used to be pronounced differently, where `ர்` was tapped (as in the Spanish word "pero") and `ற்` was trilled (as in the Spanish word "perro"). However, in the modern day, most Tamil dialects have merged these two sounds together , so I simply use `r` for both.
+
+<!-- Add footnote <sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup> -->
 
 Finally we have `ழ்`, which is one of the sounds Tamil is most known for, compared to other Indian languages. This letter is usually transcribed as ḻ or, oddly enough `zh`, and I've chosen to use `zh`, just so it's more distinctive. This is actually the last sound in the word for the Tamil Language `தமிழ்`! So while the common English spelling for the word is in fact "Tamil", it would be transcribed as `tamizh` using this transliteration scheme, and this word `tamizh` is quite commonly used in Tamil Nadu.
 
@@ -127,4 +135,3 @@ While this code isn't very long, it took a bit of thinking to get both of these 
 ## Conclusion
 
 Hopefully after reading this post, you know how the Tamil script works, how to pronounce each of the letter and syllables, and how to use Python to transliterate your own texts for easier pronunciation. With a bit of practice, you'll be able to read and pronounce any Tamil word or text, though you probably won't understand any of it :).
-
