@@ -17,3 +17,9 @@ function greet(name: string) {
 	console.log(`Hey ${name}! 👋`);
 }
 ```
+
+## Trying something new
+
+```python
+hi\1$$potato{\infty}$$
+```

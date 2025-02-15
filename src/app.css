@@ -168,3 +168,36 @@ li {
 		tab-size: 2;
 	}
 }
+
+/* Add these styles to your existing app.css */
+code {
+	counter-reset: step;
+	counter-increment: step 0;
+}
+
+.shiki {
+	border-radius: var(--radius-2);
+	padding: var(--size-3);
+	margin: var(--size-3) auto;
+	overflow-x: auto;
+	background-color: var(--surface-2);
+}
+
+.highlighted {
+	display: inline-block;
+	background-color: var(--surface-3);
+	width: 100%;
+	border-left: var(--size-1) solid var(--brand);
+	margin-left: calc(-1 * var(--size-1));
+}
+
+code .line::before {
+	display: inline-block;
+	content: counter(step);
+	counter-increment: step;
+	width: var(--size-4);
+	margin-right: var(--size-4);
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+	color: var(--text-2);
+}
