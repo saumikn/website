@@ -12,6 +12,12 @@
 
 <article>
 	<hgroup>
+		<p style="color: red; font-weight: bold;">
+			Note - I am currently in the process of migrating from Wordpress to Sveltekit. For now, some
+			of the text and images are missing, and the formatting in other areas may be broken as well. I
+			appreciate your patience at this time, I am currently working on the website, and these should
+			be fixed in the near future.
+		</p>
 		<h1>{data.meta.title}</h1>
 		<p>Published at {formatDate(data.meta.date)}</p>
 	</hgroup>

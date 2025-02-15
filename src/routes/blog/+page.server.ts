@@ -14,7 +14,7 @@ export async function load({ fetch }) {
 	for (const post of posts) {
 		const filePath = `../../posts/${post.slug}.md`;
 		if (filePath in markdownFiles) {
-			const content = await markdownFiles[filePath]();
+			const content = (await markdownFiles[filePath]()) as string;
 			// Remove frontmatter (content between --- markers)
 			post.content = content.replace(/---[\s\S]*?---/, '').trim();
 		} else {

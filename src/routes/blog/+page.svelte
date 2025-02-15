@@ -36,7 +36,7 @@
 			{#each data.posts as post}
 				<li>
 					<div class="post-content">
-						<a href={post.slug} class="title">{post.title}</a>
+						<a href="blog/{post.slug}" class="title">{post.title}</a>
 						<p class="date">{formatDate(post.date)}</p>
 						<p class="description">{getPreview(post.content)}</p>
 					</div>

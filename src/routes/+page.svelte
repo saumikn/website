@@ -8,6 +8,7 @@
 
 <section class="content-wrapper">
 	<div class="intro">
+		<img src="/saumik.jpg" alt="Profile" />
 		<div class="content">
 			<h1>Hi, I'm Saumik!</h1>
 			<br />
@@ -28,20 +29,18 @@
 				in chess.
 			</p>
 			<br />
-
 			<p style="color: var(--red-9); font-style: italic;">
 				This website currently is under construction, I am transitioning from Wordpress to Sveltekit
 				and am in the process of moving my prior blog posts over.
 			</p>
 		</div>
-		<img src="/saumik.jpg" alt="Profile" />
 	</div>
 </section>
 
 <style>
 	.intro {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: var(--size-7);
 		align-items: start;
 
