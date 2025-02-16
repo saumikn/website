@@ -16,7 +16,7 @@ Last week, I went over some functions I created to compress a chess board state 
 
 ## Visual Representation
 
-![Chess Position](/uploads/2020/10/chess-position-1.png)
+![Chess Position](/uploads/chess-position-1.png)
 
 ## Functionality
 

@@ -24,7 +24,7 @@ The last question of the homework has us implement such an algorithm, where Pacm
 
 In the following image, you can see the consequences of choosing the wrong dot. Instead of systematically eating dots in the map, Pacman leaves groups of dots by themselves. In fact, the rightmost dot in this image is the last dot in Pacman's overall path, adding dozens of extra steps to the path just because we didn't eat the dot when we were right next to it.
 
-![Wrong Dot Choice](/uploads/2021/02/image-1024x490.png)
+![Wrong Dot Choice](/uploads/image-1024x490.png)
 
 ## Randomized Greedy Algorithm
 
@@ -48,7 +48,7 @@ Because the initial greedy algorithm only takes a fraction of a second, I was ac
 
 A few days before the deadline, I came up with a potential improvement to the algorithm. Instead of simply taking the best path found, I combine all of my paths into a single directed graph, and run BFS on this graph to find the best, combined path. The intuition behind this is that each of my randomly generated paths is probably going to be pretty bad, but by combining them, we can perhaps pick and choose the good elements of each path to get a new path.
 
-![Graph Example](/uploads/2021/02/image-1.png)
+![Graph Example](/uploads/image-1.png)
 
 For example, each of the random generated paths would usually end up on one of the two sides (like the above image) where there was a lot of room to go wrong, thanks to the large areas of food. While the best path would probably have a bad solution to this specific end state, it would be very likely that a different random path had a better solution, and we could just cut and paste the better solution into the otherwise best path found. We can use similar logic for the beginning of the path as well.
 
@@ -92,4 +92,4 @@ Using Multiprocessing, I was able to generate about 5x as many paths as before i
 
 The 284-scoring team also brought their path down to 282, so at this point, I was expecting there to be a three-way tie for first. However, a few hours before the deadline, one of the teams managed to improve their own algorithm to 280. My response was to re-submit my code a few more times to the autograder, and the RNG gods eventually blessed me with a 280 score as well. In the end, I tied for first in the class.
 
-![Final Results](/uploads/2021/02/image-3-1024x790.png)
+![Final Results](/uploads/image-3-1024x790.png)

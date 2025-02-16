@@ -22,7 +22,7 @@ The process for this was the same as before; I took the 50 highest-rated blitz p
 
 Applying the same [PCA dimension reduction](<https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)>) process as last week, I generated the data plot below.
 
-![PCA Plot](/uploads/2020/11/player-bias-plot-2.png)
+![PCA Plot](/uploads/player-bias-plot-2.png)
 
 ## Classification Models
 

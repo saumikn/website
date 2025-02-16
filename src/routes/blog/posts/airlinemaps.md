@@ -1,7 +1,7 @@
 ---
 title: Visualizing Airline Routes and Hubs
 description: An exploration of airline route visualizations and their implementation.
-date: "2022-10-31"
+date: '2022-10-31'
 categories:
   - blog
   - travel
@@ -14,11 +14,11 @@ _You can jump straight to the interactive [visualization](https://saumikn.com/ai
 
 Growing up, whenever my family used to take airplanes, I was always drawn to the airline route maps that were in the seat-back magazine. I loved going over all the lines and hubs, and seeing how to get from one city to another. However, these maps were quite ugly and not great visualization tools. All the lines on the map were a single color (e.g. [Delta](https://news.delta.com/sites/default/files/styles/twitter_share_1200/public/US_10_15-01_0.png?itok=kmb_mPtD), [United](https://images.airlineroutemaps.com/maps/United_Airlines.gif)), so it was difficult to see which lines corresponded to which city halfway across the country.
 
-![Air Arabia Route Map](https://i0.wp.com/airinsight.com/wp-content/uploads/2022/04/2022-04-25.png)
+![Air Arabia Route Map](https://i0.wp.com/airinsight.com/wp-content/uploads/2022-04-25.png)
 
 _An example of Air Arabia's routes. I couldn't find an image that wasn't cut off._
 
-I assumed that this was the best we could do, at least until this summer, when I was flying to Kenya on Air Arabia and I saw a route map that actually looked quite [good](https://i0.wp.com/airinsight.com/wp-content/uploads/2022/04/2022-04-25.png?ssl=1)! I realized that we could use color to make the maps more legible. That was when I decided to create a tool to interactively visualize flights using color across all airlines.
+I assumed that this was the best we could do, at least until this summer, when I was flying to Kenya on Air Arabia and I saw a route map that actually looked quite [good](https://i0.wp.com/airinsight.com/wp-content/uploads/2022-04-25.png?ssl=1)! I realized that we could use color to make the maps more legible. That was when I decided to create a tool to interactively visualize flights using color across all airlines.
 
 At first, I intended this to be a quick and simple exercise, using tools and libraries I already knew. However, I didn't really find anything suitable. The closest I found was the [Routes Maps Builder](https://github.com/kburchfiel/route_maps_builder/) by kburchfiel, which used Python and Folium to build the maps, but this didn't allow for interactive maps.
 

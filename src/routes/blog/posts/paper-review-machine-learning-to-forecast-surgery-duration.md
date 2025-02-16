@@ -12,7 +12,7 @@ My second rotation has started on Monday, and I've decided to work with [Dr. Che
 
 The most important section of the paper discusses how the model was trained. The model itself looks like the below image.
 
-![Model Architecture](/uploads/2020/11/image-955x1024.png)
+![Model Architecture](/uploads/image-955x1024.png)
 
 The continuous and categorical features are normalized and combined as inputs for the model. The unstructured text data is broken up into word tokens and embedded into a vector. After running these word embeddings through an LSTM, the output is concatenated with the other data to be used as the input to the Mixture Density Network. I'm personally not very familiar with MDNs, so I'll have to do some more reading on how these work. MDNs were developed by [Bishop in 1994](https://publications.aston.ac.uk/id/eprint/373/1/NCRG_94_004.pdf), and York made a comment that represents the model's ability to capture the uncertainty in predictions.
 
