@@ -1,7 +1,7 @@
 ---
 title: Using GPUs and JupyterLab on the WashU RIS Cluster
 description: A step-by-step tutorial on how to get started running Deep Learning code using Pytorch, Tensorflow, and JupyterLab on the WashU RIS cluster.
-date: "2022-11-17"
+date: '2022-11-17'
 categories:
   - blog
   - deep learning
@@ -14,7 +14,7 @@ In this post, I'll give a step-by-step tutorial on how to get started running De
 
 First, you will need to get access to the RIS Cluster. Each faculty gets 5TB of free storage on the RIS Storage Cluster and access to open CPUs and GPUs on the Compute Cluster (which is currently free, but will eventually be $100 per person per year). If you're a student, you will simply be assigned access to your advisor's resources. To request access, submit a ticket at [WashU Service Desk](https://jira.wustl.edu/servicedesk/customer/portal/2/). This process will probably take a few days, and you'll need your advisor to oversee the process.
 
-![Access](https://saumikn.com/wp-content/uploads/image-1668721261311.png)
+![Access](/uploads/image-1668721261311.png)
 
 ## Setting up Docker
 
@@ -87,7 +87,7 @@ While you're in the compute environment, you'll have to get used to all the comm
 
 The other thing to note is that your RIS Storage Cluster is available at `/storage1/fs1/<faculty-key>/Active`, where `<faculty-key>` is your advisor's WUSTL key.
 
-![Cluster Status](https://saumikn.com/wp-content/uploads/image-1668721891488.png)
+![Cluster Status](/uploads/image-1668721891488.png)
 
 I created a script called [gpu.py](https://gist.github.com/saumikn/9855337011739aea6044943f6e80f25b), which allows you to view the status of the cluster. You can use it by running `python3 gpu.py`. This is very helpful to see how in-use the cluster is, and can tell you potentially why your jobs aren't landing, if there are open GPUs or CPUs, etc.
 
@@ -134,10 +134,10 @@ As long as you're on the WashU VPN, you can access your job by going to the firs
 
 If you want to submit other types of jobs than the Jupyter Lab script from above, check out the [RIS documentation](https://docs.ris.wustl.edu/doc/compute/recipes/job-execution-examples.html) on the `bsub` command. In general, the RIS docs page is a good resource for help. If you ever need additional help with the cluster that the docs don't cover, you can submit a Jira ticket [here](https://jira.wustl.edu/servicedesk/customer/portal/2), and you'll usually get a response within a business day.
 
-![Dashboard](https://saumikn.com/wp-content/uploads/image-1668720856984.png)
+![Dashboard](/uploads/image-1668720856984.png)
 
 There is an extra option for viewing the status of your GPU memory and utilization in a live dashboard, using [Jupyterlab-nvdashboard](https://github.com/rapidsai/jupyterlab-nvdashboard). This issue has now been solved, as long as you specify `bokeh=2.4.1` in your `environment.yml` as I did above.
 
-![Tensorboard](https://saumikn.com/wp-content/uploads/image-1668720929412.png)
+![Tensorboard](/uploads/image-1668720929412.png)
 
 If you plan on using Tensorboard inside Jupyter, you should install the [jupyterlab-tensorboard-pro](https://pypi.org/project/jupyterlab-tensorboard-pro/). This is very helpful if you want to inspect the metrics of your model during or after training, to help you optimize model hyperparameters. Tensorboard works with both Tensorflow and Pytorch.

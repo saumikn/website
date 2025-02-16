@@ -1,7 +1,7 @@
 ---
 title: Why America should not build Light Rail
 description: An exploration of the arguments against light rail and the benefits of alternative transit solutions.
-date: "2024-06-07"
+date: '2024-06-07'
 categories:
   - transit
 published: true
@@ -13,13 +13,13 @@ Light rail (or LRT) is a type of transit which uses street-running, at-grade tra
 
 However, I strongly feel that we should not be pursuing the construction of new light rail (and the related mode of streetcars) systems in America. The simple reason for this is cost - new light rail lines cost anywhere between $100 million to $200 million per mile to construct. As an example, the proposed 5.6 mile [St. Louis Green Line](<https://en.wikipedia.org/wiki/Green_Line_(St._Louis_MetroLink)>) is projected to cost $1.1 billion.
 
-![Light Rail](https://saumikn.com/wp-content/uploads/image-1717722805603.png)
+![Light Rail](/uploads/image-1717722805603.png)
 
 This high price tag isn't inherently a bad thing. There have been many expensive projects over history which were well worth the cost. The problem with light rail specifically is that we get almost no value back from its construction. For transit riders, there are almost no benefits to a light rail line over a simple bus line, and in a lot of respects, light rail is even worse for riders. And for cities as a whole, light rail does lead to some improvements and increased development, but at a scale which is very out of line with its high cost.
 
 Instead of light rail or streetcars, I propose that transit agencies invest heavily in a different mode of transit - "Light BRT". If you haven't heard of this term before, it's because I invented it for the purposes of this article, as there is no single widespread term which characterizes this mode. I'm personally hoping that the phrase Light BRT catches on, as it's a very convenient nomenclature to describe these existing transit lines and in a way which is easily distinguishable from the more traditional _Gold-Standard_ or _Heavy_ BRT.
 
-![Light BRT](https://saumikn.com/wp-content/uploads/image-1717712302444.png)
+![Light BRT](/uploads/image-1717712302444.png)
 
 So what is Light BRT? Essentially, Light BRT is a type of city bus which includes many infrastructure upgrades to increase the speed and reliability of the bus line. While not every light BRT line has all of these features, in general, light BRT lines are characterized by the following:
 
@@ -32,7 +32,7 @@ So what is Light BRT? Essentially, Light BRT is a type of city bus which include
 
 Each of these improvements leads to a much nicer transit experience for passengers, directly leading to faster trips and higher ridership. For example, in Minneapolis, the D Line launched in late 2022, where they implemented most of the above features on the existing #5 local bus. The D Line was a huge success, well beyond anyone's expectations. In the first _month_ alone, ridership on the D Line [increased 50%](https://www.metrotransit.org/corridor-ridership-up-after-d-line-opening) when compared with the previous city bus. And by the end of the first year, ridership had [nearly doubled](https://metrocouncil.org/News-Events/Transportation/Newsletters/Annual-transit-ridership-2023.aspx#:~:text=The%20D%20Line%27s%20average%20weekday,of%20all%20rides%20in%202023.)! As of early 2024, the D Line has a ridership of over 13,000 daily riders, a number which is actually higher than many light rail systems, and this number is projected to hit 23,000 riders by 2030.
 
-![D Line](https://saumikn.com/wp-content/uploads/image-1717712261583.png)
+![D Line](/uploads/image-1717712261583.png)
 
 And the best part? This line was incredibly cheap. The 18 mile D Line cost about $75 million in total to construct, for an average cost of about $4 million per mile. Compared to light rail, which can cost $200 million per mile, light BRT is a steal. Or in other words, for the same cost it would take to build a 5 mile LRT line, we could build over 200 miles of light BRT, leading to a much better transit network for an entire city.
 
@@ -48,7 +48,7 @@ In this section, I'll give a brief overview of the various types of transit mode
 
 ## Types of Rail
 
-![Types of Rail](https://saumikn.com/wp-content/uploads/image-1717712968930.png)
+![Types of Rail](/uploads/image-1717712968930.png)
 
 - **Heavy Rail:** This is the highest capacity and most expensive transit mode, consisting of long train sets operating in an entirely grade-separated right-of-way. Examples include the New York Subway or the Chicago L.
 - **Light Rail:** This is a lower capacity mode and less expensive than heavy rail. LRT systems are mostly not grade-separated, but run alongside street corridors, usually operating in a dedicated lane outside mixed traffic. Examples of light rail are the Minneapolis Light Rail or the San Diego Trolley.
@@ -57,7 +57,7 @@ In this section, I'll give a brief overview of the various types of transit mode
 
 ## Types of Buses
 
-![Types of Buses](https://saumikn.com/wp-content/uploads/image-1717713225387.png)
+![Types of Buses](/uploads/image-1717713225387.png)
 
 - **"Heavy" BRT:** Heavy BRT aims to replicate heavy or light rail with buses as much as possible, with dedicated concrete guideways separated from mixed traffic and rail-like stations. Examples of heavy BRT include the Albuquerque ART or the Cleveland HealthLine.
 - **"Light" BRT:** Light BRT can be thought of as an upgraded city bus, with features like transit signal priority, optimized stop spacing, and off-board fare collection. Examples of light BRT include the Minneapolis aBRT, the New York SBS, or the Seattle RapidRide.

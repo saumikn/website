@@ -1,7 +1,7 @@
 ---
 title: Notes on Curriculum Learning
 description: A summary of key papers on Curriculum Learning and their implications for machine learning.
-date: "2023-04-26"
+date: '2023-04-26'
 categories:
   - research
   - machine learning
@@ -20,19 +20,19 @@ First, the authors formalize what they consider a curriculum in the context of m
 
 First, the authors look at a simple model, learning a linear SVM classifier. They first show that just learning a model with easy examples (ignoring points which fall on the wrong side of the Bayes classifier) leads to statistically better performance than training on all points (16.3% vs 17.1% error).
 
-![Image](https://saumikn.com/wp-content/uploads/image-1682482457399.png)
+![Image](/uploads/image-1682482457399.png)
 
 Then, the authors look at training a perceptron linear classifier. They define two different metrics for data ease - how noisy the data is, and how far a point is from the true margin. They find that in both cases, learning in the order of easy to hard leads to better performance than learning from hard to easy, or learning in a random order.
 
-![Image](https://saumikn.com/wp-content/uploads/image-1682482713105.png)
+![Image](/uploads/image-1682482713105.png)
 
 Next, the authors look at a simple computer vision problem - recognizing rectangles, triangles, and ellipses in a 32x32 pixel image. In this domain, ease is defined by the "shape" of the shape, where easy shapes are squares, equilateral triangles, and circles. They evaluate a two-stage design, where over 256 epochs, they train on just easy examples for the first n epochs, and train on harder images for the remaining 256-n epochs. Overall, the results show that the more epochs consist of easy examples, the better the overall performance.
 
-![Image](https://saumikn.com/wp-content/uploads/image-1682483842124.png)
+![Image](/uploads/image-1682483842124.png)
 
 Finally, the authors look at a more challenging problem, training a language model. In this example too, they find that using a curriculum, defined by the frequency of the word (if the word is in the 5k most common words, 10k most common words, etc.) leads to better convergence. It should be noted though that the performance is worse at first, presumably because the model missed out on the majority of words at the beginning of training.
 
-![Image](https://saumikn.com/wp-content/uploads/image-1682485966500.png)
+![Image](/uploads/image-1682485966500.png)
 
 Overall, this work shows that the idea of curricula shows promise for training neural networks through the use of examples in four different domains. However, the authors leave it to future work to better understand how this process actually works, and demonstrate this in more domain examples.
 

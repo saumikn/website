@@ -1,14 +1,14 @@
 ---
 title: Exploring the Effect of AI Assistance on Human Ethical Decisions
 description: An exploration of how AI influences ethical decision-making in humans.
-date: "2023-06-01"
+date: '2023-06-01'
 categories:
   - research
   - ethics
 published: true
 ---
 
-In 2022, I published my first ever, first-author publication as a PhD student — [How Does Predictive Information Affect Human Ethical Preferences?](https://saumikn.com/wp-content/uploads/aies22_predictions.pdf), which was published at AIES 2022. This spring, I wrote a follow-up work to the original paper, titled _How does Value Similarity affect Human Reliance in AI-Assisted Ethical Decision Making?_, and this was just accepted to AIES 2023 a few weeks ago!
+In 2022, I published my first ever, first-author publication as a PhD student — [How Does Predictive Information Affect Human Ethical Preferences?](/uploads/aies22_predictions.pdf), which was published at AIES 2022. This spring, I wrote a follow-up work to the original paper, titled _How does Value Similarity affect Human Reliance in AI-Assisted Ethical Decision Making?_, and this was just accepted to AIES 2023 a few weeks ago!
 
 As part of the Student Track application, I needed to write an "extended abstract" on the research I intend to present. This would mainly be on my second publication, but I also decided to put many of the details from my first paper into the extended abstract, as a good way to practice for writing my proposal, but mostly to finally have an excuse to write-up the first paper! The rest of this blog is mostly taken verbatim from my extended abstract, though I'll also add a few graphs into the paper which I didn't have room for in the extended abstract.
 

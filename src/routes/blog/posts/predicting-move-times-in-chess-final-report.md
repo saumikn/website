@@ -58,7 +58,7 @@ The investigation into aleatoric uncertainty revealed that the point estimate ne
 
 The second investigation focused on epistemic uncertainty, with results illustrated in the following graph:
 
-![Epistemic Uncertainty Results](https://saumikn.com/wp-content/uploads/2021/05/epistemic-1024x425.png)
+![Epistemic Uncertainty Results](/uploads/2021/05/epistemic-1024x425.png)
 
 ## Conclusion
 

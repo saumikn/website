@@ -1,7 +1,7 @@
 ---
 title: First Steps in Calculating Chess Player Biases
 description: An overview of functions created to analyze chess player biases.
-date: "2020-10-27"
+date: '2020-10-27'
 categories:
   - blog
   - chess
@@ -16,7 +16,7 @@ Last week, I went over some functions I created to compress a chess board state 
 
 ## Visual Representation
 
-![Chess Position](https://saumikn.com/wp-content/uploads/2020/10/chess-position-1.png)
+![Chess Position](/uploads/2020/10/chess-position-1.png)
 
 ## Functionality
 

@@ -1,7 +1,7 @@
 ---
 title: How to Pronounce Tamil (and Transliterate it using Python)
 description: A guide on Tamil pronunciation and how to transliterate Tamil script using Python.
-date: "2023-07-19"
+date: '2023-07-19'
 categories:
   - blog
 published: true
@@ -11,7 +11,7 @@ Recently, I started a mini-project to write a Python script for transliterating 
 
 ## Tamil Script Overview
 
-![Tamil Script](https://saumikn.com/wp-content/uploads/image-1689766116431.png)
+![Tamil Script](/uploads/image-1689766116431.png)
 
 The Tamil Script has a fairly regular [Phonemic Orthography](https://en.wikipedia.org/wiki/Phonemic_orthography), where if you read a word, you know how to pronounce it, and if you hear a word, you usually know how to write it. (This is ignoring the whole [Diglossia](https://en.wikipedia.org/wiki/Diglossia) situation that Tamil has, and assumes that words are written using a colloquial spelling, or pronounced using the formal spelling).
 

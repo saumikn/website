@@ -1,7 +1,7 @@
 ---
 title: Papers on Biased Inverse Reinforcement Learning and Fairness Criteria
 description: A summary of key papers on biased inverse reinforcement learning and their implications.
-date: "2020-10-19"
+date: '2020-10-19'
 categories:
   - blog
   - research
@@ -16,7 +16,7 @@ To start off the rotation, CJ gave me several papers to read through, so I can b
 
 This paper was written in 2000 by two legends in the field of AI: Andrew Ng and Stuart Russell, though Ng was still in grad school when this paper came out. Essentially, the paper turns the methods and goals of Reinforcement Learning upside down. Normally in RL, we are concerned with creating a _Policy_ to maximize an Agent's _Reward_ function as it executes _Actions_ to navigate through a domain of potential _States_ - a framework called the _Markov Decision Process_.
 
-![Super Mario Bros](https://saumikn.com/wp-content/uploads/2020/10/supermariobros.png)
+![Super Mario Bros](/uploads/2020/10/supermariobros.png)
 
 One example of this process is a game like Super Mario Bros. The agent is Mario, actions are things like moving up/down/left/right, and states are the locations of blocks, enemies, pipes, etc. In Super Mario Bros, the main reward would be completing the stage itself, but there are also secondary rewards like collecting coins and defeating enemies, and even negative rewards (like losing lives).
 
@@ -32,7 +32,7 @@ While standard IRL, as explained in the previous paper, is very promising, it re
 
 This 2015 paper, by Evans, Suhlmuller, and Goodman, examines optimality deviations in this paper – state uncertainty and temporal inconsistency. Uncertainty is a self-explanatory concept, while temporal inconsistency means that humans often make plans that they later abandon. A famous behavioral example of this is that people generally prefer to take $100 today over $110 tomorrow but prefer $110 in 31 days over $100 in 30 days. This makes no sense, but that's how humans are! In the paper, the authors create several suboptimal agents that exhibit these tendencies, and then create an IRL model that still works on these agents.
 
-![Naive Planner](https://saumikn.com/wp-content/uploads/2020/10/naiveplanner.png)
+![Naive Planner](/uploads/2020/10/naiveplanner.png)
 
 This picture shows two suboptimal agents which suffer from temporal inconsistency. Initially, both agents want to go to the vegetarian café, which would maximize their reward for this instance. However, as the naïve agent heads directly towards the café, it is tempted by the donut café (who wouldn't pick donuts now over veggies later?) and abandons its original plan. The sophisticated planner understands its own bias and chooses the longer route in order to avoid the donut shop that it knows it will be fatally tempted by.
 
@@ -46,7 +46,7 @@ Future work mentioned includes applications in more realistic domains and evalua
 
 This third paper takes things to an even higher level. As stated in the title, instead of assuming human biases (like the second paper did), Shah et al. are interested in learning the biases directly.
 
-![Biased Models](https://saumikn.com/wp-content/uploads/2020/10/biasedmodels.png)
+![Biased Models](/uploads/2020/10/biasedmodels.png)
 
 In addition to the naïve/sophisticated models described in the last paper, this paper adds several other examples of biases that humans can exhibit. Overconfident/underconfident agents incorrectly estimate probabilities, while myopic agents suffer from the horizon effect. All of these agents are simulated in a new MDP gridworld featuring rewards, punishments, walls, and uncertainty, as agents may randomly fail to execute the intended movement, and instead move orthogonally to the intended direction.
 
@@ -60,7 +60,7 @@ In terms of future work, the authors mention using more complicated problems wit
 
 These last two papers work in a completely different direction than the first three papers, and I'll group them together since they are similar in idea.
 
-![Moral Machine](https://saumikn.com/wp-content/uploads/2020/10/moralmachine-1024x567.jpg)
+![Moral Machine](/uploads/2020/10/moralmachine-1024x567.jpg)
 
 The Moral Machine paper conducts an experiment to understand human preferences on autonomous vehicle decisions and ethics. I didn't really find there to be any particularly novel analysis in the paper; the notability from the paper comes from its massive sample size – millions of users from across the globe participated in the viral challenge. This allowed the authors to perform some cross-culture analysis based on the locations of the users.
 

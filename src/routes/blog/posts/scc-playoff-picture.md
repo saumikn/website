@@ -1,7 +1,7 @@
 ---
 title: States Chess Cup - Round 7 Playoff Picture
 description: An overview of the playoff picture for the States Chess Cup, including team standings and match schedules.
-date: "2020-10-16"
+date: '2020-10-16'
 categories:
   - chess
 published: true
@@ -19,7 +19,7 @@ In the Central, the playoffs have essentially already begun! #1 Minnesota and #2
 
 In the West, arguably the strongest division, there are still 5 teams remaining with a chance at the playoffs. #1 California-N has a full-point bye this week, so they will end up with 5.5/7, clinching the top seed in the playoffs. #2 Washington, at 4.5/6 could join them in the playoffs with a win against #7 Hawaii. #3 California-S, #4 Arizona, and #5 Oregon are locked in a battle for a wild-card spot. CA-S looks to be in the driver's seat with their higher tiebreaks, but they'll need to win against #6 Nevada first. Even then, there's still a chance for Arizona or Oregon if one of them can pull off an upset.
 
-![Match Schedule](https://saumikn.com/wp-content/uploads/2020/10/rd7-schedule.png)
+![Match Schedule](/uploads/2020/10/rd7-schedule.png)
 
 Here's a screenshot of the match schedule for next week. Note that stream links will start to be populated over the next few days, check the schedule page before the start of your match to find the stream link. To look at all of the standings yourself, please check out the main google sheet at [saumikn.com/scc-schedule](https://saumikn.com/scc-schedule).
 

@@ -1,7 +1,7 @@
 ---
 title: Thoughts on my first NeurIPS
 description: Reflections on attending the NeurIPS conference for the first time, including experiences and insights.
-date: "2022-12-04"
+date: '2022-12-04'
 categories:
   - blog
   - conference
@@ -14,7 +14,7 @@ Yesterday, I finished my first ever NeurIPS conference. It was a great experienc
 
 When you put eight thousand computer scientists into a single event, things tend to get chaotic. The poster sessions were jam-packed, and there is basically no opportunity to talk to any presenter when there was already a crowd of people surrounding each poster. I got the most out of the workshops, which were organized by topic and had plenty of expert speakers.
 
-![Workshop](https://saumikn.com/wp-content/uploads/image-1670196512182.png)
+![Workshop](/uploads/image-1670196512182.png)
 
 The wifi also didn't work at all for most of the people I talked to. Plan on using mobile data, ideally an unlimited plan, especially if you're planning on hot-spotting to your laptop.
 

@@ -1,7 +1,7 @@
 ---
 title: A Proposal to Double Express Bus Frequency Without Increasing Costs
 description: An analysis of improving express bus service efficiency in the south metro.
-date: "2019-10-21"
+date: '2019-10-21'
 categories:
   - blog
   - transit
@@ -22,7 +22,7 @@ As an avid transit enthusiast, I wanted to look more deeply into this trend and 
 
 ## Why is Frequency Important?
 
-![Metro Transit's High Frequency Network](https://saumikn.com/wp-content/uploads/2019/11/hi-frequency-1.png)
+![Metro Transit's High Frequency Network](/uploads/2019/11/hi-frequency-1.png)
 
 Frequency is one of the most important metrics, if not the most important metric, when evaluating a transit service. [Studies show that increasing frequencies directly improves ridership](https://www.researchgate.net/profile/Hani_Mahmassani/publication/260183285_Riding_More_Frequently_Estimating_Disaggregate_Ridership_Elasticity_for_a_Large_Urban_Bus_Transit_Network/links/02e7e52fe7f8de66c8000000/Riding-More-Frequently-Estimating-Disaggregate-Ridership-Elasticity-for-a-Large-Urban-Bus-Transit-Network.pdf), and many examples across the country back this assertion up. After all, one of the reasons why the light rail is so popular is its incredible ease of use. Nobody keeps track of the light rail timetables – you can just go to a station and expect that a train will be arriving soon. As famed transit planner Jarrett Walker likes to say, "[Frequency is Freedom](https://humantransit.org/2011/12/how-frequent-is-freedom.html). Because of the high level of service provided, [light rail ridership is growing dramatically](https://www.metrotransit.org/light-rail-bus-rapid-transit-lines-set-annual-ridership-records), in contrast with the shrinking Twin Cities transit system as a whole.
 
@@ -48,13 +48,13 @@ As an example, I'll use the northbound buses from Rosemount Transit Station to d
 
 ## Current System
 
-![Our current express bus system in the south metro. Look at all of the redundant, overlapping lines with low frequency!](https://saumikn.com/wp-content/uploads/2019/11/express-system-current.png)
+![Our current express bus system in the south metro. Look at all of the redundant, overlapping lines with low frequency!](/uploads/2019/11/express-system-current.png)
 
 Currently, there are 11 express bus routes from the southern suburbs to downtown Minneapolis – 10 routes operated by MVTA and route 467 operated by Metro Transit. Many of these routes also have multiple branches, making the effective number of routes even higher. My proposal is to consolidate the current system into 6 core express routes. This will make the system much more understandable and increase route frequencies without increasing the operating costs of the system.
 
 ## Proposed System
 
-![My proposed express bus system. Notice how much more clean and understandable this new system is!](https://saumikn.com/wp-content/uploads/2019/11/express-system-proposed.png)
+![My proposed express bus system. Notice how much more clean and understandable this new system is!](/uploads/2019/11/express-system-proposed.png)
 
 **Eagan**
 
@@ -96,7 +96,7 @@ I want to use the recently built \$14 million dollar online station to actually 
 
 ## Analysis
 
-![Analysis of Frequency and Travel Time](https://saumikn.com/wp-content/uploads/2019/11/full-table.png)
+![Analysis of Frequency and Travel Time](/uploads/2019/11/full-table.png)
 
 The two major changes the proposed system will have on riders are frequency and travel speed. Taking a simple average of the change in frequency and travel times over all stations gives us an increase in frequency of 479% and a decrease in travel time of 0.9 minutes! These seem like amazing results, but are in fact very misleading, since most of the positive effect is coming from the two stations of Prior Lake and Cedar Grove, both of which have very low ridership currently.
 
@@ -130,7 +130,7 @@ While I understand the importance of off-peak service, it is somewhat out of the
 
 ## Conclusion
 
-![Summary of Proposed Express Bus System](https://saumikn.com/wp-content/uploads/2019/11/summary.png)
+![Summary of Proposed Express Bus System](/uploads/2019/11/summary.png)
 
 Overall, I believe that I've designed an express bus system that works much better for transit riders than our current system. By consolidating similar routes and eliminating inefficiencies, my proposed system is able to increase the average bus frequency nearly 250% while only increasing travel times 3%. Most importantly, this increase doesn't come with a heavy price tag, since the new system has the same number of buses, drivers, and individual trips as the old system.
 

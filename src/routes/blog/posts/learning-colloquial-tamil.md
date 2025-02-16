@@ -1,7 +1,7 @@
 ---
 title: Learning Colloquial Tamil - Part 1
 description: A detailed account of my journey in learning colloquial Tamil, including resources and insights.
-date: "2021-01-04"
+date: '2021-01-04'
 categories:
   - tamil
 published: true
@@ -13,7 +13,7 @@ In this post, I will share my experiences and resources in learning colloquial T
 
 I've written two more blog posts on the topic of Colloquial Tamil. The [first](https://saumikn.com/blog/learning-colloquial-tamil-2/) is an update to this post with a few additional learning resources I've found as well as published Anki decks.
 
-![Tamil Image](https://saumikn.com/wp-content/uploads/2021/01/tamil.jpg)
+![Tamil Image](/uploads/2021/01/tamil.jpg)
 
 The second resource I found is the book _Colloquial Tamil_, which is available online at [archive.org](https://ia800209.us.archive.org/21/items/ColloquialTamil_201512/Colloquial%20Tamil.pdf). This book was published in 2003, so it's pretty old, but it provides a structured approach to learning the language.
 

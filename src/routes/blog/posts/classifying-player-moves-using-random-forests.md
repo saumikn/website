@@ -1,7 +1,7 @@
 ---
 title: Classifying Player Moves using Random Forests
 description: An exploration of using Random Forests for classifying chess player moves.
-date: "2020-11-09"
+date: '2020-11-09'
 categories:
   - blog
   - chess
@@ -22,7 +22,7 @@ The process for this was the same as before; I took the 50 highest-rated blitz p
 
 Applying the same [PCA dimension reduction](<https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)>) process as last week, I generated the data plot below.
 
-![PCA Plot](https://saumikn.com/wp-content/uploads/2020/11/player-bias-plot-2.png)
+![PCA Plot](/uploads/2020/11/player-bias-plot-2.png)
 
 ## Classification Models
 

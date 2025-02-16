@@ -1,14 +1,14 @@
 ---
 title: A Brief Guide to Maia
 description: Overview of Maia, a framework for predicting chess moves.
-date: "2021-05-24"
+date: '2021-05-24'
 categories:
   - blog
   - research
 published: true
 ---
 
-![Image taken from McIlroy-Young et al.](https://saumikn.com/wp-content/uploads/2021/05/image-1024x337.png)
+![Image taken from McIlroy-Young et al.](/uploads/2021/05/image-1024x337.png)
 
 Over the last few months, I've been working on a research project to develop personalized training tools for chess players. For this post, I'm just going to describe Maia, the framework developed last year which all of our code and models are based on.
 
