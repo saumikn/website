@@ -22,13 +22,13 @@ Looking at the above image, one objective might be to find the shortest possible
 
 The last question of the homework has us implement such an algorithm, where Pacman simply approaches the closest dot in a greedy manner. Using this algorithm, we are able to find a path to eat all the dots in 350 steps. This is a very sub-optimal algorithm though. In states where there are multiple closest dots (for example the starting position), Pacman deterministically chooses one dot based on the initial ordering definition. This means that, in many (most?) situations, Pacman chooses the objectively wrong dot to go towards.
 
-In the following image, you can see the consequences of choosing the wrong dot. Instead of systematically eating dots in the map, Pacman leaves groups of dots by themselves. In fact, the rightmost dot in this image is the last dot in Pacman's overall path, adding dozens of extra steps to the path just because we didn't eat the dot when we were right next to it.
+In the following image, you can see the consequences of choosing the wrong dot. Instead of systematically eating dots in the map, Pacman leaves groups of dots by themselves. In fact, the rightmost dot in this image is the last dot in Pacman’s overall path, adding dozens of extra steps to the path just because we didn’t eat the dot when we were right next to it.
 
 ![Wrong Dot Choice](/uploads/image-1024x490.png)
 
 ## Randomized Greedy Algorithm
 
-In the extra credit assignment, we were asked to come up with a better approximate algorithm than the greedy "eat-closest-dot" algorithm. The catch was that we only had 30 seconds of computation time, so we couldn't just run A\* for hours on end waiting for the perfect solution.
+In the extra credit assignment, we were asked to come up with a better approximate algorithm than the greedy “eat-closest-dot” algorithm. The catch was that we only had 30 seconds of computation time, so we couldn’t just run A\* for hours on end waiting for the perfect solution.
 
 I was sure that others in the class would be able to come up with very smart algorithms to get near-optimal results. However, I was quite lazy. While I wanted to win, I didn't really want to take the time and come up with a fancy algorithm. Instead, I created a simple algorithm - **I randomized the greedy algorithm from before so it was no longer deterministic, and simply ran it over and over again for 29 seconds.** In the end, I returned the best path found.
 

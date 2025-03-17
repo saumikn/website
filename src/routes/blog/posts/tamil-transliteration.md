@@ -4,6 +4,9 @@ description: A guide on Tamil pronunciation and how to transliterate Tamil scrip
 date: '2023-07-19'
 categories:
   - blog
+  - languages
+  - tamil
+  - coding
 published: true
 ---
 
@@ -18,6 +21,8 @@ The Tamil Script has a fairly regular [Phonemic Orthography](https://en.wikipedi
 Because of this, I figured that writing the code for transliteration would be easy. However, a few peculiarities of the Tamil writing script and Tamil Unicode representation made this harder than expected.
 
 To start with, it's important to know that Tamil, like all [Brahmi](https://en.wikipedia.org/wiki/Brahmi_script)-derived scripts are [Abugidas](https://en.wikipedia.org/wiki/Abugida), meaning that each syllable is written as a combination of a consonant and a vowel. In practice, this means that each combination syllable has a main consonant, and a marker for which vowel should be sounded.
+
+![](https://saumikn.com/wp-content/uploads/image-1689766176042.png)
 
 For example, if we want to write the syllable `kii`, we would take the letter `க`, pronounced `ka`, add the vowel marker for `ii` which is `ீ`, and when we combine these we get `கீ`. We can do the same thing for all the other vowel sounds as well to get all the syllables that start with `k`. Confusingly, if we don't add any vowel marker, we get the default `a` vowel, and if we want to have no vowel sound we need to add the anti-vowel marker `்`, so `k` would be `க்`.
 
@@ -41,7 +46,7 @@ Quickly going over all the vowels, we have `அ` transcribed as `a`, which is pr
 
 `எ` and `ெ` are transcribed as `e`, and pronounced as the last sound in the French word "sauté", or like the English word "hey" if you get rid of the y sound at the end. `ஏ` and `ே` are transcribed as `ee` and are pronounced like `எ` but longer, so "sautéé". `ஐ` and `ை` are transcribed as `ai`, and pronounced like the English word "eye".
 
-`ஒ` and `ொ` are transcribed as `o`, and pronounced like the first half of the English word "oh". `ஓ` and `ோ` are transcribed as `oo`, and pronounced like `ஒ` but longer, so "oooh". `ஔ` and `ௌ` are transcribed as `au`, and pronounced like the English word "cow".
+`ஒ` and `ொ` are transcribed as `o`, and pronounced like the first half of the English word "oh". `ஓ` and `ோ` are transcribed as `oo`, and pronounced like `ஒ` but longer, so something like the the first half of"ohhhh". `ஔ` and `ௌ` are transcribed as `au`, and pronounced like the English word "cow".
 
 ### Voiced/Unvoiced Consonant Pairs
 
@@ -51,6 +56,8 @@ This entire behavior works because in native Tamil words, the sound `g` never ap
 
 In addition to `க`, this same voiced/unvoiced behavior happens with the letters `ட`, which can be either `ṭa` or `ḍa`, `த`, which can be either `ta` or `da`, and `ப`, which can be either `pa` or `ba`.
 
+The letter `ச` almost follows this pattern as well. `ச்ச` in the middle of a word is `c`, and `ச` in the middle of a word is `s`. However, a word-initial `ச` can be pronounced as voiced or unvoiced (`c` or `s`) depending on the word and dialect! In my family's speech, it's usually a voiced `s`, though if you say it the other way, people will still understand you.
+
 ### Transliterating Consonants
 
 For each of the Tamil consonants, I now had to choose which Latin character to represent it as.
@@ -59,7 +66,7 @@ As mentioned, I transcribe `க்` as either `k` or `g` (pronounced as expected
 
 I transcribe `ச்` as `c` or `s`, depending on word location. `c` is really the ch-sound, as in church, but I write `c` for brevity, and because `cc` seems better than `chch` for `ச்ச`. `ஞ` by itself is written as `ñ` (similar to the Spanish sound in "Español") and `ஞ்ச` is written as `nj` (pronounced as in "ninja" or "injure").
 
-I transcribe `ட்` as `ṭ` or `ḍ`. These are [retroflex](https://en.wikipedia.org/wiki/Retroflex_consonant) sounds which are not actually found in English, though you can normally just pronounce them as the regular t and d sounds, as in "toy" or "dine", and the sounds are close enough that everybody will understand you. `ண்` by itself is written as `ṇ`, and `ண்ட` is `ṇḍ`.
+I transcribe `ட்` as `ṭ` or `ḍ`^[2]. These are [retroflex](https://en.wikipedia.org/wiki/Retroflex_consonant) sounds which are not actually found in English, though you can normally just pronounce them as the regular t and d sounds, as in "toy" or "dine", and the sounds are close enough that everybody will understand you. `ண்` by itself is written as `ṇ`, and `ண்ட` is `ṇḍ`.
 
 I transcribe `த்` as `t` or `d`. These are really actually the "th" and "dh" sounds as in "think" or "they" (which probably should be written as "dhey"). `ந்` by itself is `n` and `ந்த்` is `nd`. Tamil also has the letter `ன்` which I also transcribe as `n`. This letter used to be pronounced differently from `ந்`, with the tongue slightly farther back, but in modern Tamil dialects, the two sounds have merged[^3] so I use the same transliteration for both.
 

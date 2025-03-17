@@ -1,9 +1,9 @@
 ---
 title: A Brief Guide to Neural Network Chess Engines
 description: Overview of neural network chess engines and their evolution.
-date: "2021-01-18"
+date: '2021-01-17'
 categories:
-  - blog
+  - research
   - chess
 published: true
 ---

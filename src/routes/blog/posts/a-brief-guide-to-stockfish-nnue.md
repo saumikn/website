@@ -1,9 +1,9 @@
 ---
 title: A Brief Guide to Stockfish NNUE
 description: Overview of Stockfish NNUE and its integration into chess engines.
-date: "2021-01-25"
+date: '2021-01-24'
 categories:
-  - blog
+  - research
   - chess
 published: true
 ---

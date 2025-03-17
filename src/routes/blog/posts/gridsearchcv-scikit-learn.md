@@ -1,10 +1,9 @@
 ---
 title: Using GridSearchCV in Scikit-Learn
 description: A detailed explanation of how to use GridSearchCV for hyperparameter tuning in Scikit-Learn.
-date: "2020-12-28"
+date: '2020-12-27'
 categories:
-  - blog
-  - machine learning
+  - research
 published: true
 ---
 
@@ -19,27 +18,15 @@ Not only does Scikit-Learn already have each of these model types implemented au
 Here's what the code for KNN looks like, assuming that data preprocessing is already taken care of:
 
 ```python
-from sklearn.model_selection import GridSearchCV
-from sklearn.neighbors import KNeighborsClassifier
-import pandas as pd
-
-# Define the parameter grid
-params = {
-    'n_neighbors': [1, 3, 5, 7, 9, 11],
-    'metric': ['euclidean', 'manhattan', 'chebyshev']
-}
-
-# Set up the GridSearchCV
-clf = GridSearchCV(KNeighborsClassifier(), param_grid=params, cv=10, scoring=['precision', 'recall', 'accuracy', 'f1'], refit='f1')
+params = {'n_neighbors':[1,3,5,7,9,11],'metric':['euclidean', 'manhattan', 'chebyshev']}
+clf = sklearn.model_selection.GridSearchCV(KNeighborsClassifier(), param_grid=params, cv=10, scoring=['precision','recall','accuracy', 'f1'], refit='f1')
 clf.fit(X_train, y_train)
-
-# Convert results to DataFrame
 df = pd.DataFrame.from_dict(clf.cv_results_)
 df.drop(df.filter(regex=r'(split)|(std)|(params)|(rank)').columns, axis=1, inplace=True)
-
-# Display sorted results
 print(df.sort_values(by=['mean_test_f1'], ascending=False))
 ```
+
+![](https://web.archive.org/web/20240302031749im_/https://saumikn.com/wp-content/uploads/2020/12/image-1.png)
 
 In just 6 lines of code, we're able to train 18 individual KNN models, each with a different combination of hyperparameters, and evaluate each of the models on multiple evaluation metrics. As we can see in the results, the KNN model using Euclidean distance and k=5 performs the best on this dataset.
 
