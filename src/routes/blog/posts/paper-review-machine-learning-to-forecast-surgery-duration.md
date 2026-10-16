@@ -10,7 +10,7 @@ published: true
 
 My second rotation has started on Monday, and I've decided to work with [Dr. Chenyang Lu](https://www.cse.wustl.edu/~lu/) in the area of Machine Learning for Health. During the rotation, I'm going to be working especially close with [York Jiao, MD](https://anesthesiology.wustl.edu/jiao-appointed-director-of-anesthesia-at-shriners-hospital/), the Director of Anesthesia at the Shriners Hospital for Children in St. Louis. In between all of his medical jobs, he spends his time writing Machine Learning papers! The plan for my rotation is to work on the same project as one of his recent papers - [Probabilistic forecasting of surgical case duration using machine learning: model development and validation](https://anesthesiology.wustl.edu/jiao-appointed-director-of-anesthesia-at-shriners-hospital/), and see if I can find any potential improvements to the model!
 
-I have another paper review that I need to submit for the rotation, and just like last time, I'm planning on writing it in the form of a blog post! As a reminder, the three components of my paper review is a summary of the paper, an explanation of the paper's novelty, and critique of the paper. Let's get started!
+I have another paper review that I need to submit for the rotation, and just like [last time](/blog/paper-review-learning-human-biases), I'm planning on writing it in the form of a blog post! As a reminder, the three components of my paper review is a summary of the paper, an explanation of the paper's novelty, and critique of the paper. Let's get started!
 
 ## Summary
 

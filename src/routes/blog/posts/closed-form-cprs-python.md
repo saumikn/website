@@ -10,7 +10,7 @@ description: 'In my review of the paper Probabilistic forecasting of surgical ca
 
 In my [review](/blog/paper-review-machine-learning-to-forecast-surgery-duration) of the paper [Probabilistic forecasting of surgical case duration using machine learning: model development and validation](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocaa140/5919678) last week, I briefly mentioned the term CRPS. Today, I'll go into a little more detail on what CRPS actually is and discuss its implementation in Python.
 
-What is CRPS?
+## What is CRPS?
 
 CRPS, which stands for Continous Ranked Probability Score, is a measure which is used to evaluate the result of a probabilistic distribution. I actually can't find where this term was created, but I have found references to CRPS dating back to at least [1977](https://link.springer.com/chapter/10.1007/978-94-010-1276-8_18).
 
@@ -24,7 +24,7 @@ $$
 
 , where $F$ represents the Cumulative Density Function of our prediction distribution, and $x$ represents the point we are checking against.
 
-While this equation is great, a severe limitation of this calculation is the inherent slowness of calculating this integral. To solve this issue, several researchers have come up with [many closed-form solutions](https://cran.microsoft.com/snapshot/2017-09-17/web/packages/scoringRules/vignettes/crpsformulas.html#introduction) for certain common distributions. For example, here is the formula for a single normal distribution with mean $\mu$ and standard deviation $\sigma$, formulated by [Gneiting et al](https://apps.dtic.mil/dtic/tr/fulltext/u2/a459688.pdf) in 2004:
+While this equation is great, a severe limitation of this calculation is the inherent slowness of calculating this integral. To solve this issue, several researchers have come up with [many closed-form solutions](https://www.jstatsoft.org/article/view/v090i12) for certain common distributions. For example, here is the formula for a single normal distribution with mean $\mu$ and standard deviation $\sigma$, formulated by [Gneiting et al](https://apps.dtic.mil/dtic/tr/fulltext/u2/a459688.pdf) in 2004:
 
 ## Implementing CRPS in Python
 

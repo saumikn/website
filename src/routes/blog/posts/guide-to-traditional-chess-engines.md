@@ -32,7 +32,7 @@ Here, we can see how this process works. Each of the even steps take place on ou
 
 We can see this process in a simplified example using Tic-Tac-Toe. In this scenario, it's best for us to place the X in the bottom left, since it guarentees us a win. It's possible for us to win with the other options as well, but this isn't guaranteed if our opponent also plays perfectly.
 
-Alpha Beta Pruning
+## Alpha Beta Pruning
 
 The technique of Alpha Beta Pruning builds on top of the Minimax algorithm. This algorithm was developed independently by a number of computer scientists in the 1950s and 60s, and allows us to significantly speed up our evaluation.
 
@@ -44,7 +44,7 @@ In this example, we start out with only the bottom row given, and everything els
 
 Let's call this last number x. If `x>=4`, than this doesn't affect the minimum value, because x is greater than our current minimum. If `x<4`, then our opponent would choose x on his first move, but this is irrelevant, as we would never choose to go into this branch, we have another branch which guarantees us a higher score.
 
-Technically, this algorithm keeps track of all this information using values called \alpha and \beta, but all you need to know about Alpha Beta Pruning is that it provides a significant speedup to our algorithm. Just look at the following example.
+Technically, this algorithm keeps track of all this information using values called $\alpha$ and $\beta$, but all you need to know about Alpha Beta Pruning is that it provides a significant speedup to our algorithm. Just look at the following example.
 
 [Adversarial search](https://inst.eecs.berkeley.edu/~cs188/archive/sp24/assets/notes/cs188-sp24-note05.pdf)
 
@@ -60,7 +60,7 @@ Let's take a look at Stockfish, the best traditional engine available, which als
 
 This can be compared to a naive approach which would just add up all the material that each side has. Yes, Stockfish takes this into account, but there is a lot more granularity that is applied. A pawn might be worth 1 point, but a passed pawn on the 7th might be worth 5 points. The Stockfish evaluation also takes into account more subtle positional factors such as tempo, initiative, space, and mobility. The overall formula is quite complex, but if you're interested, you can take a look at [https://hxim.github.io/Stockfish-Evaluation-Guide/](https://hxim.github.io/Stockfish-Evaluation-Guide/).
 
-Conclusion
+## Conclusion
 
 Believe it or not, this is all it really takes to build a chess engine! Using just the Alpha Beta algorithm and a basic evaluation function, you can write your own engine from scratch! The key aspect that differentiates traditional chess engines (like Stockfish, Fritz, Komodo, etc), is their individual evaluation functions, and any improvements in runtime that they have implemented so that they can evaluate more positions faster and deeper.
 

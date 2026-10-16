@@ -36,7 +36,7 @@ Personal domain expertise
 
 However, we quickly discovered that the state space for chess was intractably large, much much higher than the scale of data available. In a small 5x5 grid, we could run a few thousand simulations and we would have several hundred data points for each possible state space as data to train on. With chess though, even if our data contained every single chess game ever played, nearly all of the states would have only one data point. Without a way to compare states against each other, there would be no way to compare player biases.
 
-To solve this problem, we created a new vector representation of a board state, based on the component breakdown used in the process of creating Stockfish evaluation. Because we are using the actual values which are relevant to the computer’s understanding of the position itself, this denser representation should also more helpful to understand the deviations that humans take against the computer’s choices. After processing the output of Stockfish, the final vector representation has 8 dimensions, each with 41 possible numeric values. Thus, we have reduced the state space from approximately 1046 to 1012. More importantly, because these vectors are numeric, we can calculate distances between vectors and apply various regression techniques to the data.
+To solve this problem, we created a new vector representation of a board state, based on the component breakdown used in the process of creating Stockfish evaluation. Because we are using the actual values which are relevant to the computer’s understanding of the position itself, this denser representation should also more helpful to understand the deviations that humans take against the computer’s choices. After processing the output of Stockfish, the final vector representation has 8 dimensions, each with 41 possible numeric values. Thus, we have reduced the state space from approximately $10^{46}$ to $10^{12}$. More importantly, because these vectors are numeric, we can calculate distances between vectors and apply various regression techniques to the data.
 
 Using this board representation, we started the process of collecting data, using the free database of games provided at Lichess.org. We decided to structure our data in the form of board states and collect three key pieces of information per data point – the vector representation of the current board state, the vector representation of the board state after the player makes his move, and the vector representation of the board state after the engine’s optimal move. In total, my dataset contained 100 games of each of the 50 highest rated players on Lichess in “Blitz” category. From each of these 5000 games, I selected all board positions between moves 10 and 30. Because some games ended earlier than move 30, and certain board positions (any position with a king in check) are unable to be evaluated by Stockfish, we ended up with a total dataset size of 80981 positions. This took about 2 days to collect, since each data set takes about 2 seconds per position to process.
 
@@ -127,11 +127,11 @@ Once we have these experiments, the most exciting aspect of this research would 
 
 For example, if we have a player at the 50th percentile who wants to know where to focus their studying efforts on. Using the first classifier, we can see how much the player differs from 100th percentile humans and optimal engines. However, the distribution of players at the 50th percentile will naturally be very diverse. It’s possible that our specific player is a very good positional player, compared to others at their same level, but they are lacking in aggressive play. Our regression model would be able to determine that, based on a sample of games given by the player, that their play is much closer to the positional cluster than the attacking cluster, and we would be able to give advice to the player on where to focus their study.
 
-Conclusion
+## Conclusion
 
 Overall, this first rotation has been a lot of fun, and CJ has been great as a rotation advisor. Tomorrow, I'm going to be starting my 2nd rotation, with [Dr. Chenyang Lu](https://www.cse.wustl.edu/~lu/). I already have an idea of what I'll be working on, but you'll have to wait until my next blog post to find out what it is :). See you all next week!
 
-Citations
+## Citations
 
 Kaebling et al. - [https://arxiv.org/pdf/cs/9605103.pdf](https://arxiv.org/pdf/cs/9605103.pdf)
 Ng and Russell - [https://ai.stanford.edu/~ang/papers/icml00-irl.pdf](https://ai.stanford.edu/~ang/papers/icml00-irl.pdf)

@@ -4,12 +4,12 @@ date: '2021-01-03'
 categories:
   - tamil
 published: true
-description: 'Update - July 20, 2023'
+description: Resources for learning colloquial Tamil, including UPenn lessons, the Colloquial Tamil textbook, and Anki vocabulary decks.
 ---
 
 **Update - July 20, 2023**
 
-I've written two more blog posts on the topic of Colloquial Tamil. The [first](/blog/learning-colloquial-tamil-2) is an update to this post with a few additional learning resources I've found as well as published Anki decks.
+I've written two more blog posts on the topic of Colloquial Tamil. The [first](/blog/learning-colloquial-tamil-2) is an update to this post with a few additional learning resources I've found as well as published Anki decks. The [second](/blog/tamil-transliteration) is a guide on how to read and pronounce the Tamil script, and transliterate it using Python.
 
 With the first semester of my PhD finally complete, I now have a few weeks of winter break before my classes start again at the end of January. To fill up my time, I've decided to try and pick up Tamil. In this post, I'll go over some of the resources that I've found (and created) to help me learn.
 

@@ -10,14 +10,21 @@ body,
   width: 100%;
 }
 
+html {
+  color-scheme: dark;
+}
+
+#map {
+  background: #0c0c0c;
+}
+
 .codes {
   font-weight: bold;
   color: #ffffff;
 }
 
-/* Keep the route colors and airport labels readable over the OSM background. */
-.route-basemap {
-  filter: grayscale(1) invert(1);
+.map-overview .codes {
+  display: none;
 }
 
 #map-status {
@@ -27,13 +34,36 @@ body,
   top: 90px;
   z-index: 1000;
   padding: 8px;
-  background: white;
-  color: #222;
+  background: #1c1c1c;
+  color: #eee;
   font: 14px Arial, sans-serif;
 }
 
 .leaflet-control-layers-expanded {
   font-size: 14px;
+}
+
+.leaflet-control-layers,
+.leaflet-bar a {
+  background: #1c1c1c;
+  color: #eee;
+  border-color: #444;
+}
+
+.leaflet-bar a:hover,
+.leaflet-bar a:focus {
+  background: #333;
+  color: #fff;
+}
+
+.leaflet-control-attribution {
+  max-width: calc(100vw - 20px);
+  background: rgba(20, 20, 20, 0.9) !important;
+  color: #ccc;
+}
+
+.leaflet-control-attribution a {
+  color: #99c8e5;
 }
 
 .info {
@@ -50,26 +80,25 @@ body,
 .legend {
   padding: 6px 8px;
   font: 14px Helvetica, serif;
-  background: white;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(25, 25, 25, 0.94);
   /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
   /*border-radius: 5px;*/
   line-height: 24px;
-  color: #555;
+  color: #ddd;
   margin: 10px;
 }
 .legend h3 {
   text-align: center;
   font-size: 24px;
   margin: 2px 12px 8px;
-  color: #777;
+  color: #eee;
 }
 
 .legend h4 {
   text-align: center;
   font-size: 16px;
   margin: 0px 0px 0px;
-  color: rgb(0, 120, 168);
+  color: #99c8e5;
 }
 
 .legend span {

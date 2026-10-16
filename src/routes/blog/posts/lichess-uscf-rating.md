@@ -33,7 +33,7 @@ In this blog, I’ll be talking specifically about four types of tournaments: Li
 
 For both SwissSys Manual and SwissSys automatic, I do acknowledge that this is significantly more effort than having Lichess run the tournament for you, but it comes with the key benefit that TDs get complete control over pairings. This means TDs can pair players using USCF Ratings, they can do team pairings (including avoiding sibling matchups), and they can use accelerated pairings.
 
-High-level Code Overview
+### High-level Code Overview
 
 ![](/uploads/optimized/code-1536x983.webp)
 
@@ -43,7 +43,7 @@ In the project, there are two options for how to run the code.
 
 **Option 1:** This is the easier of the two options, and is used for built-in Lichess Arena and Lichess Swiss events. Essentially, all a TD needs to do is run a Arena or Swiss as usual, and then follow the instructions listed in the [Readme](https://github.com/saumikn/swiss-by-api/blob/master/README.md).
 
-To look at how the code actually works, let’s look inside arena.py. Here is a quick pseudocode of the conversion process.
+To look at how the code actually works, let’s look inside [arena.py](https://github.com/saumikn/swiss-by-api/blob/master/arena.py). Here is a quick pseudocode of the conversion process.
 
 1. The TD needs to have a file in the same directory called data.csv, where all of the players have information with their Lichess username, USCF Id, and Name
 2. Make an API request at [https://lichess.org/api/tournament_id/games](https://lichess.org/api#tag/tournaments-arena) to get the games of the tournament.

@@ -23,7 +23,9 @@ My goals for this rotation were to extend the work done by Jiao and improve his 
 
 CRPS is a scoring measure which allows us to measure the distance between an observation and a distribution. The CRPS measure is denoted by the following equation:
 
-`$$\[CRPS(F,y)=\int_{-\infty}^y F(x)^2 dx + \int_y^\infty (1-F(x))^2 dx\]$$`
+$$
+CRPS(F,y)=\int_{-\infty}^y F(x)^2 dx + \int_y^\infty (1-F(x))^2 dx
+$$
 
 , where $F$ represents the Cumulative Distribution Function of the distribution. CRPS is an ideal scoring measure for forecasting, as it considers the entire distribution in the score, and rewards both accurate and precise forecasts. For this reason, CRPS is a very common scoring measure in a different domain of forecasting – meteorology. The other reason that CRPS is ideal is it’s measured in the same units as the outcome itself (in this case minutes), compared to other measures such as negative log likelihood (NLL) which creates very unintuitive results. In fact, in the deterministic forecast, CRPS actually collapses down to a more common scoring measure, mean absolute error (MAE). Thanks to this property, CRPS allows us to directly compare results with prior papers which use MAE as a scoring measure.
 

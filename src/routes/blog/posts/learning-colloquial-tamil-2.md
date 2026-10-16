@@ -19,7 +19,7 @@ In my opinion, learning sentences is one of the best ways for language study, si
 
 Unfortunately, I've never been able to find a proper dataset for learning Tamil sentences. I've considered using the [Tatoeba](https://tatoeba.org/en/) dataset, but there are very few Tamil sentences available (around 400), and most of them are repetitive and not interesting.
 
-However, a few days ago, I found a few new resources by [Agurchand Babu Subramanian](https://www.youtube.com/@agurchand/search) and [Gokila Agurchand](https://www.youtube.com/c/GokilaAgurchand) (who from what I can tell, are a married couple?). They each have Youtube channels with hundreds of thousands of subscribers, teaching Tamil, Telugu, Kannada, Malayalam, Hindi, and English. They have a website with some dialogues and sentences and vocab. They have a set of Android apps which seem to be a slight superset of the content on their website.
+However, a few days ago, I found a few new resources by [Agurchand Babu Subramanian](https://www.youtube.com/@agurchand/search) and [Gokila Agurchand](https://www.youtube.com/c/GokilaAgurchand) (who from what I can tell, are a married couple?). They each have Youtube channels with hundreds of thousands of subscribers, teaching Tamil, Telugu, Kannada, Malayalam, Hindi, and English. They have a [website](https://www.tutorialsmade.com/category/spoken-english-through-tamil/english-conversations/) with some dialogues and sentences and vocab. They have a set of [Android apps](https://play.google.com/store/apps/developer?id=agurchand) which seem to be a slight superset of the content on their website.
 
 ![](/uploads/optimized/image-1689691343308.webp)
 

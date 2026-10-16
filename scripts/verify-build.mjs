@@ -69,6 +69,7 @@ for (const legacy of ['/cv', '/about', '/projects', '/experience', '/scc-schedul
 
 let links = 0;
 const embeddedPages = new Set();
+const embeddedModules = new Set();
 const pages = [
 	'index.html',
 	'blog.html',
@@ -99,6 +100,11 @@ for (const file of pages) {
 			!/web\.archive\.org[^"\s]*saumikn\.com\/wp-content/.test(html),
 			`Archived own-media reference: ${file}`
 		);
+		const prose = html
+			.replace(/<(?:script|pre|code)\b[^>]*>[\s\S]*?<\/(?:script|pre|code)>/g, '')
+			.replace(/<!--[\s\S]*?-->/g, '');
+		assert(!/\]\(https?:\/\//.test(prose), `Unrendered Markdown link in ${file}`);
+		assert(!/\[\^\d+\]|\^\[\d+\]|\\footnote\[/.test(prose), `Unrendered footnote in ${file}`);
 	}
 	for (const [, reference] of html.matchAll(
 		/<(?:a|img|link|script|iframe)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/g
@@ -107,7 +113,15 @@ for (const file of pages) {
 			reference.replaceAll('&amp;', '&'),
 			`${origin}/${route === '/' ? '' : route}`
 		);
-		if (target.origin !== origin || reference.startsWith('#')) continue;
+		if (reference.startsWith('#')) {
+			const fragment = decodeURIComponent(target.hash.slice(1));
+			if (fragment) {
+				const ids = new Set([...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]));
+				assert(ids.has(fragment), `Broken fragment in ${file}: ${reference}`);
+			}
+			continue;
+		}
+		if (target.origin !== origin) continue;
 		const filename = decodeURIComponent(target.pathname).replace(/^\//, '');
 		if (redirects.has(target.pathname) || target.pathname.startsWith('/blog/posts/')) continue;
 		const resolved = filename
@@ -124,6 +138,16 @@ for (const file of pages) {
 // Embedded projects are separate documents; their dependencies must be present too.
 for (const file of embeddedPages) {
 	const html = await read(file);
+	const importMap = html.match(/<script type="importmap">([\s\S]*?)<\/script>/);
+	if (importMap) {
+		for (const reference of Object.values(JSON.parse(importMap[1]).imports)) {
+			const filename = new URL(reference, `${origin}/${file}`).pathname.slice(1);
+			assert(await exists(filename), `Missing import-map dependency: ${reference}`);
+			embeddedModules.add(filename);
+		}
+	}
+	for (const [, reference] of html.matchAll(/\bfrom\s+["'](\.[^"']+)["']/g))
+		embeddedModules.add(new URL(reference, `${origin}/${file}`).pathname.slice(1));
 	for (const [, reference] of html.matchAll(
 		/<(?:img|link|script|iframe)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/g
 	)) {
@@ -133,6 +157,17 @@ for (const file of embeddedPages) {
 		assert(await exists(filename), `Broken embedded-project reference in ${file}: ${reference}`);
 		if (filename.endsWith('.html')) embeddedPages.add(filename);
 		links++;
+	}
+}
+for (const file of embeddedModules) {
+	assert(await exists(file), `Missing project module: ${file}`);
+	const source = await read(file);
+	for (const [, reference] of source.matchAll(
+		/(?:\bfrom\s*|\bimport\s*\(|\bnew URL\s*\()\s*["'](\.[^"']+)["']/g
+	)) {
+		const filename = new URL(reference, `${origin}/${file}`).pathname.slice(1);
+		assert(await exists(filename), `Missing dependency in ${file}: ${reference}`);
+		if (/\.(?:m?js)$/.test(filename)) embeddedModules.add(filename);
 	}
 }
 assert(

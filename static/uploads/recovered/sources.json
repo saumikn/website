@@ -90,5 +90,12 @@
 		"previous": "https://www.microsoft.com/en-us/research/uploads/prod/2020/11/Figure3_AIandChess_high-res-1024x571.jpg",
 		"source": "https://www.microsoft.com/en-us/research/uploads/prod/2020/11/Figure3_AIandChess_high-res-1024x571.jpg",
 		"sha256": "5e318d22bf6e22cf952fe4f03e12470dfd23ae636110158b8e26b2e75300f4a2"
+	},
+	{
+		"file": "/uploads/recovered/levonian-icwsm2020.pdf",
+		"source": "https://distantreader.org/stacks/journals-ojs/icwsm/icwsm-7310.pdf",
+		"previous": "https://www.aaai.org/ojs/index.php/ICWSM/article/view/7310/7164",
+		"doi": "10.1609/icwsm.v14i1.7310",
+		"sha256": "58738653aa08164a45a42c5be9b3f0ba5c7c61e35a05b808afa8d56aee17702c"
 	}
 ]

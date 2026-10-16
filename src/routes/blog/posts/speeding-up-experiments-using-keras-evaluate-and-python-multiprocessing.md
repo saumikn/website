@@ -34,7 +34,7 @@ def df_get_preds(model, df):
     alphas = preds.apply(lambda row: row[num_densities*2:])
     return mus, sigmas, alphas
 
-  def crps(model, df):
+def crps(model, df):
     mus, sigmas, alphas = df_get_preds(model, df)
     mus = mus.to_numpy() * normalizer.std_actual + normalizer.mean_actual
     sigmas = sigmas.to_numpy() * normalizer.std_actual
@@ -89,6 +89,8 @@ model.compile(optimizer='adam', loss=mdn_2ln, metrics=[crps_metric], run_eagerly
 crps = model.evaluate(x=x_test, y=y_test)
 ```
 
+As it turns out, this code is much much faster! The old code took about 15 minutes to run one experiment, while the updated code takes 45 seconds. This is about a 20x improvement in speed!
+
 ## Using Python Multiprocessing
 
 This week, I was finally able to get access to the WashU school servers, so I didn't need to run the code on my personal computer 24/7 and hear my fans on all the time 😬.
@@ -100,13 +102,14 @@ As it turns out, Python doesn't use multiple cores for computation by default. I
 ```python
 from multiprocessing import Pool
 
-def experiment(args):
-	# Define and train a model as defined by input specs
+def experiment(*args):
+    # Define and train a model as defined by input specs
     # Calculate CRPS on validation and test sets
     # Return CRPS
+    ...
 
 with Pool() as p:
-	args = [[1,4,3,1]] # Model specifications
+    args = [[1,4,3,1]] # Model specifications
     args = args * 32 # Number of experiments we want to run
     crps_results = p.starmap(experiment, args)
     p.close()

@@ -5,16 +5,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./vendor/leaflet/leaflet.css" />
-    <script src="./vendor/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="./vendor/maplibre/maplibre-gl.css" />
     <link rel="stylesheet" href="./leaflet/map.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "leaflet": "./vendor/leaflet/leaflet-src.esm.js",
+          "maplibre-gl": "./vendor/maplibre/maplibre-gl.mjs"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="map" aria-label="Airline routes map"></div>
     <p id="map-status" role="status" hidden></p>
     <script type="module">
+      import * as L from "leaflet";
       import { getMap } from "./leaflet/map.js";
+      import { addBackground } from "./leaflet/background.js";
 
-      const map = L.map("map").setView([38, -96], 5);
+      const map = L.map("map", {
+        minZoom: 1,
+        maxZoom: 19,
+        maxBounds: [[-85.05, -180], [85.05, 180]],
+        maxBoundsViscosity: 1,
+      }).fitBounds([[24, -125], [50, -66]], { padding: [8, 8], maxZoom: 5 });
+      const updateDetail = () => map.getContainer().classList.toggle("map-overview", map.getZoom() < 5);
+      map.on("zoomend", updateDetail);
+      updateDetail();
       map.createPane("airports");
       map.getPane("airports").style.zIndex = 450;
       map.createPane("circles");
@@ -26,26 +44,12 @@
         status.textContent = message;
         status.hidden = false;
       };
-      const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        className: "route-basemap",
-        keepBuffer: 0,
-        updateWhenIdle: true,
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      addBackground(map, {
+        onReady: () => { if (!routeError) status.hidden = true; },
+        onFallback: () => {
+          if (!routeError) showError("Showing a simplified map because the detailed background could not load.");
+        },
       });
-      let tileErrors = 0;
-      tiles.on("loading", () => { tileErrors = 0; });
-      tiles.on("tileerror", () => { tileErrors++; });
-      tiles.on("load", () => {
-        if (routeError) return;
-        if (tileErrors) {
-          showError("Some map background tiles could not load. Reload the page to try again.");
-        } else {
-          status.hidden = true;
-        }
-      });
-      tiles.addTo(map);
 
       const legends = {
         All: ["Airline Key", [

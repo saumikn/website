@@ -42,9 +42,9 @@ In addition to the usability factor, I am generally a fan of the Jupyter workflo
 
 ## Implementing the Autograder
 
-I'll give a quick overview of how my autograder works in this section. If you just want to dive into the code, you can check out the file `grader.py`.
+I'll give a quick overview of how my autograder works in this section. If you just want to dive into the code, you can check out the file [`grader.py`](https://github.com/saumikn/py4e-exercises/blob/main/grader.py).
 
-At the top of each notebook (for example `05-iterations.ipynb`), I first provide links to all of the relevant materials - the main lesson page, all the lecture videos, the lesson slides, the textbook chapter, and the link to the quiz. I would expect that students go through all of this material before starting the exercises.
+At the top of each notebook (for example [`05-iterations.ipynb`](https://nbviewer.org/github/saumikn/py4e-exercises/blob/main/05-iterations.ipynb)), I first provide links to all of the relevant materials - the main lesson page, all the lecture videos, the lesson slides, the textbook chapter, and the link to the quiz. I would expect that students go through all of this material before starting the exercises.
 
 The next cell, `from grader import *` simply makes the autograder functionality available for the rest of the exercises. Otherwise, the students can solve the exercises on their own, but won't be able to check their answers.
 

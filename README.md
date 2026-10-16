@@ -65,15 +65,27 @@ The airline-map project is restored under `static/projects/airlinemaps` from
 [saumikn/airlinemaps](https://github.com/saumikn/airlinemaps) commit
 `be80d908ee8d9646b1e100a83eb408901532a7c4`, retaining its MIT license and original
 route dataset. The site embeds it at `/airlinemaps`. Its background uses the
-standard [OpenStreetMap tile service](https://operations.osmfoundation.org/policies/tiles/)
-with visible attribution, normal browser caching, and a dark CSS filter for route
-contrast. It does not require an API key. Leaflet 1.9.4 and its assets are served
-locally, with the upstream license in `static/projects/airlinemaps/vendor/leaflet`.
+[Dark Matter style](https://openmaptiles.org/styles/dark-matter/) with
+[OpenFreeMap vector tiles](https://openfreemap.org/quick_start/). It is natively dark
+and does not require an API key. The style is stored locally under
+`static/projects/airlinemaps/styles`, together with its attribution and licenses.
+Leaflet 1.9.4, MapLibre GL JS 6.14.0 and the MapLibre Leaflet adapter 0.1.4 are
+served locally under `static/projects/airlinemaps/vendor`; package sources and
+licenses are retained there. Local Natural Earth v5.1.2 country and state outlines
+provide a dark geographic background if WebGL or the tile service is unavailable.
+The initial view fits the continental US on both desktop and phone screens.
 The airline selector updates both routes and legends; airport selections reset
 when switching airlines. Recovered article illustrations and their original source
 URLs are recorded in `static/uploads/recovered/sources.json`. Two externally hosted
 originals (the Air Arabia map and Typepad pause image) remain unavailable; images
 that fail to load show their existing alternative text with an availability message.
+Migration repairs also restore original citation links, footnotes, equations and
+superscripts from the WordPress export. The historical prose and scientific claims
+are retained. The normal-distribution equation omitted from the CRPS post needs
+an editorial decision: the formula in the export disagrees with that post's Python
+implementation. The retired Microsoft CRAN snapshot reference now links to the
+scoringRules authors' journal paper. The ICWSM paper download is restored from an
+archived copy, with its source URL and publisher DOI recorded in the media manifest.
 The States Chess Cup schedule/rules redirects use the
 original Google Sheet and Google Doc published by
 [Silver State Chess in August 2020](https://silverstatechess.org/category/news/page/5/).

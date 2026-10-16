@@ -5,12 +5,12 @@ categories:
   - chess
   - research
 published: true
-description: 'In this report, we explore the methodologies and results of predicting move times in chess. The analysis is based on a dataset of chess games, focusing on various factors that…'
+description: Modeling aleatoric and epistemic uncertainty in a neural network that predicts how long human chess players take to move.
 ---
 
 ## Summary
 
-In this report, we explore the methodologies and results of predicting move times in chess. The analysis is based on a dataset of chess games, focusing on various factors that influence the time taken for each move.
+For this project, I analyzed methods to model the aleatoric and epistemic uncertainty of a neural network model for predicting the amount of time that a human player will use for a given move in a chess position.
 
 ## Data Overview
 

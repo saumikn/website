@@ -21,7 +21,7 @@ I have already started some preliminary work for the computer vision side of the
 
 ## Finding Missing Moves Algorithm
 
-When analyzing prior games from a scoresheet, one very common challenge faced especially by new or scholastic players is when there is an error in the chess notation. Maybe the player forgot to notate a pair of moves, \footnote[In chess, normally a move refers to a pair of two moves - one for White, and one for Black. The term _ply_ is used for a single half-move. However, in this post I will be using the term move to refer to half-moves, as the term ply is more unknown to general audiences.] or the player’s handwriting was illegible for a certain move. This can cause significant issues when analyzing the game afterwards.
+When analyzing prior games from a scoresheet, one very common challenge faced especially by new or scholastic players is when there is an error in the chess notation. Maybe the player forgot to notate a pair of moves, <sup><a href="#fn-1" id="fnref-1" aria-label="Footnote 1">1</a></sup> or the player’s handwriting was illegible for a certain move. This can cause significant issues when analyzing the game afterwards.
 
 For example, a player might be trying to analyze their 60-move game but skipped notating for both sides on moves 12 and 13. If the player can’t remember what these moves were, it essentially invalidates the remaining 47 moves, as the player won’t be able to analyze these moves as well.
 
@@ -42,7 +42,7 @@ To solve this problem, I’ve developed a simple algorithm which can determine w
 
 ## Algorithm Code
 
-Below I show my implementation of the code to serve as a reference while reading through the walkthrough. All chess-specific calls I have to make, including updating the board, checking legal moves, and getting the current board state were done through the python-chess library.
+Below I show my implementation of the code to serve as a reference while reading through the walkthrough. All chess-specific calls I have to make, including updating the board, checking legal moves, and getting the current board state were done through the [python-chess](https://pypi.org/project/python-chess/) library.
 
 ```python
 import chess
@@ -101,13 +101,13 @@ Along with the number of games increasing exponentially, we see that the runtime
 
 Fortunately, we can look at the runtime another way, by analyzing the algorithm itself. In order to do this, we need to consider three parameters: the number of moves in the chess game, the average [branching factor](https://en.wikipedia.org/wiki/Branching_factor) per move, and the number of missing moves. We denote these numbers as n, b, and k, respectively.
 
-At each split, the number of branches will be increased by a factor of b. Let's say b=3. Then, with 0 missing moves, we have 1 branch, 1 missing move gives us 3 branches, 2 missing moves gives us 9 branches, 3 missing moves gives us 27 branches, etc.. For each branch, we have to go through every move in the branch to determine if the total branch is valid, so we get a runtime of O(n\*bk).
+At each split, the number of branches will be increased by a factor of b. Let's say b=3. Then, with 0 missing moves, we have 1 branch, 1 missing move gives us 3 branches, 2 missing moves gives us 9 branches, 3 missing moves gives us 27 branches, etc.. For each branch, we have to go through every move in the branch to determine if the total branch is valid, so we get a runtime of $O(n*b^k)$.
 
 Actually, with the way the algorithm is set up, we don’t have to go through every move in the branch, only the moves after the branch splits. However, this makes no difference to the runtime, since we can’t make assumptions on where the branch is splitting in the tree.
 
-We can now specify this runtime even further by using existing knowledge of a chess game to determine the actual branching factor. Chess doesn’t have a set branching factor, as each position has a varying number of legal moves. However, user kentdjb on chess.stackoverflow.com looked through 2.5 million games from [ChessBase](https://en.chessbase.com/), and found an average branching factor of [31.1](https://web.archive.org/web/20240716023305/https://chess.stackexchange.com/questions/23135/what-is-the-average-number-of-legal-moves-per-turn). Depending on the position, there could be as many as [218](https://web.archive.org/web/20240716023305/https://lichess.org/analysis/fromPosition/R6R/3Q4/1Q4Q1/4Q3/2Q4Q/Q4Q2/pp1Q4/kBNN1KB1_w_-_-(!) child branches, although we should realistically never get close to this number.
+We can now specify this runtime even further by using existing knowledge of a chess game to determine the actual branching factor. Chess doesn’t have a set branching factor, as each position has a varying number of legal moves. However, user kentdjb on chess.stackoverflow.com looked through 2.5 million games from [ChessBase](https://en.chessbase.com/), and found an average branching factor of [31.1](https://web.archive.org/web/20240716023305/https://chess.stackexchange.com/questions/23135/what-is-the-average-number-of-legal-moves-per-turn). Depending on the position, there could be as many as [218](https://lichess.org/analysis/fromPosition/R6R/3Q4/1Q4Q1/4Q3/2Q4Q/Q4Q2/pp1Q4/kBNN1KB1_w_-_-)(!) child branches, although we should realistically never get close to this number.
 
-Using this information, we can give our algorithm an average runtime of `$O(n*31.1k)$`, and a worst-case runtime of `$O(n*218k)$`.
+Using this information, we can give our algorithm an average runtime of $O(n*31.1^k)$, and a worst-case runtime of $O(n*218^k)$.
 
 ## Conclusion and Next Steps
 
@@ -119,3 +119,7 @@ If I don't get through all of these stages that's fine, as long as I'm happy wit
 
 See you soon!
 Saumik
+
+<hr />
+
+<p id="fn-1">In chess, normally a move refers to a pair of two moves - one for White, and one for Black. The term <em>ply</em> is used for a single half-move. However, in this post I will be using the term move to refer to half-moves, as the term ply is more unknown to general audiences. <a href="#fnref-1" aria-label="Return to footnote reference">↩</a></p>

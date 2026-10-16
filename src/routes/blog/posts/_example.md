@@ -23,7 +23,7 @@ or in multiple languages
 const example = 'Hello, world!';
 ```
 
-We might have a inline equation like `$E = mc^2$`. **Important, in-line latex should always be surrounded by backticks like an inline code block, since our markdown parser will not parse latex otherwise.**
+We might have an inline equation like $E = mc^2$. Surround inline LaTeX with dollar signs. Use backticks only when displaying the LaTeX source as code.
 
 **IMPORTANT: Please use backticks to escape dollar signs in text. For example, if we want to write 100 million dollars, we should write `$`100 million.**
 

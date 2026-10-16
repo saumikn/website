@@ -13,7 +13,7 @@ For this assignment, I’ve chosen to write about the paper: [On the Feasibility
 
 ## Summary
 
-Prior literature has explored the idea of using inverse reinforcement learning to learn the reward functions of biased agents, for example [1][2][3]. However, each of these papers made key assumptions about the nature of the agent, which could lead to bad results if an IRL system made an incorrect assumption about biases. This paper aims to learn the nature of biased agents directly, without making any assumptions about the agent.
+Prior literature has explored the idea of using inverse reinforcement learning to learn the reward functions of biased agents, for example [[1](https://arxiv.org/abs/1512.05832)][[2](https://arxiv.org/abs/1710.11040)][[3](https://arxiv.org/abs/1805.08010)]. However, each of these papers made key assumptions about the nature of the agent, which could lead to bad results if an IRL system made an incorrect assumption about biases. This paper aims to learn the nature of biased agents directly, without making any assumptions about the agent.
 
 In the paper, the authors model agents with several types of biases – naïve/sophisticated agents (which suffer from hyperbolic time discounting), overconfident/underconfident agents (which incorrectly estimate probabilistic events), and myopic agents (which suffer from the horizon effect).
 

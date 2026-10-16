@@ -1,3 +1,5 @@
+import * as L from "leaflet";
+
 export async function getMap(map, maptype) {
   const getData = async (file) => {
     const response = await fetch(`./data/${maptype}/${file}.json`);
@@ -75,8 +77,9 @@ export async function getMap(map, maptype) {
 
   function airportToCircleMarker(feature, latlng) {
     return L.circleMarker(latlng, {
-      radius: 4,
+      radius: map.getZoom() < 5 ? 2 : 4,
       color: "white",
+      weight: 1,
       fillOpacity: 1,
       pane: "airports",
       bubblingMouseEvents: false,
@@ -150,6 +153,11 @@ export async function getMap(map, maptype) {
   ]);
   // Reset the selection when changing airlines, without leaving filtered layers behind.
   layerGroup.on("remove", showAll);
+  map.on("zoomend", () => {
+    const radius = map.getZoom() < 5 ? 2 : 4;
+    airportLayer.eachLayer(layer => layer.setRadius(radius));
+    filterAirportLayer.eachLayer(layer => layer.setRadius(radius));
+  });
 
   return layerGroup;
 }
