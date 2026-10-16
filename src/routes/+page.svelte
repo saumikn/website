@@ -51,8 +51,9 @@
 			<br />
 
 			<p>
-				Outside of work, I enjoy playing chess and other board games, climbing, pickleball, and
-				cooking
+				Outside of work, I enjoy playing board games, climbing, pickleball, traveling, and cooking.
+				I'm also a strong advocate for improving our cities, especially in the areas of public
+				transit and housing affordability.
 			</p>
 		</div>
 	</div>
