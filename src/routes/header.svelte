@@ -13,6 +13,7 @@
 				</a>
 			</li>
 			<li><a href={resolve('/blog')}>Blog</a></li>
+			<li><a href="https://saumikn.com/cv" data-sveltekit-reload>CV</a></li>
 		</ul>
 		<Toggle />
 	</nav>

@@ -42,9 +42,8 @@ frontmatter. Put unpublished examples in filenames starting with `_` and use
 are generated from this metadata. Short previews are computed at build time;
 article bodies are not sent with the blog index.
 
-The repair preserves existing page wording. Research, Contact and Other still
-contain their original placeholder text; these pages are marked `noindex` and
-excluded from the sitemap until the author replaces that text.
+Research, Contact and Other placeholder pages have been removed; their old URLs
+redirect to the homepage. The header links to the blog and the current CV.
 
 Original media and downloads are in `static/uploads`; optimized WebP versions are
 in `static/uploads/optimized`. To regenerate the optimized images after adding or
@@ -58,8 +57,11 @@ npm run verify
 
 The optimized files and dimension metadata are checked in. Ordinary builds do not
 need to regenerate images or access archived websites. Legacy WordPress download
-URLs redirect to restored files. `/cv` serves the January 2024 CV available in the
-backup; this repair does not represent it as a current CV.
+URLs redirect to restored files. `/cv` and `/cv/` temporarily redirect to
+`static/uploads/SaumikNarayananCV-2026_10.pdf`, copied from the owner's CV folder.
+To publish a newer CV, copy its PDF into `static/uploads`, update the two `/cv`
+destinations in `static/_redirects`, then commit and push. Historical PDFs retain
+their original URLs. The public site does not read the local CV folder directly.
 
 The airline-map project is restored under `static/projects/airlinemaps` from
 [saumikn/airlinemaps](https://github.com/saumikn/airlinemaps) commit

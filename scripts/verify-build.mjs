@@ -46,7 +46,7 @@ let foundDynamic = false,
 	staticRules = 0;
 for (const [source, destination, status] of redirectRules) {
 	assert(source.startsWith('/'), 'Cloudflare Pages cannot match a source hostname');
-	assert.equal(status, '301');
+	assert.equal(status, source === '/cv' || source === '/cv/' ? '302' : '301');
 	const dynamic = source.includes('*') || source.includes(':');
 	if (dynamic) {
 		foundDynamic = true;

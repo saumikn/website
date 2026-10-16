@@ -38,6 +38,7 @@
 		<nav id="mobile-menu" class="mobile-menu" transition:slide={{ duration: 200, axis: 'y' }}>
 			<ul>
 				<li><a href={resolve('/blog')} onclick={close}>Blog</a></li>
+				<li><a href="https://saumikn.com/cv" data-sveltekit-reload onclick={close}>CV</a></li>
 			</ul>
 			<div class="toggle-container">
 				{@render children()}
