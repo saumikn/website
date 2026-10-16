@@ -1,0 +1,8 @@
+{
+	"$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+	"name": "saumikn-www-redirect",
+	"main": "www-redirect.js",
+	"compatibility_date": "2026-10-16",
+	"workers_dev": false,
+	"routes": [{ "pattern": "www.saumikn.com/*", "zone_name": "saumikn.com" }]
+}

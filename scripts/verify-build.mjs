@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { escapeXml } from '../src/lib/xml.ts';
+import wwwRedirect from '../cloudflare/www-redirect.js';
 
 const output = '.svelte-kit/cloudflare';
 const origin = 'https://saumikn.com';
@@ -131,4 +132,20 @@ const css = (await Promise.all(cssFiles.map((file) => read(`_app/immutable/asset
 assert(!css.includes('🔥'));
 console.log(
 	`Verified ${pages.length} pages, ${posts.length} articles, ${links} internal references, crawler endpoints, structured data, feed, sitemap, draft exclusion and static 404 output.`
+);
+
+for (const input of [
+	'https://www.saumikn.com/',
+	'http://www.saumikn.com/blog/example?ref=test&value=a%20b'
+]) {
+	const response = wwwRedirect.fetch(new Request(input));
+	const expected = new URL(input);
+	expected.protocol = 'https:';
+	expected.hostname = 'saumikn.com';
+	assert.equal(response.status, 301);
+	assert.equal(response.headers.get('Location'), expected.toString());
+}
+assert.equal(wwwRedirect.fetch(new Request('https://unrelated.example/')).status, 404);
+console.log(
+	'Verified www redirects preserve paths and query strings and cannot redirect to arbitrary hosts.'
 );

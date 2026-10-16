@@ -2,7 +2,7 @@
 
 Personal website built with SvelteKit, Svelte and Markdown. All pages, feeds and
 crawler endpoints are rendered as static files; production does not require a
-Worker, database or Git LFS.
+application server, database or Git LFS. A separate, small edge Worker can redirect the existing www hostname to the apex domain.
 
 ## Development
 
@@ -71,13 +71,23 @@ original Google Sheet and Google Doc published by
 
 ## Domain and indexing follow-up
 
-The apex domain `saumikn.com` must remain attached to the Pages project. To repair
-`www.saumikn.com`, configure Cloudflare's account-level [www-to-apex redirect](https://developers.cloudflare.com/pages/how-to/www-redirect/):
-source `www.saumikn.com`, target `https://saumikn.com`, status 301, with query
-preservation, subpath matching and path-suffix preservation enabled. The source
-hostname needs a proxied DNS record so the redirect runs at Cloudflare's edge.
-Pages `_redirects` cannot match a source hostname, and a repository change cannot
-repair its DNS or account-level redirect rules. Also check for a dashboard
+The apex domain `saumikn.com` must remain attached to the Pages project. The
+existing `www` hostname already reaches Cloudflare's proxy but returns 522 from
+its old origin. The scoped edge Worker in `cloudflare/www-redirect.js` returns a
+301 to the apex before attempting that origin, preserving paths and queries.
+It does not serve the site or implement a server-rendering fallback.
+
+With the owner's Cloudflare account authenticated, deploy it using:
+
+```sh
+npx wrangler@4.151.1 deploy --config cloudflare/wrangler.www.jsonc
+```
+
+The config targets only `www.saumikn.com/*` in the `saumikn.com` zone and disables
+its public `workers.dev` endpoint. If an existing Worker route already handles
+that hostname, inspect it before replacing it. Alternatively, use Cloudflare's
+[www-to-apex Bulk Redirect](https://developers.cloudflare.com/pages/how-to/www-redirect/).
+Pages `_redirects` cannot match a source hostname. Also check for a dashboard
 `NODE_VERSION` override that conflicts with Node 24.
 
 After deploying, verify `/robots.txt`, `/sitemap.xml`, `/rss.xml`, all article URLs
