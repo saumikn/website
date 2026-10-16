@@ -34,19 +34,25 @@
 			<br />
 
 			<p>
-				I'm currently a 5th-year PhD student at Washington University in St. Louis, working in
-				thefield of Artificial Intelligence with Chien-Ju Ho. I also heavily collaborate with Sid
-				Sen at Microsoft Research NYC.
+				I'm currently a Research Scientist at Meta NYC on the Instagram Trust & Safety team. I'm
+				working on deploying AI systems to automatically flag content violations.
 			</p>
 			<br />
 
 			<p>
-				My research focuses on the topic of AI-Assisted Decision Making. Some of my prior work has
-				analyzed human usage of AI assistance while answering ethical questions involving kidney
-				allocation. I have also researched the potential for AI models to learn from and leverage
-				low-skill human data to improve the task performance in chess and Atari. Currently, I am
-				working on designing intervention strategies for AI models to assist human decision making
-				in chess.
+				Previously, I was a PhD student at Washington University in St. Louis, where I worked on the
+				AI-Assisted Decision Making. Some of my research topics included:
+			</p>
+			<ul>
+				<li>Efficient algorithms for imitating low-skill human behavior (NeurIPS 2026)</li>
+				<li>Personalized intervention strategies for improving human decision making (RLC 2026)</li>
+				<li>Analyzing human usage of AI assistance in ethical domains (AIES 2022, AIES 2023)</li>
+			</ul>
+			<br />
+
+			<p>
+				Outside of work, I enjoy playing chess and other board games, climbing, pickleball, and
+				cooking
 			</p>
 		</div>
 	</div>

@@ -7,8 +7,6 @@ categories:
 published: true
 ---
 
-**Note - the interactive map is currently not working on my new website, will fix when I get time.**
-
 _You can jump straight to the interactive [visualization](https://saumikn.com/airlinemaps) here. Details on how I implemented this project are available in the [Github repo](https://github.com/saumikn/airlinemaps)._
 
 ![United Airlines Route Map](/uploads/optimized/united-airlines.webp)

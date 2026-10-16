@@ -38,8 +38,8 @@ However, there are a number of other closed-form functions which aren't implemen
 
 ```python
 def crps_norm(x, mu, sigma):
-    sx = (x-mu)/sigma
-    return sigma * (sx*(2*norm.cdf(sx)-1) + 2 * norm.pdf(sx) - 1/sqrt(pi))
+    sx = (x - mu) / sigma
+    return sigma * (sx * (2 * norm.cdf(sx) - 1) + 2 * norm.pdf(sx) - 1 / sqrt(pi))
 ```
 
 ## Mixture of Normal Distributions
@@ -51,21 +51,23 @@ def crps_mixnorm(x, mus, sigmas, alphas):
     def F(x):
         total = 0
         for i in range(M):
-            total += alphas[i] * norm.cdf((x-mus[i])/sigmas[i])
+            total += alphas[i] * norm.cdf((x - mus[i]) / sigmas[i])
         return total
 
     def A(mu1, mu2, sig1, sig2):
         sig = sqrt(sig1**2 + sig2**2)
-        sx = (mu1-mu2)/sig
-        return sx * sig * (2*norm.cdf(sx) - 1) + 2*sig*norm.pdf(sx)
+        sx = (mu1 - mu2) / sig
+        return sx * sig * (2 * norm.cdf(sx) - 1) + 2 * sig * norm.pdf(sx)
 
     total = 0
     for i in range(M):
-        total += alphas[i] * A(x,mus[i], 0,sigmas[i])
+        total += alphas[i] * A(x, mus[i], 0, sigmas[i])
 
     for i in range(M):
         for j in range(M):
-            total -= 0.5 * alphas[i] * alphas[j] * A(mus[i],mus[j], sigmas[i],sigmas[j])
+            total -= (
+                0.5 * alphas[i] * alphas[j] * A(mus[i], mus[j], sigmas[i], sigmas[j])
+            )
     return total
 ```
 
@@ -73,10 +75,12 @@ def crps_mixnorm(x, mus, sigmas, alphas):
 
 ```python
 def crps_lognorm(x, mu, sigma):
-    sx = (log(x)-mu)/sigma
-    ex = 2 * exp(mu + sigma**2/2)
+    sx = (log(x) - mu) / sigma
+    ex = 2 * exp(mu + sigma**2 / 2)
 
-    return x * (2 * norm.cdf(sx) - 1) - ex * (norm.cdf(sx-sigma) + norm.cdf(sigma/sqrt(2)) - 1)
+    return x * (2 * norm.cdf(sx) - 1) - ex * (
+        norm.cdf(sx - sigma) + norm.cdf(sigma / sqrt(2)) - 1
+    )
 ```
 
 You can check the code at the bottom to view the results and confirm that these functions have been implemented correctly, and produce identical results to numeric integration. In fact, using the closed-form solutions is more accurate, due to the inherent rounding errors arising from integration.
