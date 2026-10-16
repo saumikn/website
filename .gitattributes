@@ -1,1 +1,2 @@
-static/uploads/* filter=lfs diff=lfs merge=lfs -text
+# Static assets are stored directly so clean builds do not require Git LFS.
+static/uploads/** -filter -diff -merge

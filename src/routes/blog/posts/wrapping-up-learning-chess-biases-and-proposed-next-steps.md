@@ -1,10 +1,11 @@
 ---
-title: Wrapping up Learning Chess Biases and Proposed Next Steps
+title: 'Wrapping up Learning Chess Biases and Proposed Next Steps'
 date: '2020-11-15'
 categories:
   - chess
   - research
 published: true
+description: "Today is the final day of my first rotation with CJ and as part of the rotation requirements, I need to write a final report. In line with some of my other assignments, I've…"
 ---
 
 ## Introduction
@@ -19,7 +20,7 @@ However, traditional IRL requires a key assumption that the agent is performing 
 
 While these papers’ preliminary results showed promise in learning the reward functions of biased agents, each of these models held specific assumptions on the nature of the bias, which could lead to even worse results than traditional IRL if the model’s assumption about the nature of the bias was incorrect.
 
-![](https://saumikn.com/wp-content/uploads/2020/10/biasedmodels.png)
+![](/uploads/optimized/biasedmodels.webp)
 
 In 2019, Shah et al. explored a new approach, to see if these biases could be learned during the model along with the reward function. Using several novel techniques for this application, such as the use of a value iteration network and pretraining near-optimal agents from a subset of known rewards, the authors were able to achieve a slight improvement in agent understanding for a toy gridworld domain. In addition, the authors claim that with an improvement in available differentiable planners, this method would work even better.
 

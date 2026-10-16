@@ -1,9 +1,10 @@
 ---
-title: Qualitative and Quantitative Methods for Cancer Journeys
+title: 'Qualitative and Quantitative Methods for Cancer Journeys'
 date: '2020-10-04'
 categories:
   - research
 published: true
+description: 'Last week, I wrote about my first ever research project and publication, and I’ll continue this topic today by talking about my next project and publication at GroupLens.…'
 ---
 
 Last week, I wrote about my first ever research project and publication, and I’ll continue this topic today by talking about my next project and publication at GroupLens. Actually, quite a lot of time passed between these two projects, so first I’ll give a quick overview of what did in between the projects; I might elaborate on some of these in the future with dedicated blog posts of their own.

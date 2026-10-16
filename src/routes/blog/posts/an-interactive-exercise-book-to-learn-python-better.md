@@ -1,9 +1,10 @@
 ---
-title: An Interactive Exercise Book to Learn Python Better
+title: 'An Interactive Exercise Book to Learn Python Better'
 date: '2020-12-06'
 categories:
   - blog
 published: true
+description: "In the past, I've been asked by multiple people for recommendations on how to get started programming. However, when I looked online for courses, I honestly didn't find…"
 ---
 
 In the past, I've been asked by multiple people for recommendations on how to get started programming. However, when I looked online for courses, I honestly didn't find anything online that met my criteria of free, beginner-friendly, and engaging (assigning students interactive assignments). Here are some of my thoughts on the top results that come up if I just Google ["learn python online free interactive"](https://www.google.com/search?q=learn+python+online+free+interactive):

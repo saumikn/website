@@ -1,15 +1,11 @@
-<script>
-	import { page } from '$app/stores';
+<script lang="ts">
+	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
+	import Seo from '#lib/components/Seo.svelte';
 </script>
 
-<div class="error">
-	<h1>{$page.status}: {$page.error?.message}</h1>
-</div>
-
-<style>
-	.error {
-		height: 100%;
-		display: grid;
-		place-content: center;
-	}
-</style>
+<Seo title={`${page.status} | Saumik Narayanan`} noindex />
+<section class="content-wrapper">
+	<h1>{page.status}: {page.error?.message}</h1>
+	<p><a href={resolve('/')}>Home</a> · <a href={resolve('/blog')}>Blog</a></p>
+</section>

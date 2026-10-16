@@ -1,15 +1,16 @@
 ---
-title: First Steps in Calculating Chess Player Biases
+title: 'First Steps in Calculating Chess Player Biases'
 date: '2020-10-27'
 categories:
   - research
   - chess
 published: true
+description: 'Last week, I went over some functions I created to compress a chess board state into a set of integers, based on the component functions created during the Stockfish evaluation…'
 ---
 
 Last week, I went over some functions I created to compress a chess board state into a set of integers, based on the component functions created during the [Stockfish evaluation process](https://hxim.github.io/Stockfish-Evaluation-Guide/).
 
-![](https://saumikn.com/wp-content/uploads/2020/10/chess-position-1.png)
+![](/uploads/optimized/chess-position-1.webp)
 
 For example, in the above position, we get the compressed board state of `(0.9,0.05,-0.05,-0.42,0.31,0.0,-0.3,0.0)`. These values correspond to Material, Imbalance, Mobility, King Safety, Threats, Passed Pawns, Space, and Winnable. These values pass an initial sanity check for usefulness. For example, Passed Pawns is `0.0` because neither side has any passed pawns, or a chance to create any passed pawns in the near future. Space is `-0.3` because Black has slightly more space here. Material is `0.9`, presumably due to White’s bishop pair.
 
@@ -26,11 +27,11 @@ For each of these FEN positions, I then calculated three compressed states: the 
 
 Once I’ve calculated these statistics, the fun part is comparing the players against each other! You can look at the table below for the statistics that I calculated. p0-p7 refer to the 8 components of the compressed state, and each row represents an individual player’s results.
 
-![](https://web.archive.org/web/20240528232159im_/https://saumikn.com/wp-content/uploads/2020/10/player-bias.png)
+![](/uploads/optimized/player-bias.webp)
 
 However, this table is a little hard to look at, so I’ve applied a [PCA dimension reduction](<https://en.wikipedia.org/wiki/Dimensionality_reduction#Principal_component_analysis_(PCA)>) function given by [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) to reduce data to two columns (explaining about 83% of total variance). Now we’re able to plot the data!
 
-![]()
+![](/uploads/optimized/player-bias-plot.webp)
 
 The goal of this was to hopefully see clusters of points, representing meaningful patterns among the players themselves. If you squint, you can maybe see some patterns, but mostly you can just see that we need more data. Fortunately with Lichess, we have all the data we could possibly analyze, it’s just a question of actually going through that data. On my personal computer, it takes about an hour to generate each of those points. I’m hoping to get access to some faster computers on campus, but we will have to make do for now. I’ll try to get as much data as possible before my next meeting with CJ.
 

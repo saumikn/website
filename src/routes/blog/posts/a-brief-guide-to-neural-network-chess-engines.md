@@ -1,5 +1,5 @@
 ---
-title: A Brief Guide to Neural Network Chess Engines
+title: 'A Brief Guide to Neural Network Chess Engines'
 description: Overview of neural network chess engines and their evolution.
 date: '2021-01-17'
 categories:
@@ -8,7 +8,7 @@ categories:
 published: true
 ---
 
-Last week, I wrote an [article](https://saumikn.com/blog/guide-to-traditional-chess-engines/) explaining the basics on traditional chess engines. Today, I will go over the new generation of chess engines, using neural networks instead of brute force evaluation.
+Last week, I wrote an [article](/blog/guide-to-traditional-chess-engines) explaining the basics on traditional chess engines. Today, I will go over the new generation of chess engines, using neural networks instead of brute force evaluation.
 
 ## History
 

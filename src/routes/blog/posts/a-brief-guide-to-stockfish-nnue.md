@@ -1,5 +1,5 @@
 ---
-title: A Brief Guide to Stockfish NNUE
+title: 'A Brief Guide to Stockfish NNUE'
 description: Overview of Stockfish NNUE and its integration into chess engines.
 date: '2021-01-24'
 categories:
@@ -8,7 +8,7 @@ categories:
 published: true
 ---
 
-In my [last](https://saumikn.com/blog/guide-to-traditional-chess-engines/) [two](https://saumikn.com/blog/a-brief-guide-to-neural-network-chess-engines/) posts, I gave brief overviews to two of the more established paradigms for chess engines, represented by Stockfish and AlphaZero. In this post, I will go over the latest engine on the block - Stockfish NNUE. NNUE was integrated into the main Stockfish branch in late 2020 with [incredible results](https://www.chess.com/news/view/stockfish-12-released-130-elo-points-stronger)!
+In my [last](/blog/guide-to-traditional-chess-engines) [two](/blog/a-brief-guide-to-neural-network-chess-engines) posts, I gave brief overviews to two of the more established paradigms for chess engines, represented by Stockfish and AlphaZero. In this post, I will go over the latest engine on the block - Stockfish NNUE. NNUE was integrated into the main Stockfish branch in late 2020 with [incredible results](https://www.chess.com/news/view/stockfish-12-released-130-elo-points-stronger)!
 
 ## What is Stockfish NNUE?
 

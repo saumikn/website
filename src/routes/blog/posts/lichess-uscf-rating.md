@@ -1,9 +1,10 @@
 ---
-title: Rating USCF Tournaments on Lichess.org
+title: 'Rating USCF Tournaments on Lichess.org'
 date: '2020-06-23'
 categories:
   - chess
 published: true
+description: "In the last three months, I've run twelve USCF rated tournaments online and many more unrated tournaments, as COVID-19 has put all of our OTB tournaments on hold. Our biggest…"
 ---
 
 ## Introduction
@@ -14,13 +15,13 @@ If you want to dive right into the code, I’ve made it available to the public 
 
 ## Websites
 
-There are two major websites that I can use to run chess tournaments on: [chess.com](chess.com) and [lichess.org](lichess.org). I personally prefer Lichess, due to its better interface (in my opinion), it’s easy-to-use [API](https://lichess.org/api) for integrating with my own code, and because I like to support open-source projects. There is a 3rd platform we could also use, the [Internet Chess Club](https://www.chessclub.com/), but ICC is old, has a worse UI, and (most importantly) isn’t free.
+There are two major websites that I can use to run chess tournaments on: [chess.com](https://www.chess.com) and [lichess.org](https://lichess.org). I personally prefer Lichess, due to its better interface (in my opinion), it’s easy-to-use [API](https://lichess.org/api) for integrating with my own code, and because I like to support open-source projects. There is a 3rd platform we could also use, the [Internet Chess Club](https://www.chessclub.com/), but ICC is old, has a worse UI, and (most importantly) isn’t free.
 
 ## Types of Tournaments
 
 In this blog, I’ll be talking specifically about four types of tournaments: Lichess Arena, Lichess Swiss, SwissSys Manual, and SwissSys Automatic.
 
-![](https://web.archive.org/web/20240419132338im_/https://saumikn.com/wp-content/uploads/2020/06/swiss-1-1536x878.png)
+![](/uploads/optimized/swiss-1-1536x878.webp)
 
 **Lichess Arena**: In arena tournaments, there aren’t shared round start times, where everybody starts their round at the same time. Instead, players are paired as soon as the system finds a pairing for them. Unlike in a Swiss tournament, players may get paired against the same opponent more than once, though two players will never get paired against each other two games in a row.
 
@@ -34,7 +35,7 @@ For both SwissSys Manual and SwissSys automatic, I do acknowledge that this is s
 
 High-level Code Overview
 
-![](https://web.archive.org/web/20240419132338im_/https://saumikn.com/wp-content/uploads/2020/06/code-1536x983.png)
+![](/uploads/optimized/code-1536x983.webp)
 
 In the rest of the post, I will be going over the actual code which allows directors to rate tournaments from Lichess. For those of you who are more interested in actually running tournaments than looking at the code, especially if you don’t have any prior programming experience, I will suggest that you instead take a look at the [Readme](https://github.com/saumikn/swiss-by-api/blob/master/README.md) file, which has instructions on how directors can run the code.
 

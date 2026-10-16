@@ -1,33 +1,26 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Toggle from './toggle.svelte';
-	import * as config from '$lib/config';
-	import MobileMenu from '$lib/components/MobileMenu.svelte';
-	import { page } from '$app/stores';
-
-	// Get current path for active link highlighting
-	let currentPath = '';
-	if (typeof window !== 'undefined') {
-		currentPath = window.location.pathname;
-	}
+	import MobileMenu from '#lib/components/MobileMenu.svelte';
 </script>
 
 <header>
 	<nav class="desktop-nav">
 		<ul class="links">
 			<li>
-				<a href="/" class="name">
+				<a href={resolve('/')} class="name">
 					<span class="name-text">Saumik Narayanan</span>
 				</a>
 			</li>
-			<li><a href="/blog">Blog</a></li>
-			<li><a href="/research">Research</a></li>
-			<li><a href="/other">Other</a></li>
+			<li><a href={resolve('/blog')}>Blog</a></li>
+			<li><a href={resolve('/research')}>Research</a></li>
+			<li><a href={resolve('/other')}>Other</a></li>
 		</ul>
 		<Toggle />
 	</nav>
 
 	<nav class="mobile-nav">
-		<a href="/" class="name"><span class="name-text">Saumik Narayanan</span></a>
+		<a href={resolve('/')} class="name"><span class="name-text">Saumik Narayanan</span></a>
 		<MobileMenu>
 			<Toggle />
 		</MobileMenu>

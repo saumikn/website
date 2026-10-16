@@ -1,13 +1,14 @@
 ---
-title: Implementing Closed Form CPRS in Python
+title: 'Implementing Closed Form CPRS in Python'
 date: '2020-11-29'
 categories:
   - research
   - python
 published: true
+description: 'In my review of the paper Probabilistic forecasting of surgical case duration using machine learning: model development and validation last week, I briefly mentioned the term…'
 ---
 
-In my [review](https://saumikn.com/blog/paper-review-machine-learning-to-forecast-surgery-duration/) of the paper [Probabilistic forecasting of surgical case duration using machine learning: model development and validation](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocaa140/5919678) last week, I briefly mentioned the term CRPS. Today, I'll go into a little more detail on what CRPS actually is and discuss its implementation in Python.
+In my [review](/blog/paper-review-machine-learning-to-forecast-surgery-duration) of the paper [Probabilistic forecasting of surgical case duration using machine learning: model development and validation](https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocaa140/5919678) last week, I briefly mentioned the term CRPS. Today, I'll go into a little more detail on what CRPS actually is and discuss its implementation in Python.
 
 What is CRPS?
 
@@ -17,7 +18,9 @@ So why do we want to use CRPS? In normal regression problems, we can compare our
 
 This is where CRPS comes in, as it allows us to compare the actual result against the entire prediction distribution, instead of the just the mean of the distribution. The standard way we can calculate CRPS is with the integral
 
-`$$\[\mathrm{CRPS}(F,x) = \int_{-\infty}^x F(x)^2 dx + \int_x^{\infty} (1-F(x))^2 dx\]$$`
+$$
+\mathrm{CRPS}(F,x) = \int_{-\infty}^x F(x)^2 dx + \int_x^{\infty} (1-F(x))^2 dx
+$$
 
 , where $F$ represents the Cumulative Density Function of our prediction distribution, and $x$ represents the point we are checking against.
 

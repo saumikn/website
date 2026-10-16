@@ -1,5 +1,5 @@
 ---
-title: Thoughts on my first NeurIPS
+title: 'Thoughts on my first NeurIPS'
 description: Reflections on attending the NeurIPS conference for the first time, including experiences and insights.
 date: '2022-12-04'
 categories:
@@ -15,7 +15,7 @@ The most important thing you can do to get as much out of the conference is have
 
 One thing you absolutely need to do is prepare for the poster sessions beforehand, since each session has hundreds of people presenting. What I did was go through each of the paper tiles and abstracts before the session, and write down the titles and locations of each poster I wanted to visit.
 
-![Workshop](/uploads/image-1670196512182.png)
+![Workshop](/uploads/optimized/image-1670196512182.webp)
 
 My plan for Tuesday - the list of posters I went to and their locations
 
@@ -23,7 +23,7 @@ This goes for everything else as well - figure out which socials you want to att
 
 # 2. Manage the crowds
 
-![](https://web.archive.org/web/20241010021110im_/https://saumikn.com/wp-content/uploads/image-1670196512182.png)
+![](/uploads/optimized/image-1670196512182.webp)
 
 When you put eight thousand computer scientists into a single event, things tend to get chaotic. The poster sessions were jam packed, and there is basically no opportunity to talk to any presenter when there was already a crowd of people surrounding each poster. I got the most out of the sessions when I went 30 minutes early, and talked to the people as they were setting up, so I could actually have one-on-ones without trying to get through the crowds. I'd definitely recommend doing this in the future.
 
@@ -39,7 +39,7 @@ The "official" socials I went to were mostly better. The RL social was also chao
 
 # 4. Go to Workshops
 
-![](https://web.archive.org/web/20241010021110im_/https://saumikn.com/wp-content/uploads/neurips-poster-1024x768.jpg)
+![](/uploads/optimized/neurips-poster-1024x768.webp)
 
 Some advice I got before the conference was that the best part of the conferences are the workshops, and in general I'd agree. The fact that the sessions are organized by topic, with plenty of expert speakers at workshop meant that I could immerse myself in research closer to my own interests.
 
@@ -49,7 +49,7 @@ On Saturday, I mostly alternated between the workshops on Foundational Decision 
 
 # 5. Don't burn out
 
-![](https://web.archive.org/web/20241010021110im_/https://saumikn.com/wp-content/uploads/image-1670196299265.png)
+![](/uploads/optimized/image-1670196299265.webp)
 
 NeurIPS is very tiring, so don't feel like you have to do everything. The four days of the main conference, you're essentially on your feet walking for most of 12 hours - I averaged over 20k steps per day!
 

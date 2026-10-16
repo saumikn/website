@@ -1,16 +1,18 @@
 ---
-title: Compressing Chess Board States for Reinforcement Learning
+title: 'Compressing Chess Board States for Reinforcement Learning'
 date: '2020-10-25'
 categories:
   - research
   - chess
+published: true
+description: 'Last week, I went over several papers in the area of Biased Inverse Reinforcement Learning and Fairness Criteria. I also brainstormed several possible next steps for research.…'
 ---
 
 Last week, I went over several papers in the area of Biased Inverse Reinforcement Learning and Fairness Criteria. I also brainstormed several possible next steps for research. After talking with CJ on Monday, we decided that the second option was the most promising – extending the ideas behind [this paper](http://proceedings.mlr.press/v97/shah19a/shah19a.pdf) by Shah et al. to more the human domains of chess and poker. As a reminder, this paper’s goals were to automatically learn how agents can act using a biased policy (a systematic pattern of deviations from optimality) in a gridworld domain, without any assumptions on the specific nature of the biases.
 
 During the week, I did a scan of the literature to see what prior research had been done on biased players in chess and poker. I found a few papers on how _computers_ can be programed to be biased, but it wasn’t especially relevant. I found one paper, [Playing Chess at a Human Desired Level and Style](https://dl.acm.org/doi/pdf/10.1145/3349537.3351904?casa_token=yu2dWWXr0xkAAAAA:AGptiu2h3N3e_o2DF-HkHjLc4snugOL83rD2IAIUmHRzsSevOQXcZxDYRqxFntigvydahw7raf2g), which was interesting, but they used word “style” only in the context of playing human-like vs computer-like, while we need a much broader sense of the word. Overall, I didn’t find anything super useful on chess, so I’m on my own here (but that’s research!).
 
-I also read several papers on poker, and learned quite a bit about the [metagame](metagame) of top level poker. However, poker seems like a much harder domain to explore suboptimal moves in than chess, due to my lack of domain knowledge, and the fact that suboptimal moves can actually be the best move to play in some scenarios (e.g. bluffing). For this reason, I’m probably going to focus on chess for my research this rotation.
+I also read several papers on poker, and learned quite a bit about the [metagame](https://www.pokernews.com/strategy/game-theory-optimal-solutions-and-poker-a-few-thoughts-22654.htm) of top level poker. However, poker seems like a much harder domain to explore suboptimal moves in than chess, due to my lack of domain knowledge, and the fact that suboptimal moves can actually be the best move to play in some scenarios (e.g. bluffing). For this reason, I’m probably going to focus on chess for my research this rotation.
 
 Chess does have its own issues as a domain – it has a huge state space [estimated](https://www.chessprogramming.org/Chess) at 10^46, meaning that even with a very large database like Chessbase or Lichess, only a tiny amount of states past the opening will share states, making it difficult to compare different agents against each other. The state representation itself is also very large, since we have 64 squares on the board, and up to 16 pieces that we need to place on the board, along with other factors like en-passant options, castling, etc.
 

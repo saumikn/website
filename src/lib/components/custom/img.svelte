@@ -1,10 +1,14 @@
 <script lang="ts">
-	type Props = {
-		src: string;
-		alt: string;
-	};
-
-	let { src, alt }: Props = $props();
+	import images from '#lib/images.json';
+	let { src, alt = '' }: { src: string; alt?: string } = $props();
+	const dimensions = $derived((images as Record<string, { width: number; height: number }>)[src]);
 </script>
 
-<img {src} {alt} loading="lazy" />
+<img
+	{src}
+	{alt}
+	width={dimensions?.width}
+	height={dimensions?.height}
+	loading="lazy"
+	decoding="async"
+/>

@@ -1,5 +1,5 @@
 ---
-title: Notes on Curriculum Learning
+title: 'Notes on Curriculum Learning'
 description: A summary of key papers on Curriculum Learning and their implications for machine learning.
 date: '2023-04-26'
 categories:
@@ -18,19 +18,19 @@ First, the authors formalize what they consider a curriculum in the context of m
 
 First, the authors look at a simple model, learning a linear SVM classifier. They first show that just learning a model with easy examples (ignoring points which fall on the wrong side of the Bayes classifier) leads to statistically better performance than training on all points (16.3% vs 17.1% error).
 
-![Image](/uploads/image-1682482457399.png)
+![Image](/uploads/optimized/image-1682482457399.webp)
 
 Then, the authors look at training a perceptron linear classifier. They define two different metrics for data ease - how noisy the data is, and how far a point is from the true margin. They find that in both cases, learning in the order of easy to hard leads to better performance than learning from hard to easy, or learning in a random order.
 
-![Image](/uploads/image-1682482713105.png)
+![Image](/uploads/optimized/image-1682482713105.webp)
 
 Next, the authors look a simple computer vision problem - recognizing rectangles, triangles, and ellipses in a 32x32 pixel image. In this domain, ease is defined by the "shape" of the shape, where easy shapes are squares, equilateral triangles, and circles. They evaluate a two stage design, where over 256 epochs, they train on just easy examples for the first n epochs, and train on harder images for the remaining 256-n epochs. Overall, the results show that the more epochs consist of easy examples, the better the overall performance is. However, it is a little unclear why the authors stopped at 128 epochs, rather than continuing to increase the switch epoch to see where performance starts to decrease
 
-![Image](/uploads/image-1682483842124.png)
+![Image](/uploads/optimized/image-1682483842124.webp)
 
 Finally, the authors look at a more challenging problem, training a language model. In this example too, they find that using a curriculum, defined by the frequency of the word (if the word is in the 5k most common words, 10k most common words, etc) leads to better converged better. It should be noted though that the performance is worse at first, presumably because the model missed out on the majority of words at the beginning of training.
 
-![Image](/uploads/image-1682485966500.png)
+![Image](/uploads/optimized/image-1682485966500.webp)
 
 Overall, this work shows that the idea of curricula shows promise for training neural networks through the use of examples in four different domains. However, the authors leave it to future work to better understand , and the authors leave it to future work to better understand how this process actually works, and demonstrate this in more domain examples.
 
@@ -50,7 +50,7 @@ They then summarize a taxonomy of CL applied to different areas. Vanilla CL was 
 
 The authors then describe over 100 CL papers over the last 15 years, categorized by domain application and CL taxonomy, in a 6-page table and 20 pages of text. I'm not going to go over this, you can read the paper if you'd like more detail :).
 
-![](https://web.archive.org/web/20241010004833im_/https://saumikn.com/wp-content/uploads/image-1682537207559.png)
+![](/uploads/optimized/image-1682537207559.webp)
 
 They then use this analysis to create an automatic hierarchy of CL papers using a TF-IDF clustering agglomeration. This is a fancy of saying they find out which papers share similar words to each other. Papers with more similar words are deemed to be more similar in content as well. They find that TF-IDF produces a similar hierarchy to the manual (subective) one they defined, providing good evidence for their analysis.
 

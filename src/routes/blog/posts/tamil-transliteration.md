@@ -1,5 +1,5 @@
 ---
-title: How to Pronounce Tamil (and Transliterate it using Python)
+title: 'How to Pronounce Tamil (and Transliterate it using Python)'
 description: A guide on Tamil pronunciation and how to transliterate Tamil script using Python.
 date: '2023-07-19'
 categories:
@@ -14,7 +14,7 @@ Recently, I started a mini-project to write a Python script for transliterating 
 
 ## Tamil Script Overview
 
-![Tamil Script](/uploads/image-1689766116431.png)
+![Tamil Script](/uploads/optimized/image-1689766116431.webp)
 
 The Tamil Script has a fairly regular [Phonemic Orthography](https://en.wikipedia.org/wiki/Phonemic_orthography), where if you read a word, you know how to pronounce it, and if you hear a word, you usually know how to write it. (This is ignoring the whole [Diglossia](https://en.wikipedia.org/wiki/Diglossia) situation that Tamil has, and assumes that words are written using a colloquial spelling, or pronounced using the formal spelling).
 
@@ -22,7 +22,7 @@ Because of this, I figured that writing the code for transliteration would be ea
 
 To start with, it's important to know that Tamil, like all [Brahmi](https://en.wikipedia.org/wiki/Brahmi_script)-derived scripts are [Abugidas](https://en.wikipedia.org/wiki/Abugida), meaning that each syllable is written as a combination of a consonant and a vowel. In practice, this means that each combination syllable has a main consonant, and a marker for which vowel should be sounded.
 
-![](https://saumikn.com/wp-content/uploads/image-1689766176042.png)
+![](/uploads/optimized/image-1689766176042.webp)
 
 For example, if we want to write the syllable `kii`, we would take the letter `க`, pronounced `ka`, add the vowel marker for `ii` which is `ீ`, and when we combine these we get `கீ`. We can do the same thing for all the other vowel sounds as well to get all the syllables that start with `k`. Confusingly, if we don't add any vowel marker, we get the default `a` vowel, and if we want to have no vowel sound we need to add the anti-vowel marker `்`, so `k` would be `க்`.
 

@@ -1,9 +1,10 @@
 ---
-title: Building a Complete aBRT System in Minneapolis
+title: 'Building a Complete aBRT System in Minneapolis'
 description: A vision for a complete aBRT system in Minneapolis, including cost estimates and benefits.
 date: '2020-03-26'
 categories:
   - transit
+published: true
 ---
 
 _This post has been republished from [https://streets.mn/2020/03/26/building-a-complete-abrt-system-in-minneapolis/](https://streets.mn/2020/03/26/building-a-complete-abrt-system-in-minneapolis/). Check out the comment section here for reactions to my proposal!_
@@ -30,7 +31,7 @@ First, we need to define the scope of buses we are upgrading to aBRT. As my base
 
 In total, this gives us 18 routes, shown in the table below. I have also displayed a few route statistics based on [2017 Met Council data](https://web.archive.org/web/20240302021236/https://metrocouncil.org/Transportation/Publications-And-Resources/Finance/Metropolitan-Area-Transit-Finance-Report,-2018.aspx).
 
-![](https://web.archive.org/web/20240302021236im_/https://saumikn.com/wp-content/uploads/2020/06/abrt_existing.png)
+![](/uploads/optimized/abrt_existing.webp)
 
 ## Designing the System
 
@@ -40,7 +41,7 @@ There were a few routes which I needed to extend farther out from Minneapolis be
 
 Using these guidelines, I constructed the below aBRT system. Routes are color coded based on if they are ‘downtown’ or ‘crosstown’ routes. For visual context, I’ve included the Green, Blue, and Orange lines, as well as the Minneapolis city boundaries. Click [here](https://web.archive.org/web/20240302021236/https://drive.google.com/open?id=1bN3DqKgY6kBMmt2ghRskUeUmRfnbG6Lf&usp=sharing) to play around with the map yourself.
 
-![](https://web.archive.org/web/20240302021236im_/https://saumikn.com/wp-content/uploads/2020/06/abrt_map-622x1024-1.png)
+![](/uploads/optimized/abrt_map-622x1024-1.webp)
 
 I want to mention that this system is not intended to be a final proposal for implementation, just a sample network to demonstrate my ideas.
 
@@ -56,7 +57,7 @@ For these reasons, I would estimate a ridership increase of at least 50%. Though
 
 ## How much will it cost?
 
-![](https://web.archive.org/web/20240302021236im_/https://saumikn.com/wp-content/uploads/2020/06/abrt_cost-1536x1064.png)
+![](/uploads/optimized/abrt_cost-1536x1064.webp)
 
 Overall, I estimate that the new aBRT system would cost about $879 million to build, based on the A and C Lines. Using the low ridership increase estimate of 30%, the system would have a net increase of $88 million in operational costs, again based on the A and C Lines.
 
@@ -79,7 +80,7 @@ For example, in the [West Broadway corridor](https://web.archive.org/web/2024030
 
 Fulfilling the Minneapolis Transportation Action Plan
 
-![](https://web.archive.org/web/20240302021236im_/https://saumikn.com/wp-content/uploads/2020/06/minneapolis_tap-797x1024-1.png)
+![](/uploads/optimized/minneapolis_tap-797x1024-1.webp)
 
 Minneapolis recently released its [Transportation Action Plan draft](https://web.archive.org/web/20240302021236/http://go.minneapolismn.gov/). I actually started writing this post before this draft was released, but the vision expressed in the plan is highly aligned with the goal of a complete aBRT network. Some highlights include:
 

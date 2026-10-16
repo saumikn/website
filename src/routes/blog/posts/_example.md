@@ -1,5 +1,5 @@
 ---
-title: Markdown file example
+title: 'Markdown file example'
 description: Example of what markdown files should look like, including formatting, images, code, and latex
 date: '2025-02-15'
 categories:

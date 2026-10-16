@@ -1,5 +1,5 @@
 ---
-title: 8 Tips on How to Give a Great Research Presentation
+title: '8 Tips on How to Give a Great Research Presentation'
 description: A summary of key tips for delivering effective research presentations.
 date: '2023-08-14'
 categories:
@@ -24,7 +24,7 @@ The first 60 seconds of your presentation are by far the most important. These a
 
 There are many ways to hook the audience. You can talk about a specific problem that they have in real life. You can tell a joke (about something related to your work). You can tell them a story about something that has happened to you. At AIES last week, I asked my audience the following question and had them physically vote on what they thought was the answer by raising their hands.
 
-![](https://saumikn.com/wp-content/uploads/image-1692030550773.png)
+![](/uploads/optimized/image-1692030550773.webp)
 
 No matter what approach you pick, you should focus on standing out from the crowd. If they get nothing else out of your presentation, **your goal should be for everybody in the audience to remember your name, remember your face**, and come see you at the poster session or a break later.
 
@@ -32,7 +32,7 @@ No matter what approach you pick, you should focus on standing out from the crow
 
 When I'm watching a presentation, the worst thing ever is when the speaker is visibly bored while giving the talk. They might not actually even be feeling bored internally, they could be nervous or excited or whatever, but when somebody stands at the podium, stares down at their laptop, and mumbles every word in a monotone, boredom is the only feeling they give off. And when the speaker is bored, this implicitly gives permission to the audience to get bored and disengage as well.
 
-![](https://saumikn.com/wp-content/uploads/image-1692037353018.png)
+![](/uploads/optimized/image-1692037353018.webp)
 
 On the other hand, when a speaker is clearly enthusiastic or passionate about a topic, the audience immediately gets drawn in as well. **The number one thing you can do to improve your talk is to get excited!** Look at the audience, smile, laugh, walk around the stage, and make sure that the audience knows just how happy you are to be on stage.
 
@@ -52,7 +52,7 @@ The most common, easily fixable mistake I see at talks is absolutely terrible sl
 
 Here's an example bad slide which I made during my first semester of my PhD. The text side is not terrible, but it isn't self-contained so somebody just following along won't really understand what these sentences really mean (what even is a validation value of 18.31?), and even if you were paying attention, the previous slides weren't really helpful in this. The graph is really comically terrible, impossible to read and and essentially adds no negative value to the slide. I like to think I've gotten much better at presenting over the last few years :).
 
-![](https://saumikn.com/wp-content/uploads/image-1692037956227.png)
+![](/uploads/optimized/image-1692037956227.webp)
 
 From my DSS notes on presentation feedback and elsewhere, here are some common tips on how to make better slides :
 
@@ -81,7 +81,7 @@ When thinking about presenting bad or complex slides, one thing to keep in mind 
 
 Instead, your job is to convince the audience that your research is worthwhile and interesting, and hopefully at least a handful of people will follow you on Twitter, come to your poster, or read your paper.
 
-![](https://saumikn.com/wp-content/uploads/image-1692039997918-1024x768.png)
+![](/uploads/optimized/image-1692039997918-1024x768.webp)
 
 Example of a slide "advertisement" from AIES which I liked.
 
@@ -107,7 +107,7 @@ Once you've finished your talk, if your audience doesn't know what they should h
 
 Ideally, this is your last slide of your presentation, and you should leave it up on the screen during the Q&A period. This is a much much better way to end a talk than an empty slide that only says "Thank you!" or "Questions?". This slide will help to reinforce your entire presentation better one more time, and might inspire some extra questions as well.
 
-![](https://saumikn.com/wp-content/uploads/image-1692038440199.png)
+![](/uploads/optimized/image-1692038440199.webp)
 
 Here's an example of such a slide which I used last week at AIES 2023. Looking back at this now, I don't think this is a really great slide and there's a number of things I'd change even a few days later, but this is reasonable I think for getting the summary across, as well as giving my contact info.
 

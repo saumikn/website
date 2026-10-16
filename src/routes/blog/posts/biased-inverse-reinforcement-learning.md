@@ -1,9 +1,10 @@
 ---
-title: Papers on Biased Inverse Reinforcement Learning and Fairness Criteria
+title: 'Papers on Biased Inverse Reinforcement Learning and Fairness Criteria'
 date: '2020-10-18'
 categories:
   - research
 published: true
+description: 'Unlike many other PhD programs, WashU has a special rotation program to facilitate student-advisor matching, where students do a 2-4 one-month research stints with professors…'
 ---
 
 Unlike many other PhD programs, WashU has a special rotation program to facilitate student-advisor matching, where students do a 2-4 one-month research stints with professors so the students and professors can get to know each other better before committing to a relationship for the next 4+ years. On Wednesday, I started my first rotation with [Dr. Chien-Ju "CJ" Ho](http://chienjuho.com/), and the topic of the rotation will be on Learning Fairness Criteria and Biases in Inverse Reinforcement Learning.
@@ -14,7 +15,7 @@ To start off the rotation, CJ gave me several papers to read through, so I can b
 
 This paper was written in 2000 by two legends in the field of AI: Andrew Ng and Stuart Russell, though Ng was still in grad school when this paper came out. Essentially, paper turns the methods and goals of Reinforcement Learning upside down. Normally in RL, we are concerned with creating a _Policy_ to maximize an Agent’s _Reward_ function as it executes Actions to navigate through a domain of potential States - a framework called the _Markov Decision Process_. To put this more simply, we are given a list of goals, and we have to figure out what actions to take to accomplish these goals.
 
-![Super Mario Bros](/uploads/supermariobros.png)
+![Super Mario Bros](/uploads/optimized/supermariobros.webp)
 
 One example of this process is a game like Super Mario Bros. The agent is Mario, actions are things like moving up/down/left/right, and states are the locations of blocks, enemies, pipes, etc. In Super Mario Bros, the main reward would be completing the stage itself, but there are also secondary rewards like collecting coins and defeating enemies, and even negative rewards (like losing lives). There are plenty of other real-world examples of RL, in gaming, robotics, or even advertising (where the reward could be number of clicks).
 
@@ -30,7 +31,7 @@ While standard IRL, as explained in the previous paper, is very promising, it re
 
 This 2015 paper, by Evans, Suhlmuller, and Goodman, examine optimality deviations in this paper – state uncertainty and temporal inconsistency. Uncertainty is self-explanatory concept, while temporal inconsistency means that that humans often make plans that they later abandon. A famous behavioral example of this is that people generally prefer to take $100 today over $110 tomorrow but prefer $110 in 31 days over $100 in 30 days. This makes no sense, but that’s how humans are! In the paper, the authors create several suboptimal agents that exhibit these tendencies, and then create an IRL model that still works on these agents.
 
-![Naive Planner](/uploads/naiveplanner.png)
+![Naive Planner](/uploads/optimized/naiveplanner.webp)
 
 This picture shows two suboptimal agents which suffer from temporal inconsistency. Initially, both agents want to go to the vegetarian café, which would maximize their reward for this instance. However, as the naïve agent heads directly towards the café, it is tempted by the donut café (who wouldn’t pick donuts now over veggies later?) and abandons its original plan. The sophisticated planner understands its own bias and chooses the longer route in order to avoid the donut shop that it knows it will be fatally tempted by.
 
@@ -44,7 +45,7 @@ Future work mentioned include applications on more realistic domains and evaluat
 
 This third paper takes things to an even higher level. As stated in the title, instead of assuming human biases (like the second paper did), Shah et al. are interested with learning the biases directly.
 
-![Biased Models](/uploads/biasedmodels.png)
+![Biased Models](/uploads/optimized/biasedmodels.webp)
 
 In addition to the naïve/sophisticated models described in the last paper, this paper adds several other examples of biases that humans can exhibit. Overconfident/underconfident agents incorrectly estimate probabilities, while myopic agents suffer from the horizon effect. All of these agents are simulated in a new MDP gridworld featuring rewards, punishments, walls, and uncertainty, as agents may randomly fail to execute the intended movement, and instead move orthogonally to the intended direction.
 
@@ -58,7 +59,7 @@ In terms of future work, the authors mention using more complicated problems wit
 
 These last two papers work in a completely different direction as the first three papers, and I’ll group them together since they are similar in idea.
 
-![Moral Machine](/uploads/moralmachine-1024x567.jpg)
+![Moral Machine](/uploads/optimized/moralmachine-1024x567.webp)
 
 The Moral Machine paper conducts an experiment to understand human preferences on autonomous vehicle decisions and ethics. I didn’t really find there to be any particularly novel analysis in the paper, the notability from the paper comes from its massive sample size – millions of users from across the globe participated in the viral challenge. This allowed the authors to perform some cross-culture analysis based on locations of the users.
 

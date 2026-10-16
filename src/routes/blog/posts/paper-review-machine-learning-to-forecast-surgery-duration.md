@@ -1,7 +1,7 @@
 ---
-title: Paper Review: Machine Learning to Forecast Surgery Duration
+title: 'Paper Review: Machine Learning to Forecast Surgery Duration'
 description: A review of the paper discussing the application of machine learning techniques to predict surgery duration.
-date: "2020-11-19"
+date: '2020-11-19'
 categories:
   - blog
   - research
@@ -20,7 +20,7 @@ Next, the authors go over prior literature in this area, and their limitations. 
 
 The most important section of the paper discusses how the model was trained. The model itself looks like the below image.
 
-![](m_/https://saumikn.com/wp-content/uploads/2020/11/image-1433x1536.png)
+![](/uploads/optimized/image-1433x1536.webp)
 
 The continuous and categorical are normalized and combined as inputs for the model. The unstructured text data is broken up into word tokens and embedded into a vector. After running these word embeddings through an LSTM, the output is concatenated with the other data to be used as the input to the Mixture Density Network. I'm personally not very familiar with MDNs, so I'll have to do some more reading on how these work. MDNs were developed by [Bishop in 1994](https://publications.aston.ac.uk/id/eprint/373/1/NCRG_94_004.pdf), and York made a comment that replacing the MDNs with a more modern architecture could be an option for improving the overall output. In any case, I'll need to really understand how MDNs work before I can decide to use something else.
 

@@ -1,5 +1,5 @@
 ---
-title: Learning Colloquial Tamil - Part 2
+title: 'Learning Colloquial Tamil - Part 2'
 description: A continuation of my journey in learning colloquial Tamil, focusing on resources and methods.
 date: '2023-07-18'
 categories:
@@ -9,7 +9,7 @@ categories:
 published: true
 ---
 
-A few years ago, I wrote in a [blog post](https://saumikn.com/blog/learning-colloquial-tamil/) that I would start working more on Tamil again, and while I was able to read through the Colloquial Tamil book and pick up some grammatical concepts and vocab, it wasn't really useful by itself, and I wasn't super satisfied with the Anki decks that I made, so this study habits kinda died out.
+A few years ago, I wrote in a [blog post](/blog/learning-colloquial-tamil) that I would start working more on Tamil again, and while I was able to read through the Colloquial Tamil book and pick up some grammatical concepts and vocab, it wasn't really useful by itself, and I wasn't super satisfied with the Anki decks that I made, so this study habits kinda died out.
 
 In the last few weeks though, I've picked it up again, with new resources to learn from!
 
@@ -21,11 +21,11 @@ Unfortunately, I've never been able to find a proper dataset for learning Tamil 
 
 However, a few days ago, I found a few new resources by [Agurchand Babu Subramanian](https://www.youtube.com/@agurchand/search) and [Gokila Agurchand](https://www.youtube.com/c/GokilaAgurchand) (who from what I can tell, are a married couple?). They each have Youtube channels with hundreds of thousands of subscribers, teaching Tamil, Telugu, Kannada, Malayalam, Hindi, and English. They have a website with some dialogues and sentences and vocab. They have a set of Android apps which seem to be a slight superset of the content on their website.
 
-![](https://web.archive.org/web/20241010022738im_/https://saumikn.com/wp-content/uploads/image-1689691343308.png)
+![](/uploads/optimized/image-1689691343308.webp)
 
 And finally, they have a set of "books" they published which are essentially word and sentence lists in various language. While these books don't actually teach grammar directly, they're a great resource for encountering colloquial speech in context, especially as they are all about $0.99, great value!
 
-![](https://web.archive.org/web/20241010022738im_/https://saumikn.com/wp-content/uploads/image-1689691445074.png)
+![](/uploads/optimized/image-1689691445074.webp)
 
 As soon as I saw this, I immediately bought the Tamil book, and copy pasted the full text into a text file which I could them import into Anki. I ignored the 300 vocab terms since I'm not super concerned about it, and figured they'd anyways show up in the sentences. I also removed two duplicate sentences, so I ended up with 698 Tamil Sentences for my Anki Deck, quite a bargain if you ask me :).
 
@@ -33,15 +33,15 @@ There were a few problems with the book though, in my opinion. For 99 cents, the
 
 First, a few of the English sentences aren't really how a native (non-Indian) speaker would say them, or slightly incorrect. For example, in the above image "Actual price is Rs. 10 only" should probably be "The actual price is only Rs. 10", and "I don't want to go to cinema" should definitely be "I don't want to go to the cinema". For a native English speaker, especially one who is familiar with Indian English, I always know what they mean anyways so it isn't a huge problem.
 
-![](https://web.archive.org/web/20241010022738im_/https://saumikn.com/wp-content/uploads/image-1689692639363.png)
+![](/uploads/optimized/image-1689692639363.webp)
 
 The second problem is, despite the title saying "Spoken Tamil", a few of the sentences are more formal than commonly spoken in colloquial Tamil. For example, the book gives "இது அவருடைய சட்டை" (i.e. "idu avaruḍaiya caṭṭai") for "This is his shirt", but அவருடைய (avaruḍaiya), meaning "his", is only used in formal Tamil. In colloquial Tamil, it would instead be அவர் (avar) or அவரோட (avarooda), and indeed, the authors use அவர் or அவரோட for other sentences containing the word "his". This trips me up a little bit, but whenever I encounter a sentence with a new grammatical construct I don't know, I'll generally consult my textbooks, a family member, or ChatGPT, and I'll be able to figure out what is colloquial and what is formal. Most of the sentences I've found are colloquial though, so this problem doesn't come up much.
 
-![](https://web.archive.org/web/20241010022738im_/https://saumikn.com/wp-content/uploads/image-1689691595110.png)
+![](/uploads/optimized/image-1689691595110.webp)
 
 The last problem which was most annoying for me is the transliteration scheme that Agurchand used was quite inconsistent, as Tamil speakers might be able to see in the above image. It isn't the biggest deal in the world, since I can anyways read the Tamil script (slowly) and don't need the transliteration, but I would prefer having a consistent transliteration to check back on while studying.
 
-I didn't really want to manually re-type each sentence though to fix the transliteration, and I wasn't happy with any of the existing Tamil transliteration code I found online. I figured that I would just write my own code to do this. For more information on this code, you can check out my other [blog post](http://saumikn.com/blog/tamil-transliteration).
+I didn't really want to manually re-type each sentence though to fix the transliteration, and I wasn't happy with any of the existing Tamil transliteration code I found online. I figured that I would just write my own code to do this. For more information on this code, you can check out my other [blog post](/blog/tamil-transliteration).
 
 ### Colloquial Tamil Dialogues
 

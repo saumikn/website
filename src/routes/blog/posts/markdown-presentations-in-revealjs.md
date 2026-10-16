@@ -1,5 +1,5 @@
 ---
-title: Markdown Presentations in RevealJS
+title: 'Markdown Presentations in RevealJS'
 description: An exploration of using RevealJS for creating presentations with Markdown.
 date: '2023-03-29'
 categories:
@@ -11,7 +11,7 @@ A few months ago, I started using [RevealJS](https://revealjs.com) to make prese
 
 RevealJS has over 60k stars on [Github](https://web.archive.org/web/20241107073002/https://github.com/hakimel/reveal.js/) with built in features like mobile responsive layouts, animations for code formatting, rendering Latex equations and Markdown, and embedding websites and JS visualizations. Thanks to the extensive API, there are also a huge amount of [third-party plugins](https://web.archive.org/web/20241107073002/https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware) which add extra features to your presentations as well. For somebody who has to spend quite a bit of time making presentations for work, it seemed like the perfect thing to try out.
 
-![](https://web.archive.org/web/20241107073002im_/https://saumikn.com/wp-content/uploads/image-1680103491422.png)
+![](/uploads/optimized/image-1680103491422.webp)
 
 However, one problem that I ran into when I wanted to try it out is actually trying it out! On the RevealJS website, they provide three different options for installing the software - downloading a zip file from Github containing all of RevealJS, installing it through [Node](https://web.archive.org/web/20241107073002/https://nodejs.org/), and installing it as an NPM dependency. The third option is probably not relevant for most people making presentations, and the second one might be difficult for somebody without a background in web development. The first option is definitely the simplest, but even that requires you manually download the entire repository, and work on your presentations inside the repo.
 

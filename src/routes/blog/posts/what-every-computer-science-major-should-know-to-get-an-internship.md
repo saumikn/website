@@ -1,5 +1,5 @@
 ---
-title: What Every Computer Science Major Should Know (to Get an Internship)
+title: 'What Every Computer Science Major Should Know (to Get an Internship)'
 description: A comprehensive guide for computer science students on essential skills and knowledge for securing internships.
 date: '2022-07-09'
 categories:
@@ -25,7 +25,7 @@ Specific Recommendations:
 - Be familiar with object-oriented programming. You should understand concepts like classes, objects, methods, and inheritance, and be comfortable writing programs using the OOP paradigm.
 - Know how to debug code. This involves using breakpoints and print statements, reading errors inside stack traces, and knowing how to use Google when things go wrong. Chances are, any error you run into already has 1000+ upvotes on Stack Overflow.
 
-All of this should be covered in your first semester "Intro to programming" class that you take. Alternatively, there are plenty of online resources available. I'm personally a big fan of [Python for Everybody](http://py4e.com/), and I made my add-on exercise book to this course which you can read about [here](https://saumikn.com/blog/an-interactive-exercise-book-to-learn-python-better/). If you're looking for a more typical college-lecture style course, Harvard's [CS 50](https://cs50.harvard.edu/python/2022/) course is freely available online, with lecture recordings, notes, and homework.
+All of this should be covered in your first semester "Intro to programming" class that you take. Alternatively, there are plenty of online resources available. I'm personally a big fan of [Python for Everybody](http://py4e.com/), and I made my add-on exercise book to this course which you can read about [here](/blog/an-interactive-exercise-book-to-learn-python-better). If you're looking for a more typical college-lecture style course, Harvard's [CS 50](https://cs50.harvard.edu/python/2022/) course is freely available online, with lecture recordings, notes, and homework.
 
 If you're already familiar with one language, and you're looking to learn a second language, [Learn X in Y minutes](https://learnxinyminutes.com) is a great way to get quickly acquainted with the syntax of any language. I wouldn't recommend this for your first language though, it'll just be too overwhelming.
 
@@ -92,7 +92,7 @@ However, once you have a base level of competency for a given area, I definitely
 
 At first, it might seem impossibly hard to even start working on one of these, but with a basic foundation, you can definitely make something good enough to showcase your skills on your resume or personal website, and something to talk about during your interviews! Here are some sample project ideas:
 
-- An [algorithm](https://web.archive.org/web/20241010010509/https://saumikn.com/blog/finding-missing-chess-moves/) I created for inserting moves into a chess game
+- An [algorithm](/blog/finding-missing-chess-moves) I created for inserting moves into a chess game
 - A simple [front-end website](https://web.archive.org/web/20241010010509/https://igullickson.github.io/UMNWhereToDine/) my friend Isaac created about tracking our campus dining halls.
 - This tutorial shows you step by step how to build a [full-stack website](https://web.archive.org/web/20241010010509/https://christophergs.com/tutorials/ultimate-fastapi-tutorial-pt-1-hello-world/) on cooking recipes
 - [Possible data science projects](https://web.archive.org/web/20241010010509/https://www.coursera.org/articles/data-analytics-projects-for-beginners)

@@ -2,3 +2,6 @@
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Vendored project assets retain their upstream formatting.
+static/projects/

@@ -1,10 +1,11 @@
 ---
-title: Predicting Move Times in Chess - Status Update
+title: 'Predicting Move Times in Chess - Status Update'
 date: '2021-04-04'
 categories:
   - chess
   - research
 published: true
+description: 'For this project, I am comparing the abilities of Bayesian and non-Bayesian neural networks as a predictor for how much time a chess player will use to make their move in a…'
 ---
 
 ## Summary

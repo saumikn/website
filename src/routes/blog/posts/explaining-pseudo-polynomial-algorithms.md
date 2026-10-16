@@ -1,9 +1,10 @@
 ---
-title: Explaining Polynomial, Exponential, and Pseudo-Polynomial Algorithms
+title: 'Explaining Polynomial, Exponential, and Pseudo-Polynomial Algorithms'
 date: '2020-09-20'
 categories:
   - blog
 published: true
+description: 'One of the classes I’m signed up for this semester is Advanced Algorithms. Already, this is shaping up to be one of my favorite classes and I think it’s really going to take my…'
 ---
 
 One of the classes I’m signed up for this semester is Advanced Algorithms. Already, this is shaping up to be one of my favorite classes and I think it’s really going to take my understanding of algos to the next level. In just the first week, my understanding of runtime complexity has been revolutionized, thanks to a new concept called pseudo-polynomial runtime. It took me quite some time to really internalize this concept, so my goal with this blog post is to provide a clear example of how we classify algorithms as having pseudo-polynomial runtime.

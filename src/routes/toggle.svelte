@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import { Moon, Sun } from 'lucide-svelte';
-	import { theme } from '$lib/theme.svelte';
+	import { Moon, Sun } from '@lucide/svelte';
+	import { theme } from '#lib/theme.svelte.ts';
+	import { onMount } from 'svelte';
+	onMount(() => theme.initialize());
 </script>
 
-<button on:click={theme.toggle} aria-label="Toggle theme">
+<button onclick={theme.toggle} aria-label="Toggle theme">
 	{#if theme.current === 'dark'}
 		<div in:fly={{ y: 10 }}>
 			<Sun />

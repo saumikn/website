@@ -1,14 +1,34 @@
 <script lang="ts">
-	import * as config from '$lib/config';
+	import * as config from '#lib/config.ts';
+	import Seo from '#lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>{config.title}</title>
-</svelte:head>
+<Seo
+	schema={{
+		'@context': 'https://schema.org',
+		'@type': 'ProfilePage',
+		url: `${config.url}/`,
+		name: config.title,
+		mainEntity: {
+			'@type': 'Person',
+			'@id': `${config.url}/#person`,
+			name: config.title,
+			url: `${config.url}/`,
+			image: `${config.url}/saumik.jpg`,
+			sameAs: config.profiles
+		}
+	}}
+/>
 
 <section class="content-wrapper">
 	<div class="intro">
-		<img src="/saumik.jpg" alt="Profile" />
+		<img
+			src="/uploads/optimized/saumik.webp"
+			alt="Saumik Narayanan"
+			width="1536"
+			height="2048"
+			fetchpriority="high"
+		/>
 		<div class="content">
 			<h1>Hi, I'm Saumik!</h1>
 			<br />

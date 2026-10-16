@@ -1,9 +1,10 @@
 ---
-title: Finding Missing Moves in a Chess Scoresheet
+title: 'Finding Missing Moves in a Chess Scoresheet'
 date: '2019-06-21'
 categories:
   - chess
 published: true
+description: 'In competitive chess games, players must keep a score of the game as it is played. Notating a game like this is required for two reasons. The first is that it helps tournament…'
 ---
 
 ## Digitizing Chess Scoresheets Project
@@ -80,7 +81,7 @@ Readers who play chess competitively will know this line as the Ruy Lopez, one o
 
 The algorithm starts by taking in the above move list and iterating through the moves. The first four moves are all valid moves, and as a result, we get the following game state:
 
-![](https://web.archive.org/web/20240716023305im_/https://saumikn.com/wp-content/uploads/2019/06/output.png)
+![](/uploads/optimized/output.webp)
 
 At this game state, it turns out there are 27 legal moves: Ng5, Nxe5, Nh4, Nd4, Ng1, Rg1, Ba6, Bb5, Bc4, Bd3, Be2, Ke2, Qe2, Nc3, Na3, h3, g3, d3, c3, b3, a3, h4, g4, d4, c4, b4, and a4.
 
@@ -92,7 +93,7 @@ It turns out in this case that Bb5 is the only move which causes the entire list
 
 While this seemed simple enough, the issue with this algorithm is as there are more and more missing moves, the runtime of this grows exponentially, since each missing move will create a split that will create more and more new branches. Since the algorithm’s runtime isn’t immediately obvious, I wanted to try for myself a few examples before diving deeper into the code to determine what the actual runtime was.
 
-![](https://web.archive.org/web/20240716023305im_/https://saumikn.com/wp-content/uploads/2019/06/find-missing-move-runtime.png)
+![](/uploads/optimized/find-missing-move-runtime.webp)
 
 Just for fun, I used this algorithm to find the number of legal games after 2 moves for both White and Black. In the initial game state, both White and Black have 20 legal moves, and no move White can make will affect Black’s legal moves. Thus, we see that there are 20 possible “games” after one move, and 400 possible “games” after two moves. After this though, we begin to see this number increase with an even larger branching factor. There are 8902 possible games after three moves, meaning that the average branching factor on move 3 is 8902/400 = 22.26. On move 4, there are 197281 moves, meaning an average branching factor of 197281/8902 = 22.16 moves. Fun fact: out of these 197281 moves, exactly [one](https://web.archive.org/web/20240716023305/https://en.wikipedia.org/wiki/Fool%27s_mate) of them actually ends in checkmate!
 

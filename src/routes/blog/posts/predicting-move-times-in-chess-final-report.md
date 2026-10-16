@@ -1,10 +1,11 @@
 ---
-title: Predicting Move Times in Chess - Final Report
+title: 'Predicting Move Times in Chess - Final Report'
 date: '2021-05-03'
 categories:
   - chess
   - research
 published: true
+description: 'In this report, we explore the methodologies and results of predicting move times in chess. The analysis is based on a dataset of chess games, focusing on various factors that…'
 ---
 
 ## Summary
@@ -88,7 +89,7 @@ In the domain of move time predictions, an example of aleatoric uncertainty woul
 
 To deal with this issue, we can try to predict a distribution as the output of our model, instead of a single point estimate. The below graph shows the distribution of all moves in our dataset.
 
-![](/uploads/movedist.png)
+![](/uploads/optimized/movedist.webp)
 
 While a number of distributions could potentially model our dataset, I decided to use the beta distribution for the key reason that it is constrained between 0 and 1, just like our data. Other distributions such as the log-normal distribution or the exponential distribution could work well too, but I thought that their tails would bias the model too much.
 
@@ -123,9 +124,7 @@ This was quite surprising, as we would intuitively expect that the distribution 
 
 My second result comes from the investigation on epistemic uncertainty. The below graph shows my results.
 
-##
-
-![Epistemic Uncertainty Results](/uploads/epistemic-1024x425.png)
+![Epistemic Uncertainty Results](/uploads/optimized/epistemic-1024x425.webp)
 
 I trained four pairs of models, on four different orders of magnitude data size. For each data selection, the standard model drastically outperformed the Bayesian model. As we get more data, the Bayesian model does perform relatively better, and the uncertainty of the model diminishes tends to diminish, though it unexpectedly rises again with n = 66 million.
 

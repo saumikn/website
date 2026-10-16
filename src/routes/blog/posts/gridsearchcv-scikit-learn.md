@@ -1,5 +1,5 @@
 ---
-title: Using GridSearchCV in Scikit-Learn
+title: 'Using GridSearchCV in Scikit-Learn'
 description: A detailed explanation of how to use GridSearchCV for hyperparameter tuning in Scikit-Learn.
 date: '2020-12-27'
 categories:
@@ -26,7 +26,7 @@ df.drop(df.filter(regex=r'(split)|(std)|(params)|(rank)').columns, axis=1, inpla
 print(df.sort_values(by=['mean_test_f1'], ascending=False))
 ```
 
-![](https://web.archive.org/web/20240302031749im_/https://saumikn.com/wp-content/uploads/2020/12/image-1.png)
+![](/uploads/optimized/image-1.webp)
 
 In just 6 lines of code, we're able to train 18 individual KNN models, each with a different combination of hyperparameters, and evaluate each of the models on multiple evaluation metrics. As we can see in the results, the KNN model using Euclidean distance and k=5 performs the best on this dataset.
 

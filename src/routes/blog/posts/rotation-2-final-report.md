@@ -1,9 +1,10 @@
 ---
-title: Rotation 2 Final Report
+title: 'Rotation 2 Final Report'
 date: '2020-12-15'
 categories:
   - research
 published: true
+description: 'I## ntroduction'
 ---
 
 I## ntroduction
@@ -48,11 +49,11 @@ When taking all of these model improvements into account, the updated model can 
 
 ## Shared Model Layers
 
-![](https://saumikn.com/wp-content/uploads/2020/12/model1.png)
+![](/uploads/optimized/model1.webp)
 
 In Jiao’s model, there were three sequences of layers which calculated mu, sigma, and alpha respectively. However, there are several redundancies in this model. Generally, in multi-layer neural networks, the first few layers learn more general features of the input data, and the last layers are aim on learning the output data. As a result, there is no reason to have three separate streams for the input data to flow through, since the first few layers in each of the streams will be roughly the same. Instead, we can combine these layers into a single shared network, and only split the network near the end of the network, giving us a model which looks something like this:
 
-![](https://saumikn.com/wp-content/uploads/2020/12/model2.png)
+![](/uploads/optimized/model2.webp)
 
 In fact, experiments show that the shared network performs substantially better. The best hyperparameters in the original network have a final validation CRPS and test CRPS of about 17.91 minutes and 18.34 minutes respectively. On the other hand, the best hyperparameters in the shared network have validation and test CRPS values of 17.64 minutes and 18.14 minutes, respectively.
 

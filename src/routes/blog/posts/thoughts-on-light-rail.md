@@ -1,5 +1,5 @@
 ---
-title: Why America should not build Light Rail
+title: 'Why America should not build Light Rail'
 description: An exploration of the arguments against light rail and the benefits of alternative transit solutions.
 date: '2024-06-07'
 categories:
@@ -14,13 +14,13 @@ Light rail (or LRT) is a type of transit which uses street-running, at-grade tra
 
 However, I strongly feel that we should not be pursuing the construction of new light rail (and the related mode of streetcars) systems in America. The simple reason for this is cost - new light rail lines cost anywhere between $100 million to $200 million per mile to construct. As an example, the proposed 5.6 mile [St. Louis Green Line](<https://en.wikipedia.org/wiki/Green_Line_(St._Louis_MetroLink)>) is projected to cost $1.1 billion.
 
-![Light Rail](/uploads/image-1717722805603.png)
+![Light Rail](/uploads/optimized/image-1717722805603.webp)
 
 This high price tag isn’t inherently a bad thing. There have been many expensive projects over history which were well worth the cost. The problem with light rail specifically is that we get almost no value back from its construction. For transit riders, there are almost no benefits to a light rail line over a simple bus line, and in a lot of respects, light rail is even worse for riders. And for cities as a whole, light rail does lead to some improvements and increased development, but at a scale which is very out of line with its high cost.
 
 Instead of light rail or streetcars, I propose that transit agencies invest heavily in a different mode of transit - “Light BRT”. If you haven’t heard of this term before, it’s because I invented it for the purposes of this article, as there is no single widespread term which characterizes this mode. I’m personally hoping that the phrase Light BRT catches on, as it’s a very convenient nomenclature to describe these existing transit lines and in a way which is easily distinguishable from the more traditional _Gold-Standard_ or _Heavy_ BRT.
 
-![Light BRT](/uploads/image-1717712302444.png)
+![Light BRT](/uploads/optimized/image-1717712302444.webp)
 
 So what is Light BRT? Essentially, Light BRT is a type of city bus which includes many infrastructure upgrades to increase the speed and reliability of the bus line. While not every light BRT line has all of these features, in general, light BRT lines are characterized by the following:
 
@@ -33,7 +33,7 @@ So what is Light BRT? Essentially, Light BRT is a type of city bus which include
 
 Each of these improvements leads to a much nicer transit experience for passengers, directly leading to faster trips and higher ridership. For example, in Minneapolis, the D Line launched in late 2022, where they implemented most of the above features on the existing #5 local bus. The D Line was a huge success, well beyond anyone’s expectations. In the first _month_ alone, ridership on the D Line [increased 50%](https://www.metrotransit.org/corridor-ridership-up-after-d-line-opening) when compared with the previous city bus. And by the end of the first year, ridership had [nearly doubled](https://metrocouncil.org/News-Events/Transportation/Newsletters/Annual-transit-ridership-2023.aspx#:~:text=The%20D%20Line%27s%20average%20weekday,of%20all%20rides%20in%202023.)! As of early 2024, the D Line has a ridership of over 13,000 daily riders, a number which is actually higher than many light rail systems, and this number is projected to hit 23,000 riders by 2030.
 
-![D Line](/uploads/image-1717712261583.png)
+![D Line](/uploads/optimized/image-1717712261583.webp)
 
 And the best part? This line was incredibly cheap. The 18 mile D Line cost about $75 million in total to construct, for an average cost of about $4 million per mile. Compared to light rail, which can cost $200 million per mile, light BRT is a steal. Or in other words, for the same cost it would take to build a 5 mile LRT line, we could build over 200 miles of light BRT, leading to a much better transit network for an entire city.
 
@@ -49,33 +49,33 @@ In this section, I'll give a brief overview of the various types of transit mode
 
 ## Types of Rail
 
-![](/uploads/image-1717712968930.png)
+![](/uploads/optimized/image-1717712968930.webp)
 
 - **Heavy Rail:**: This is the highest capacity and most expensive transit mode, consisting of long train sets operating in an entirely grade-separated right-of-way. Examples include the New York Subway or the Chicago L.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717712733438.png)
+![](/uploads/optimized/image-1717712733438.webp)
 
 - **Light Rail:**: This is a lower capacity mode and less expensive than heavy rail. LRT systems are mostly not grade-separated, but run alongside street corridors, usually operating in a dedicated lane outside mixed traffic. Examples of light rail are the Minneapolis Light Rail or the San Diego Trolley.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717712894374.png)
+![](/uploads/optimized/image-1717712894374.webp)
 
 - **Heavy+Light Rail**: As a side note, there are many LRT systems which are very close to heavy rail but are still considered light rail. In these systems, where the vast majority of the system is grade-separated and operates like heavy rail, but there are still a few at-grade crossings. Examples of this are the Seattle Link or the St. Louis MetroLink.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717713077901.png)
+![](/uploads/optimized/image-1717713077901.webp)
 
 - **Streetcars:**: In America, the distinction between LRT and streetcars is very fuzzy, but in general, streetcars usually refer to at-grade trains which run in mixed traffic, and are essentially treated like a city bus on rails instead of tires. Examples of streetcars include the Portland Streetcar or the Kansas City Streetcar.
 
 ## Types of Buses
 
-![](/uploads/image-1717713225387.png)
+![](/uploads/optimized/image-1717713225387.webp)
 
 - **"Heavy" BRT**: Heavy BRT aims to replicate heavy or light rail with buses as much as possible, with dedicated concrete guideways separated from mixed traffic and rail-like stations. Examples of heavy BRT include the Albuquerque ART or the Cleveland HealthLine.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717712425191.png)
+![](/uploads/optimized/image-1717712425191.webp)
 
 - **"Light" BRT**: Light BRT can be thought of as an upgraded city bus, with features like transit signal priority, optimized stop spacing, and off-board fare collection. Examples of light BRT include the Minneapolis aBRT, the New York SBS, or the Seattle RapidRide.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717713379343.png)
+![](/uploads/optimized/image-1717713379343.webp)
 
 - **City Buses**: This is the standard mode bus which operates in every major city, operating in mixed traffic without any extra features to improve transit operations. It’s possible for buses to use special propulsion technology like electric engines with batteries, or elevated wires (i.e. trolleybuses).
 
@@ -91,7 +91,7 @@ Before I begin, I would like to acknowledge that many of these thoughts come fro
 
 - **Overall Capacity**: This is the biggest, most-cited reason why light rail is better than light BRT. Most common LRT vehicles have a carrying capacity of 200 to 300 passengers per car and can be connected in sets of two or three cars. Assuming a maximum of 2 minute frequency, this gives us a potential capacity of 27k passengers per hour per direction (PPHPD). On the other hand, the largest bi-articulated buses can carry 300 passengers at most. With no ability to combine buses together, this means a maximum capacity of 9k PPHPD.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717713590946.png)
+![](/uploads/optimized/image-1717713590946.webp)
 
 - **Bike/Wheelchair Capacity**: On a related note, LRT can carry not only more passengers, but more large mobility aids like bikes, wheelchairs, or strollers. A single bus can only really hold 3 bikes on the front racks, while the interiors of LRT can be arranged to accommodate more bikes. The extra space on LRT also allows for more space for wheelchairs, strollers, scooters, and other types of mobility devices, or even just large items in general like suitcases or furniture.
 
@@ -101,7 +101,7 @@ Before I begin, I would like to acknowledge that many of these thoughts come fro
 
 - **Speed**: Overall, the speed of buses and trains on city streets are approximately the same. I've seen some claims that buses are slightly faster at accelerating/decelerating, but most of the speed differences are due to the infrastructure supporting the transit, not the vehicles themselves. If both modes have dedicated lanes, signal priority, equal stop spacing, and off-board fare collection, they will both be roughly the same speed.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717714071105.png)
+![](/uploads/optimized/image-1717714071105.webp)
 
 - **System Legibility**: For new riders who have never taken transit, learning how to take the train is generally easier to learn how to take the bus. However, with enough effort, transit operators can make buses just as legible. [Well-designed maps](https://web.archive.org/web/20241010020839/https://humantransit.org/basics/the-case-for-frequency-mapping) can highlight BRT routes, and bright, continuous, red-painted lanes make it equally easy to understand the direction of a bus and a physical rail line.
 
@@ -109,7 +109,7 @@ Before I begin, I would like to acknowledge that many of these thoughts come fro
 
 - **Operating Costs**: The data shows that LRT generally has higher operating costs than buses. According to analysis by [Christopher MacKechnie](https://web.archive.org/web/20241010020839/https://www.liveabout.com/bus-and-light-rail-costs-2798852) in 2020, in America, buses have an hourly operating cost of $122, while LRT has an hourly operating cost of costs $233 per hour. What this means for riders is that transit operators can afford to run more buses than trains under a fixed operating budget. As an example, if an agency is planning to run an LRT with 15 minute frequency, they could afford to run a bus with 8 minute frequency for the same cost, providing a much more useful service.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717723101143.png)
+![](/uploads/optimized/image-1717723101143.webp)
 
 - **Dealing with Obstacles**: Because LRT is on rails, there is essentially no way for it to maneuver around obstacles or go in places where there is no rail. This is most obviously a problem if there is an accident or the rails are blocked by e.g. a parked car. But even more importantly, this is a long-term issue that can prevent full service. For example, the [2022 St. Louis floods](https://web.archive.org/web/20241010020839/https://www.metrostlouis.org/nextstop/metrolink-flood-damage-update/) damaged the light rail signal box at one station, causing all trains to be plagued with single-tracking and slow speeds for nearly two years! If this were a BRT, the bus could just pick an alternate road to go around without harming operations.
 
@@ -159,7 +159,7 @@ I’ve spent this entire post talking about reasons we shouldn’t build light r
 
 **Transit**: If your priority is to help transit riders, you would be much better off by building Light BRT instead, for 1/40th of the cost. (i.e. for every mile of LRT you build, you could afford to build 40 miles of Light BRT). The below image is an quick example of what a potential 100 mile Light BRT system could look like in St. Louis. It would cost $400 million to build, instead of the $1.1 billion, 5 mile Green Line. You could then take the remaining $700 million to place in a trust fund for guaranteeing high frequency service along all these routes for years to come.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717713933437.png)
+![](/uploads/optimized/image-1717713933437.webp)
 
 If you consider federal matching as part of your calculation, it’s roughly the case that the FTA will cover 80% of the cost of new light rail projects, and 50% of the cost of bus projects. For St. Louis specifically, both the 5.6 mile Green Line and my proposed 100 mile light BRT network would both cost about $200 million in local funding, with the federal government picking up the rest of the costs. I would definitely argue that the 100 mile BRT network provides a much higher value for $200 million than the 5 mile train line.
 
@@ -169,7 +169,7 @@ If you consider federal matching as part of your calculation, it’s roughly the
 
 **Development**: If your priority is to spur development, you should just take the $1.1 billion and use it to directly incentivize new construction. This could be done with tax abatements, paid-for without hurting school budgets. A very back-of-the-napkin estimate is that if $10 million is enough to cover [this abatement](https://web.archive.org/web/20241010020839/https://www.stlouis-mo.gov/government/city-laws/board-bills/boardbill.cfm?bbDetail=true&BBId=14188), then $1.1 billion would be enough to pay for almost $16 billion in new development projects, 32,000 new housing units and 165,000 sqft of commercial space. For some context, in the last 10 years (2014-2023), St. Louis gained only gained 7,034 new housing units total. I haven’t seen any direct numbers as to how much development is expected from the Green Line, but I would expect this amount is far less than $16 billion, considering the state of the literature on LRT development referenced above. As a specific example, the Wellston station in St. Louis has been open for more than 20 years and still borders a huge undeveloped plot of grass.
 
-![](https://web.archive.org/web/20241010020839im_/https://saumikn.com/wp-content/uploads/image-1717774298562.png)
+![](/uploads/optimized/image-1717774298562.webp)
 
 **Bus Network Externalities**: Some may object to my previous two recommendations of using the money to build solar panels and create tax abatements, rather than building transit, since funding sources are often not transferable like this, and rail funding might only be usable for transit projects. In these cases, I would still suggest building a large 100 mile light BRT transit network instead of a 5 mile light rail line. While I don’t have numbers to support this, I would strongly expect that this 100 mile network would lead to more emission reductions and more economic development than the 5 mile LRT line.
 

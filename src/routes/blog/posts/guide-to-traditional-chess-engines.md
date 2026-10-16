@@ -1,10 +1,11 @@
 ---
-title: A Brief Guide to Traditional Chess Engines
+title: 'A Brief Guide to Traditional Chess Engines'
 date: '2021-01-10'
 categories:
   - research
   - chess
 published: true
+description: "Over the next few posts, I'll be writing a series on how chess engines work. This isn't intended to be an authoritative, in-depth guide on engines, but just a quick summary on…"
 ---
 
 Over the next few posts, I'll be writing a series on how chess engines work. This isn't intended to be an authoritative, in-depth guide on engines, but just a quick summary on the different types of chess engines, and how they compare against each other.
@@ -37,7 +38,7 @@ The technique of Alpha Beta Pruning builds on top of the Minimax algorithm. This
 
 The specific steps require some effort to comprehend, but the basic idea is that we can skip (or prune) branches that are guaranteed to not affect the final outcome.
 
-![](https://saumikn.com/wp-content/uploads/2021/01/image.png)
+![](/uploads/optimized/image.webp)
 
 In this example, we start out with only the bottom row given, and everything else is blank. In the first subbranch (with the 5 and 6), we assign the parent node as 5, which is the minimum of 5 and 6. For the second subbranch (with 7, 4, and 5), we take 7 and 4 and get the minimum value as 4. At this point, we can actually the last number in the subbranch (in this case 5), because it is impossible for it to affect the final outcome.
 

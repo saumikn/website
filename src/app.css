@@ -1,3 +1,6 @@
+@import 'open-props/style';
+@import 'open-props/normalize';
+@import 'open-props/buttons';
 @import '@fontsource/atkinson-hyperlegible';
 @import '@fontsource/jetbrains-mono';
 @import './lib/styles/layout.css';
@@ -152,7 +155,7 @@ li {
 	}
 
 	:is(ul, ol) {
-		list-style-type: '🔥';
+		list-style-type: disc;
 		padding-left: var(--size-5);
 	}
 
@@ -169,8 +172,7 @@ li {
 	}
 }
 
-/* Add these styles to your existing app.css */
-code {
+pre code {
 	counter-reset: step;
 	counter-increment: step 0;
 }
@@ -191,7 +193,7 @@ code {
 	margin-left: calc(-1 * var(--size-1));
 }
 
-code .line::before {
+pre code .line::before {
 	display: inline-block;
 	content: counter(step);
 	counter-increment: step;
@@ -200,4 +202,87 @@ code .line::before {
 	text-align: right;
 	font-variant-numeric: tabular-nums;
 	color: var(--text-2);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+body {
+	min-width: 0;
+	margin: 0;
+}
+main,
+section,
+article,
+.prose {
+	min-width: 0;
+}
+.prose {
+	overflow-wrap: anywhere;
+	line-height: 1.7;
+}
+.prose ol {
+	list-style-type: decimal;
+}
+.prose ul ul {
+	list-style-type: circle;
+}
+.prose p {
+	margin-block: 1.25rem;
+}
+.prose img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin-block: 1.5rem;
+}
+.prose pre {
+	overflow-x: auto;
+	max-width: 100%;
+	white-space: pre;
+}
+.prose table {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+}
+.prose td,
+.prose th {
+	padding: 0.5rem 0.75rem;
+	border: 1px solid var(--border);
+}
+.prose .katex-display {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-block: 0.5rem;
+}
+a {
+	text-underline-offset: 0.15em;
+}
+:focus-visible {
+	outline: 2px solid var(--brand);
+	outline-offset: 4px;
+}
+.skip-link {
+	position: fixed;
+	top: -10rem;
+	left: 1rem;
+	z-index: 30;
+	padding: 0.75rem;
+	background: var(--surface-1);
+}
+.skip-link:focus {
+	top: 1rem;
+}
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }

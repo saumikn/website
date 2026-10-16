@@ -1,17 +1,18 @@
 ---
-title: Classifying Player Moves using Random Forests
+title: 'Classifying Player Moves using Random Forests'
 date: '2020-11-08'
 categories:
   - research
   - chess
 published: true
+description: 'Over the last week, I’ve mainly been expanding on my work from last week, with the dataset of moves represented as differences of compressed chess board states. In my blog post…'
 ---
 
-Over the last week, I’ve mainly been expanding on my work from last week, with the dataset of moves represented as differences of [compressed chess board states](https://saumikn.com/blog/compressing-chess-states/). In my blog post last week, I generated a dataset of 10 players, and plotted the results. The first thing I did this week was to generate a bigger dataset, this time with 50 players! The process for this was the same as before, I took the 50 highest rated blitz players on Lichess, and parsed moves 10-30 in their 100 most recent games. This gives us 1000-2000 moves per player, and a total dataset size of about 81,000 moves.
+Over the last week, I’ve mainly been expanding on my work from last week, with the dataset of moves represented as differences of [compressed chess board states](/blog/compressing-chess-states). In my blog post last week, I generated a dataset of 10 players, and plotted the results. The first thing I did this week was to generate a bigger dataset, this time with 50 players! The process for this was the same as before, I took the 50 highest rated blitz players on Lichess, and parsed moves 10-30 in their 100 most recent games. This gives us 1000-2000 moves per player, and a total dataset size of about 81,000 moves.
 
 Applying the same PCA dimension reduction process as last week, I generated the data plot below.
 
-![](https://saumikn.com/wp-content/uploads/2020/11/player-bias-plot-2.png)
+![](/uploads/optimized/player-bias-plot-2.webp)
 
 Unfortunately, this doesn’t really give us any more information about the distribution of players, it looks like it’s just randomly scattered across the grid.
 

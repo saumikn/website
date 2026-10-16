@@ -1,5 +1,5 @@
 ---
-title: A Brief Guide to Maia
+title: 'A Brief Guide to Maia'
 description: Overview of Maia, a framework for predicting chess moves.
 date: '2021-05-24'
 categories:
@@ -8,15 +8,15 @@ categories:
 published: true
 ---
 
-![Image taken from McIlroy-Young et al.](/uploads/image-1024x337.png)
+![Image taken from McIlroy-Young et al.](/uploads/optimized/image-1024x337.webp)
 
 Over the last few months, I've been working on a research project to develop personalized training tools for chess players. For this post, I'm just going to describe Maia, the framework developed last year which all of our code and models are based on.
 
 ## Maia
 
-Maia is a framework/model developed in 2020 by [McIlroy-Young et al.](https://arxiv.org/pdf/2006.01855.pdf), which accurately predicts chess moves made by humans on [Lichess](http://lichess.org/). Essentially, their model took the neural network structure of Leela Chess (which I described in [this post](https://saumikn.com/blog/a-brief-guide-to-neural-network-chess-engines/)), and adapted it so that it predicts what a human would play in a given position, instead of "the best" chess move in the position. Here's what the model looks like:
+Maia is a framework/model developed in 2020 by [McIlroy-Young et al.](https://arxiv.org/pdf/2006.01855.pdf), which accurately predicts chess moves made by humans on [Lichess](http://lichess.org/). Essentially, their model took the neural network structure of Leela Chess (which I described in [this post](/blog/a-brief-guide-to-neural-network-chess-engines)), and adapted it so that it predicts what a human would play in a given position, instead of "the best" chess move in the position. Here's what the model looks like:
 
-![](/uploads/image-1536x506.png)
+![](/uploads/optimized/image-1536x506.webp)
 
 The architecture of this model is a Residual Convolutional Neural Network with 6 res blocks, and 64 filters per CNN layer. In plain English, a [Convolutional Neural Network](https://en.wikipedia.org/wiki/Convolutional_neural_network) (CNN) is a type of neural network which uses filters instead of fully-connected layers, because of the improved speed of computation and similar features of the data. Typically, CNNs are used in the field of computer vision, but as it turns out, they also work very well for chess boards! Instead of a typical 3-channel (RGB) image that you'd typically see, the chess board that Leela and Maia have uses 112 channels.
 

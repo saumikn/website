@@ -1,16 +1,16 @@
 <script lang="ts">
-	import * as config from '$lib/config';
-	import { Mail, GraduationCap } from 'lucide-svelte';
+	import * as config from '#lib/config.ts';
+	import { Mail, GraduationCap } from '@lucide/svelte';
 </script>
 
 <footer>
 	<div class="content">
 		<p>{config.title} &copy {new Date().getFullYear()}</p>
 		<div class="social">
-			<a href="/contact" aria-label="Contact">
+			<a href={`mailto:${config.email}`} aria-label="Contact">
 				<Mail />
 			</a>
-			<a href="/contact" aria-label="Scholar">
+			<a href="https://scholar.google.com/citations?user=GSgaC84AAAAJ" aria-label="Scholar">
 				<GraduationCap />
 			</a>
 		</div>

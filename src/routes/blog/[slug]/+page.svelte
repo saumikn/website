@@ -1,14 +1,31 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils';
+	import { formatDate } from '#lib/utils.ts';
+	import Seo from '#lib/components/Seo.svelte';
+	import * as config from '#lib/config.ts';
 
 	let { data } = $props();
 </script>
 
-<svelte:head>
-	<title>{data.meta.title}</title>
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.meta.title} />
-</svelte:head>
+<Seo
+	title={`${data.meta.title} | ${config.title}`}
+	description={data.meta.description}
+	article
+	published={data.meta.date}
+	schema={{
+		'@context': 'https://schema.org',
+		'@type': 'BlogPosting',
+		headline: data.meta.title,
+		description: data.meta.description,
+		datePublished: `${data.meta.date}T00:00:00Z`,
+		mainEntityOfPage: `${config.url}/blog/${data.meta.slug}`,
+		author: {
+			'@type': 'Person',
+			'@id': `${config.url}/#person`,
+			name: config.title,
+			url: `${config.url}/`
+		}
+	}}
+/>
 
 <article>
 	<hgroup>
@@ -19,11 +36,11 @@
 			be fixed in the near future.
 		</p>
 		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
+		<p>Published at <time datetime={data.meta.date}>{formatDate(data.meta.date)}</time></p>
 	</hgroup>
 
 	<div class="tags">
-		{#each data.meta.categories as category}
+		{#each data.meta.categories as category (category)}
 			<span class="surface-4">&num;{category}</span>
 		{/each}
 	</div>
@@ -35,11 +52,12 @@
 
 <style>
 	article {
-		max-inline-size: var(--size-content-3);
+		max-inline-size: 72ch;
+		min-width: 0;
 		margin-inline: auto;
 
 		h1 {
-			text-transform: capitalize;
+			overflow-wrap: anywhere;
 		}
 
 		h1 + p {
@@ -49,6 +67,7 @@
 
 		.tags {
 			display: flex;
+			flex-wrap: wrap;
 			gap: var(--size-3);
 			margin-top: var(--size-7);
 

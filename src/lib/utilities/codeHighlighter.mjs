@@ -1,59 +1,22 @@
 import { transformerMetaHighlight } from '@shikijs/transformers';
-import { parse } from 'node-html-parser';
-import { codeToHtml, createHighlighter } from 'shiki';
+import { codeToHtml } from 'shiki';
 
-const THEME = 'github-dark';
-
-/**
- * Returns code with curly braces and backticks replaced by HTML entity equivalents
- * @param {string} html - highlighted HTML
- * @returns {string} - escaped HTML
- */
-function escapeHtml(code) {
-	return code.replace(
-		/[{}`]/g,
-		(character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' })[character]
+/** @param {string} code @param {string} [lang] @param {string} [meta] */
+export default async function highlighter(code, lang = 'text', meta) {
+	const html = await codeToHtml(code, {
+		lang: lang || 'text',
+		theme: 'github-dark',
+		...(meta ? { meta: { __raw: meta }, transformers: [transformerMetaHighlight()] } : {})
+	});
+	// A focusable code block lets keyboard users scroll wide examples.
+	return (
+		'<!-- svelte-ignore a11y_no_noninteractive_tabindex -->\n' +
+		html
+			.replace('<pre ', '<pre role="region" aria-label="Code sample" ')
+			.replace(
+				/[{}\x60]/g,
+				(character) =>
+					({ '{': '&lbrace;', '}': '&rbrace;', '\x60': '&grave;' })[character] ?? character
+			)
 	);
 }
-
-/**
- * @param {string} html - code to highlight
- * @returns {string} - highlighted html
- */
-function makeFocussable(html) {
-	const root = parse(html);
-	return root.toString();
-}
-
-/**
- * @param {string} code - code to highlight
- * @param {string} lang - code language
- * @param {string} [meta] - code meta
- * @returns {Promise<string>} - highlighted html
- */
-async function highlighter(code, lang, meta) {
-	await createHighlighter({
-		langs: [lang],
-		themes: [THEME]
-	});
-
-	let html;
-	if (!meta) {
-		html = await codeToHtml(code, {
-			lang,
-			theme: THEME
-		});
-	} else {
-		html = await codeToHtml(code, {
-			lang,
-			theme: THEME,
-			meta: { __raw: meta },
-			transformers: [transformerMetaHighlight()]
-		});
-	}
-
-	html = makeFocussable(html);
-	return escapeHtml(html);
-}
-
-export default highlighter;

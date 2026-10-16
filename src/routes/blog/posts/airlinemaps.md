@@ -1,5 +1,5 @@
 ---
-title: Visualizing Airline Routes and Hubs
+title: 'Visualizing Airline Routes and Hubs'
 description: An exploration of airline route visualizations and their implementation.
 date: '2022-10-31'
 categories:

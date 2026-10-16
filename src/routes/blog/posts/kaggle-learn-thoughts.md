@@ -1,9 +1,10 @@
 ---
-title: My thoughts on Kaggle Learn
+title: 'My thoughts on Kaggle Learn'
 date: '2019-07-17'
 categories:
   - learning
 published: true
+description: 'After I graduated from college in May, I didn’t want to immediately start searching for jobs for two main reasons. The first was simply that I wanted to take a break, and do…'
 ---
 
 ## Introduction
@@ -38,7 +39,7 @@ The list of courses offered on Kaggle is constantly evolving, with a new course 
 
 Of these courses, I skipped Python, the first Data Visualization course, and Pandas because I was already confident enough in my abilities with these skills. I also skipped Intro to SQL because I was planning on taking Mode’s SQL course instead.
 
-![](https://web.archive.org/web/20240621054002im_/https://saumikn.com/wp-content/uploads/2019/07/kaggle-categorical-1-1024x590.png)
+![](/uploads/optimized/kaggle-categorical-1-1024x590.webp)
 
 ## Review of Kaggle Learn
 

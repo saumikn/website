@@ -1,5 +1,5 @@
 ---
-title: Building an NLP Death Classifier
+title: 'Building an NLP Death Classifier'
 description: An exploration of using NLP techniques to classify death-related content.
 date: '2020-09-27'
 categories:
@@ -21,7 +21,7 @@ Once we had this filter on data, we set out on creating ground-truth values. We 
 
 Along the way, we started talking about potential features to use for the classifier. We initially decided to use the [LIWC Dictionary](https://web.archive.org/web/20240528232058/https://www.kovcomp.co.uk/wordstat/LIWC.html) of death words, but as we read more, we discovered that a lot of the LIWC words weren’t actually relevant, and we introduced more words that could give our model much more understanding of the post’s content with respect to how talk about their family member’s deaths. For example, most users don’t say that a family member “died”, they would say something like they have “passed away” or they are “with god” or they “lost their battle”. Here’s a table of the most useful words that we used in the final model.
 
-![](https://web.archive.org/web/20240528232058im_/https://saumikn.com/wp-content/uploads/2020/09/cbtable.png)
+![](/uploads/optimized/cbtable.webp)
 
 Finally, using this data and these features, we trained a machine learning classifier model, using the Python library [Scikit-learn](https://web.archive.org/web/20240528232058/https://scikit-learn.org/stable/). Our final model was a Random Forest model which achieved a test-data accuracy between 85-95% accuracy, good enough to use in the final model.
 

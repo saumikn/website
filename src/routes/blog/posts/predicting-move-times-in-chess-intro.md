@@ -1,10 +1,11 @@
 ---
-title: Predicting Move Times in Chess - Intro
+title: 'Predicting Move Times in Chess - Intro'
 date: '2021-03-14'
 categories:
   - research
   - chess
 published: true
+description: 'During a chess game, players are constantly making decisions and evaluating the current state to increase their odds of winning. The process of analyzing positions is a problem…'
 ---
 
 ## Problem

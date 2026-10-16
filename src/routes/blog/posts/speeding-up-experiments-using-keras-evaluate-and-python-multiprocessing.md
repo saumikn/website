@@ -1,9 +1,10 @@
 ---
-title: Speeding up Machine Learning using Keras.evaluate() and Python Multiprocessing
+title: 'Speeding up Machine Learning using Keras.evaluate() and Python Multiprocessing'
 date: '2020-12-13'
 categories:
   - research
 published: true
+description: "My second research is coming to a close next week, and I've been running a lot of ML experiments so I can have interesting results for my final report. However, one of the…"
 ---
 
 My second research is coming to a close next week, and I've been running a lot of ML experiments so I can have interesting results for my final report. However, one of the things slowing down my iterative process was the very slow training and testing process to get results. Normally, this is when I would just have my computer running my programs, but the experiments were still far too slow to generate any meaningful number of results. In this post, I'm going to describe two changes I made to my code/workflow which allows me to generate 120x the amount of results in the same amount of time!

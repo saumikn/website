@@ -1,10 +1,9 @@
 <script lang="ts">
-	import * as config from '$lib/config';
+	import * as config from '#lib/config.ts';
+	import Seo from '#lib/components/Seo.svelte';
 </script>
 
-<svelte:head>
-	<title>Contact | {config.title}</title>
-</svelte:head>
+<Seo title={`Contact | ${config.title}`} noindex />
 
 <section class="content-wrapper">
 	<h1>Contact</h1>

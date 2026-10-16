@@ -1,9 +1,10 @@
 ---
-title: Using Tableau to Visualize Light Rail Ridership in the Twin Cities
+title: 'Using Tableau to Visualize Light Rail Ridership in the Twin Cities'
 date: '2019-06-16'
 categories:
   - transit
 published: true
+description: 'During my final semester at the University of Minnesota this spring, I took an Urban Studies colloquium on Urban Analytics. The course was taught by Andrew Dahl, a former Data…'
 ---
 
 ## Introduction
@@ -18,7 +19,7 @@ When the final project was announced, I immediately knew that I wanted to my pro
 
 ## Light Rail Background
 
-![](https://web.archive.org/web/20240419120145im_/https://saumikn.com/wp-content/uploads/2019/06/light-rail-map-1024x576.png)
+![](/uploads/optimized/light-rail-map-1024x576.webp)
 
 As a little bit of background, there are currently two light rail lines in the Twin Cities. The Blue Line goes between the Mall of America, MSP International Airport, and Downtown Minneapolis, while the Green Line goes between Downtown St. Paul, the University of Minnesota, and Downtown Minneapolis. When the Blue Line was constructed in 2004, Metro Transit operated the line at peak frequencies of every 7.5 minutes. However, when the Green Line started operations in 2014, frequencies were reduced to only every 10 minutes on both routes, as both lines share a track in Downtown Minneapolis which can only support trains every 5 minutes.
 
@@ -30,7 +31,7 @@ One way to roughly determine if ridership would support doubling frequencies out
 
 ## Data Collection
 
-![](https://web.archive.org/web/20240419120145im_/https://saumikn.com/wp-content/uploads/2019/06/geospatial_commons-1024x605.png)
+![](/uploads/optimized/geospatial_commons-1024x605.webp)
 
 With any new analytics problem, the most immediate decision is which datasets to use. For this final project specifically, we were required to use one spatial point dataset and one spatial polygon dataset. The State of Minnesota publishes their transportation datasets, along with other GIS data at the [Minnesota Geospatial Commons](https://web.archive.org/web/20240419120145/https://gisdata.mn.gov/organization/us-mn-state-metc). From this site, I ended up selecting datasets for analysis: [Transit boardings](https://web.archive.org/web/20240419120145/https://gisdata.mn.gov/dataset/us-mn-state-metc-trans-stop-boardings-alightings) and [Schedules](https://web.archive.org/web/20240419120145/https://gisdata.mn.gov/dataset/us-mn-state-metc-trans-transit-schedule-google-fd). Because Tableau can become very slow while dealing with unions of large files, I used some simple Python code to remove all rows on bus stops and commuter rail stations, leaving only data on light rail stations. By doing this, I was able to reduce my Schedule dataset from 312mb to 0.6mb and my Boardings dataset from 6mb to 4kb.
 
@@ -42,15 +43,15 @@ Finally, I needed a way to combine all the stop_id values from each station into
 
 Below, we can see the final graph of dataset interactions in Tableau
 
-![](https://web.archive.org/web/20240419120145im_/https://saumikn.com/wp-content/uploads/2019/06/tableau-1024x338.png)
+![](/uploads/optimized/tableau-1024x338.webp)
 
 ## Tableau Visualizations
 
 For this project, I created two visualizations – one for the Green Line and one for the Blue Line.
 
-![](https://web.archive.org/web/20240419120145im_/https://saumikn.com/wp-content/uploads/2019/06/GreenLine-1-1024x819.png)
+![](/uploads/optimized/GreenLine-1-1024x819.webp)
 
-![](https://web.archive.org/web/20240419120145im_/https://saumikn.com/wp-content/uploads/2019/06/BlueLine-2-1024x819.png)
+![](/uploads/optimized/BlueLine-2-1024x819.webp)
 
 Both visualizations show four different types of graphs – a map of each station with size representing number of boardings, a bar chart showing the number boardings directly, a pie chart comparing ridership in Downtown Minneapolis to areas outside Downtown Minneapolis, and a line graph visualizing frequency.
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Menu, X } from 'lucide-svelte';
-	import { fade, slide } from 'svelte/transition';
-	import { page } from '$app/stores';
+	import { resolve } from '$app/paths';
+	import { Menu, X } from '@lucide/svelte';
+	import { slide } from 'svelte/transition';
 
 	let isOpen = $state(false);
 	const toggle = () => (isOpen = !isOpen);
@@ -11,7 +11,13 @@
 </script>
 
 <div class="menu-container">
-	<button class="hamburger" onclick={toggle} aria-label="Toggle menu">
+	<button
+		class="hamburger"
+		onclick={toggle}
+		aria-label="Toggle menu"
+		aria-expanded={isOpen}
+		aria-controls="mobile-menu"
+	>
 		{#if isOpen}
 			<X />
 		{:else}
@@ -29,11 +35,11 @@
 	{/if}
 
 	{#if isOpen}
-		<nav class="mobile-menu" transition:slide={{ duration: 200, axis: 'y' }}>
+		<nav id="mobile-menu" class="mobile-menu" transition:slide={{ duration: 200, axis: 'y' }}>
 			<ul>
-				<li><a href="/blog" onclick={close}>Blog</a></li>
-				<li><a href="/research" onclick={close}>Research</a></li>
-				<li><a href="/other" onclick={close}>Other</a></li>
+				<li><a href={resolve('/blog')} onclick={close}>Blog</a></li>
+				<li><a href={resolve('/research')} onclick={close}>Research</a></li>
+				<li><a href={resolve('/other')} onclick={close}>Other</a></li>
 			</ul>
 			<div class="toggle-container">
 				{@render children()}

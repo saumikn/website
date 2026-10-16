@@ -1,9 +1,10 @@
 ---
-title: Starting a Weekly Blog during my PhD
+title: 'Starting a Weekly Blog during my PhD'
 date: '2020-09-13'
 categories:
   - research
 published: true
+description: 'Tomorrow is my first day at Washington University in St. Louis, where I will be working towards a PhD in Computer Science! While I spend the next 4-6 years of my life here,…'
 ---
 
 Tomorrow is my first day at Washington University in St. Louis, where I will be working towards a PhD in Computer Science! While I spend the next 4-6 years of my life here, I've decided to make a commitment: I will write at least one blog post every week until I finish my PhD.
