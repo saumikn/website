@@ -3,7 +3,6 @@ import { getPosts } from '#lib/posts.server.ts';
 
 export const prerender = true;
 export function GET() {
-	// Leave the existing placeholder pages out until the author supplies their content.
 	const paths = ['/', '/blog', ...getPosts().map((post) => `/blog/${post.slug}`)];
 	return new Response(
 		`<?xml version="1.0" encoding="UTF-8"?>

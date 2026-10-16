@@ -13,8 +13,6 @@
 				</a>
 			</li>
 			<li><a href={resolve('/blog')}>Blog</a></li>
-			<li><a href={resolve('/research')}>Research</a></li>
-			<li><a href={resolve('/other')}>Other</a></li>
 		</ul>
 		<Toggle />
 	</nav>

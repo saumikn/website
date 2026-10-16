@@ -48,11 +48,6 @@
 				working on designing intervention strategies for AI models to assist human decision making
 				in chess.
 			</p>
-			<br />
-			<p style="color: var(--red-9); font-style: italic;">
-				This website currently is under construction, I am transitioning from Wordpress to Sveltekit
-				and am in the process of moving my prior blog posts over.
-			</p>
 		</div>
 	</div>
 </section>

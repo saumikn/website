@@ -74,9 +74,6 @@ const pages = [
 	'index.html',
 	'blog.html',
 	'airlinemaps.html',
-	'contact.html',
-	'other.html',
-	'research.html',
 	'404.html',
 	...posts.map((post) => `blog/${post.slug}.html`)
 ];

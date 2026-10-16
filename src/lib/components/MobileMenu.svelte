@@ -38,8 +38,6 @@
 		<nav id="mobile-menu" class="mobile-menu" transition:slide={{ duration: 200, axis: 'y' }}>
 			<ul>
 				<li><a href={resolve('/blog')} onclick={close}>Blog</a></li>
-				<li><a href={resolve('/research')} onclick={close}>Research</a></li>
-				<li><a href={resolve('/other')} onclick={close}>Other</a></li>
 			</ul>
 			<div class="toggle-container">
 				{@render children()}
