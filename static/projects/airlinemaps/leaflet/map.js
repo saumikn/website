@@ -1,15 +1,17 @@
 export async function getMap(map, maptype) {
-  const prom1 = fetch(`./data/${maptype}/airports.json`).then((res) =>
-    res.json()
-  ); //.then(response => airports = response.json());
-  const prom2 = fetch(`./data/${maptype}/routes.json`).then((res) =>
-    res.json()
-  ); //.then(response => routes = response.json());
+  const getData = async (file) => {
+    const response = await fetch(`./data/${maptype}/${file}.json`);
+    if (!response.ok) throw new Error(`Could not load ${maptype}/${file}`);
+    return response.json();
+  };
+  const prom1 = getData("airports");
+  const prom2 = getData("routes");
   var [airports, routes] = await Promise.all([prom1, prom2]);
 
   var filterRouteLayer = L.layerGroup();
   var filterAirportLayer = L.layerGroup();
   var filterLabelLayer = L.layerGroup();
+  let layerGroup;
 
   function getConnections(id) {
     var connections = new Set();
@@ -27,40 +29,40 @@ export async function getMap(map, maptype) {
   }
 
   function filterId(id) {
-    if (!map.hasLayer(filterRouteLayer)) {
+    if (!layerGroup.hasLayer(filterRouteLayer)) {
       var connections = getConnections(id);
-      map.removeLayer(lineLayer);
-      map.removeLayer(halfLineLayer);
-      map.removeLayer(clearLineLayer);
-      map.removeLayer(airportLayer);
-      map.removeLayer(labelLayer);
+      layerGroup.removeLayer(lineLayer);
+      layerGroup.removeLayer(halfLineLayer);
+      layerGroup.removeLayer(clearLineLayer);
+      layerGroup.removeLayer(airportLayer);
+      layerGroup.removeLayer(labelLayer);
       filterAirportLayer = L.geoJSON(airports, {
         onEachFeature: onEachAirport,
         pointToLayer: airportToCircleMarker,
         filter: (feature, layer) => connections.has(feature.id),
-      }).addTo(map);
+      }).addTo(layerGroup);
       filterLabelLayer = L.geoJSON(airports, {
         onEachFeature: onEachAirport,
         pointToLayer: airportToLabel,
         filter: (feature, layer) => connections.has(feature.id),
-      }).addTo(map);
+      }).addTo(layerGroup);
       filterRouteLayer = L.geoJSON(routes, {
         style: (feature) => feature.properties.style,
         filter: (feature, layer) => feature.id.includes(id),
-      }).addTo(map);
+      }).addTo(layerGroup);
     }
   }
 
   function showAll() {
-    if (map.hasLayer(filterLabelLayer)) {
-      map.removeLayer(filterAirportLayer);
-      map.removeLayer(filterLabelLayer);
-      map.removeLayer(filterRouteLayer);
-      map.addLayer(lineLayer);
-      map.addLayer(halfLineLayer);
-      map.addLayer(clearLineLayer);
-      map.addLayer(airportLayer);
-      map.addLayer(labelLayer);
+    if (layerGroup.hasLayer(filterLabelLayer)) {
+      layerGroup.removeLayer(filterAirportLayer);
+      layerGroup.removeLayer(filterLabelLayer);
+      layerGroup.removeLayer(filterRouteLayer);
+      layerGroup.addLayer(lineLayer);
+      layerGroup.addLayer(halfLineLayer);
+      layerGroup.addLayer(clearLineLayer);
+      layerGroup.addLayer(airportLayer);
+      layerGroup.addLayer(labelLayer);
     }
   }
   map.on("click", () => showAll());
@@ -138,7 +140,7 @@ export async function getMap(map, maptype) {
   );
   var halfLineLayer = L.geoJSON(halfRoutes, { style: styleLine });
 
-  var layerGroup = L.layerGroup([
+  layerGroup = L.layerGroup([
     airportLayer,
     clearAirportLayer,
     labelLayer,
@@ -146,6 +148,8 @@ export async function getMap(map, maptype) {
     clearLineLayer,
     halfLineLayer,
   ]);
+  // Reset the selection when changing airlines, without leaving filtered layers behind.
+  layerGroup.on("remove", showAll);
 
   return layerGroup;
 }

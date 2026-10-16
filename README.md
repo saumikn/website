@@ -64,8 +64,17 @@ backup; this repair does not represent it as a current CV.
 The airline-map project is restored under `static/projects/airlinemaps` from
 [saumikn/airlinemaps](https://github.com/saumikn/airlinemaps) commit
 `be80d908ee8d9646b1e100a83eb408901532a7c4`, retaining its MIT license and original
-route dataset. The site embeds it at `/airlinemaps`. It uses public map tiles and
-Leaflet's public CDN. The States Chess Cup schedule/rules redirects use the
+route dataset. The site embeds it at `/airlinemaps`. Its background uses the
+standard [OpenStreetMap tile service](https://operations.osmfoundation.org/policies/tiles/)
+with visible attribution, normal browser caching, and a dark CSS filter for route
+contrast. It does not require an API key. Leaflet 1.9.4 and its assets are served
+locally, with the upstream license in `static/projects/airlinemaps/vendor/leaflet`.
+The airline selector updates both routes and legends; airport selections reset
+when switching airlines. Recovered article illustrations and their original source
+URLs are recorded in `static/uploads/recovered/sources.json`. Two externally hosted
+originals (the Air Arabia map and Typepad pause image) remain unavailable; images
+that fail to load show their existing alternative text with an availability message.
+The States Chess Cup schedule/rules redirects use the
 original Google Sheet and Google Doc published by
 [Silver State Chess in August 2020](https://silverstatechess.org/category/news/page/5/).
 

@@ -14,7 +14,7 @@ In my [last](/blog/guide-to-traditional-chess-engines) [two](/blog/a-brief-guide
 
 Essentially, Stockfish NNUE incorporates the power of neural networks into a traditional chess engine. However, the architecture of Stockfish NNUE is extremely different from the neural networks that Leela or AlphaZero use. Engines of the latter type are extremely deep, convolutional neural networks with as many as 40 layers. Because of this, evaluating positions is quite slow. Even with a strong GPU, AlphaZero calculates around 4 orders of magnitude fewer positions than Stockfish 11 would. Thankfully, this deep convolutional NN is strong enough that analyzing 40 thousand positions is enough to perform as well or even better than the 100 million positions that Stockfish 11 can analyze in a single second.
 
-![Stockfish NNUE Layers](https://www.chessprogramming.org/images/thumb/6/66/StockfishNNUELayers.png/1024px-StockfishNNUELayers.png)
+![Stockfish NNUE Layers](/uploads/optimized/stockfish-nnue-layers.webp)
 
 So what is different about NNUE? As it turns out, the network architecture is completely different. Instead of a deep convolutional NN, NNUE uses a shallow, fully connected network, with 4 hidden layers instead of 40.
 

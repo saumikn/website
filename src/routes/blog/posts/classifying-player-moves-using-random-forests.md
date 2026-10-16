@@ -16,7 +16,7 @@ Applying the same PCA dimension reduction process as last week, I generated the 
 
 Unfortunately, this doesn’t really give us any more information about the distribution of players, it looks like it’s just randomly scattered across the grid.
 
-My next approach was to see if the moves are separable by player. In other words, do each of our players have a distinct, significant style associated with their moves? In order to test this, I built a few multi-class classification models using [scikit-learn](https://web.archive.org/web/20240621035209/https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html), to see if we can actually predict which of the players in my dataset played an unseen move. It turns out that building classification models in scikit-learn is very very easy! Just look at the following code:
+My next approach was to see if the moves are separable by player. In other words, do each of our players have a distinct, significant style associated with their moves? In order to test this, I built a few multi-class classification models using [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html), to see if we can actually predict which of the players in my dataset played an unseen move. It turns out that building classification models in scikit-learn is very very easy! Just look at the following code:
 
 ```
 cross_val_score(RandomForestClassifier(), X1, y)
@@ -24,7 +24,7 @@ cross_val_score(LogisticRegression(), X1, y)
 cross_val_score(KNeighborsClassifier, X1, y)
 ```
 
-In just three lines of code, we’ve built three different classification models - [Random Forests](https://web.archive.org/web/20240621035209/https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html), [Logistic Regression](https://web.archive.org/web/20240621035209/https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), and [KNN](https://web.archive.org/web/20240621035209/https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html). We've also trained each of them on the input features `X1` and classes `y`, applied k-fold cross validation on each of the models, and calculated accuracy scores for each of the models.
+In just three lines of code, we’ve built three different classification models - [Random Forests](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html), [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html), and [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html). We've also trained each of them on the input features `X1` and classes `y`, applied k-fold cross validation on each of the models, and calculated accuracy scores for each of the models.
 
 I ended up training 9 models, 3 models for each of the datasets `X1`, `X2`, and `X3`. `X1` represents the move that the player made, `X2` represents the move that the engine chooses, and `X3` represents the difference between these two moves, a basic representation of player bias. Here are the accuracy results from the models!
 
@@ -79,7 +79,7 @@ Move Vector, Piece Moved, and Initial Position
 
 While we did see an improvement with these values, one of the issues is that these values are simply too low to really understand, since all of the values have a baseline of 1/50=2%. In addition, this approach does not scale very well when we add new players. If we are operating on a dataset of a million players, we aren't going to be comparing accuracy values to the nearest 0.000001%, this isn't even a meaningful number over a dataset of a few thousand games (or fewer) per player.
 
-The other reason this doesn't make sense is in the end, we don't really even care about comparing players to other individuals - we want to understand player styles, and how players are similar to each other. If this sounds like a clustering problem to you, we're on the same page! I decided to run all the player's mean values through the scikit-learn [Kmeans](https://web.archive.org/web/20240621035209/https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) algorithm. Then, instead of using the player name as the output class, we can then use the player's cluster number as the class. This way, we aren't doing a 50-class classification problem, just 2 classes. Learning the same 12 models as before, we the following results:
+The other reason this doesn't make sense is in the end, we don't really even care about comparing players to other individuals - we want to understand player styles, and how players are similar to each other. If this sounds like a clustering problem to you, we're on the same page! I decided to run all the player's mean values through the scikit-learn [Kmeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) algorithm. Then, instead of using the player name as the output class, we can then use the player's cluster number as the class. This way, we aren't doing a 50-class classification problem, just 2 classes. Learning the same 12 models as before, we the following results:
 
 ```
 Baseline Accuracy: 0.500

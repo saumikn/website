@@ -243,6 +243,10 @@ article,
 	max-width: 100%;
 	white-space: pre;
 }
+.prose :not(pre) > code {
+	white-space: break-spaces;
+	overflow-wrap: anywhere;
+}
 .prose table {
 	display: block;
 	max-width: 100%;

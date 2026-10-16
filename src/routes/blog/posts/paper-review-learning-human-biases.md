@@ -9,7 +9,7 @@ published: true
 
 In my Intro to Grad Studies class, we have been given an assignment to do an in-depth paper review for each of our rotations. I already [posted](/blog/biased-inverse-reinforcement-learning) a general literature review summarizing a few papers related to my rotation research area, but this assignment is also requiring us to elaborate on the novelty of the paper and provide some critiques of the paper, in addition to the summary.
 
-For this assignment, I’ve chosen to write about the paper: [On the Feasibility of Learning, Rather than Assuming, Human Biases for Reward Inference](https://web.archive.org/web/20240621053205/http://proceedings.mlr.press/v97/shah19a/shah19a.pdf).
+For this assignment, I’ve chosen to write about the paper: [On the Feasibility of Learning, Rather than Assuming, Human Biases for Reward Inference](http://proceedings.mlr.press/v97/shah19a/shah19a.pdf).
 
 ## Summary
 

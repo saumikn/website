@@ -1,0 +1,94 @@
+[
+	{
+		"file": "/uploads/recovered/monte-carlo-tree-search.svg",
+		"previous": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/MCTS-steps.svg/800px-MCTS-steps.svg.png",
+		"source": "https://upload.wikimedia.org/wikipedia/commons/2/21/MCTS-steps.svg"
+	},
+	{
+		"file": "/uploads/recovered/minimax.svg",
+		"previous": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/400px-Minimax.svg.png",
+		"source": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Minimax.svg"
+	},
+	{
+		"file": "/uploads/recovered/stockfish-nnue-layers.png",
+		"previous": "https://www.chessprogramming.org/images/thumb/6/66/StockfishNNUELayers.png/1024px-StockfishNNUELayers.png",
+		"source": "https://www.chessprogramming.org/assets/StockfishNNUELayers.png"
+	},
+	{
+		"file": "/uploads/recovered/minimax-tic-tac-toe.png",
+		"previous": "https://www.researchgate.net/publication/262672371/figure/fig1/AS:393455625883662@1470818539933/Game-tree-for-Tic-Tac-Toe-game-using-MiniMax-algorithm.png",
+		"source": "https://thatannoyingturingmachine.wordpress.com/wp-content/uploads/2018/08/game-tree-for-tic-tac-toe-game-using-minimax-algorithm.png"
+	},
+	{
+		"file": "/uploads/recovered/pacman-project.png",
+		"previous": "https://miro.medium.com/max/1868/1*AksaWYwhXxpDXwgdvkfghQ.png",
+		"source": "https://miro.medium.com/max/1868/1*AksaWYwhXxpDXwgdvkfghQ.png",
+		"sha256": "8d444bd8f7900bb8c5d2299ad3e19dc3b3fed194951250dcd71801d1693c64b0"
+	},
+	{
+		"file": "/uploads/recovered/alphago-architecture.png",
+		"previous": "https://nikcheerla.github.io/deeplearningschool//media/alphago_arch.png",
+		"source": "https://nikcheerla.github.io/deeplearningschool//media/alphago_arch.png",
+		"sha256": "1b21789c14343ef51d40d93f5d286263292f03c58c74fe11742d379485f2ffef"
+	},
+	{
+		"file": "/uploads/recovered/united-airlines.gif",
+		"previous": "https://images.airlineroutemaps.com/maps/United_Airlines.gif",
+		"source": "https://images.airlineroutemaps.com/maps/United_Airlines.gif",
+		"sha256": "a0cecc66126fde07d63e9811bb6025f447137d7fc483b028e218c891b3ef9521"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-all.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all.png",
+		"sha256": "eed8b44c277e047111ad8aea66d579ea4eacf49b14626222738fb036aa1f6c24"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-american.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/american.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/american.png",
+		"sha256": "b0dc3ea9aca9932cd7ff68384c08e04ffe5c57f74fc482642fc3c859c7af2205"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-delta.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/delta.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/delta.png",
+		"sha256": "c1f8b9139e3dadda322380c414401e380778911b79c9d770e3644f4e71632348"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-united.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/united.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/united.png",
+		"sha256": "ead460543e3ae938ddbca9778c5fef4f2fd9983854dfc701ed567a4295a6e37e"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-all-lax.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all-lax.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all-lax.png",
+		"sha256": "4fb6e38a55109a4fe5b8ba9e618805c906c9828714a3c31aba0226758329edb5"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-all-ord.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all-ord.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all-ord.png",
+		"sha256": "23750e79189ce4313640e01a9a50de87e799b4d7f78e759d6ddfc3b1267886c4"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-all-mci.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all-mci.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/all-mci.png",
+		"sha256": "1860d5490452a0c7d22b0a0417ec3930eacc72a35ff2ab42d32f7d03f5eb1aa2"
+	},
+	{
+		"file": "/uploads/recovered/airlinemaps-delta-msp.png",
+		"previous": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/delta-msp.png",
+		"source": "https://raw.githubusercontent.com/saumikn/airlinemaps/master/screenshots/delta-msp.png",
+		"sha256": "97ac244f6f4da001e280383433e70d5edac16859b1039bfe6d0ea0219de32017"
+	},
+	{
+		"file": "/uploads/recovered/ai-and-chess.jpg",
+		"previous": "https://www.microsoft.com/en-us/research/uploads/prod/2020/11/Figure3_AIandChess_high-res-1024x571.jpg",
+		"source": "https://www.microsoft.com/en-us/research/uploads/prod/2020/11/Figure3_AIandChess_high-res-1024x571.jpg",
+		"sha256": "5e318d22bf6e22cf952fe4f03e12470dfd23ae636110158b8e26b2e75300f4a2"
+	}
+]

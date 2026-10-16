@@ -15,8 +15,25 @@ body,
   color: #ffffff;
 }
 
+/* Keep the route colors and airport labels readable over the OSM background. */
+.route-basemap {
+  filter: grayscale(1) invert(1);
+}
+
+#map-status {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 90px;
+  z-index: 1000;
+  padding: 8px;
+  background: white;
+  color: #222;
+  font: 14px Arial, sans-serif;
+}
+
 .leaflet-control-layers-expanded {
-  font-size: 150%;
+  font-size: 14px;
 }
 
 .info {
@@ -71,4 +88,16 @@ body,
 .legend i.icon {
   background-size: 18px;
   background-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 600px) {
+  .legend {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding: 4px 6px;
+  }
+  .legend h3 { font-size: 16px; margin: 2px 0 6px; }
+  .legend h4 { font-size: 13px; }
+  .legend i { width: 14px; height: 14px; }
 }

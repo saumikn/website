@@ -46,7 +46,7 @@ In the project, there are two options for how to run the code.
 To look at how the code actually works, let’s look inside arena.py. Here is a quick pseudocode of the conversion process.
 
 1. The TD needs to have a file in the same directory called data.csv, where all of the players have information with their Lichess username, USCF Id, and Name
-2. Make an API request at [https://lichess.org/api/tournament_id/games](https://lichess.org/api/tournament_id/games) to get the games of the tournament.
+2. Make an API request at [https://lichess.org/api/tournament_id/games](https://lichess.org/api#tag/Arena-tournaments/operation/gamesByTournament) to get the games of the tournament.
 3. Go through all these games and filter only the games played by players we have information on in data.csv
 4. Get the set of all the players who competed in the tournament
 5. Construct a crosstable by going through each player and recording their games into the crosstable
@@ -58,11 +58,11 @@ To look at how the code actually works, let’s look inside arena.py. Here is a 
 To understand how the code works, let’s look at the most important call - start_round(). Here is a quick pseudocode of the function:
 
 1. Prompt the user for the cell in Google Sheets where section pairings should be printed to
-2. Prompt the user for the section file with premade Lichess challenge links (created by calling [https://lichess.org/api/challenge/open](https://lichess.org/api/challenge/open))
+2. Prompt the user for the section file with premade Lichess challenge links (created by calling [https://lichess.org/api/challenge/open](https://lichess.org/api#tag/Challenges/operation/challengeOpen))
 3. Set up a new pairing object for new line in the pairing file
 4. Assign a game link to the pairing, and increment the cell by a new row
 5. Print the preliminary pairing to Google Sheets
-6. Set up a stream to watch all the players by calling [https://lichess.org/api/stream/games-by-users](https://lichess.org/api/challenge/open)
+6. Set up a stream to watch all the players by calling [https://lichess.org/api/stream/games-by-users](https://lichess.org/api#tag/Board/operation/gamesByUsers)
 7. When a new value comes up in the stream, update the relevant pairing object with the game link or result, and post the update to Google Sheet (using [sheet.values().update()](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update))
 
 ## Final Thoughts

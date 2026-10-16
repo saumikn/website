@@ -10,11 +10,11 @@ published: true
 
 ## Introduction
 
-In my AI class this semester, we have a 3-part course project based on the [Berkeley CS118 Pacman Project](http://ai.berkeley.edu/project_overview.html). The first part of this project was due last week, and we were asked to implement some straightforward search algorithms like DFS and A\*. However, the interesting part of this project was an optional question of the assignment, where we were asked to find the best solution we could compute on a Pacman version of the [Travelling Salesman Problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem), by implementing a custom algorithm in only 30 seconds of computation time. The top solutions in the entire class would get a few points of extra credit!
+In my AI class this semester, we have a 3-part course project based on the [Berkeley CS118 Pacman Project](https://inst.eecs.berkeley.edu/~cs188/archive/fa24/projects/). The first part of this project was due last week, and we were asked to implement some straightforward search algorithms like DFS and A\*. However, the interesting part of this project was an optional question of the assignment, where we were asked to find the best solution we could compute on a Pacman version of the [Travelling Salesman Problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem), by implementing a custom algorithm in only 30 seconds of computation time. The top solutions in the entire class would get a few points of extra credit!
 
 In this post, I'll show how I got to the top of my class's leaderboard, without actually needing to come up with a new algorithm of my own.
 
-![Pacman Project](https://miro.medium.com/max/1868/1*AksaWYwhXxpDXwgdvkfghQ.png)
+![Pacman Project](/uploads/optimized/pacman-project.webp)
 
 ## Greedy Algorithm
 

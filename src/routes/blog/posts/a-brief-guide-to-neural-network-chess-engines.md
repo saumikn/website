@@ -24,7 +24,7 @@ While DeepMind did release papers describing their work, the algorithms and mode
 
 How exactly do these neural network engines work? Last week, we saw that traditional engines work by analyzing trees of variations, and applying a human-tuned evaluation function at the end of each variation.
 
-![Monte Carlo tree search - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/MCTS-steps.svg/800px-MCTS-steps.svg.png)
+![Monte Carlo tree search - Wikipedia](/uploads/recovered/monte-carlo-tree-search.svg)
 
 Alpha Zero works slightly differently. The key to AZ is the Monte Carlo Tree Search algorithm. MCTS is a four-step process to building out a tree. First, AZ will select a new node in the tree. This selection process weights both exploration and exploitation using the PUCT algorithm, meaning that more promising nodes (the nodes which seem better so far) tend to be explored more often, but nodes that haven't been explored much so far also get a chance for expansion.
 
@@ -32,7 +32,7 @@ Once a new node is selected, it is then evaluated by expanding out the children 
 
 ## Neural Network Architecture
 
-![AlphaZero Explained · On AI](https://nikcheerla.github.io/deeplearningschool//media/alphago_arch.png)
+![AlphaZero Explained · On AI](/uploads/optimized/alphago-architecture.webp)
 
 So where do the neural networks come into play? It turns out that the entire evaluation process is guided by a deep convolutional network, with 40 residual layers. The initial network is initialized with completely random parameters, meaning that there is no knowledge of the game other than the basic rules. Hence, the "Zero" in AlphaZero.
 

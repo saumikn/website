@@ -15,7 +15,7 @@ In this post, I'll give a step-by-step tutorial on how to get started running De
 
 ![](/uploads/optimized/image-1668721261311.webp)
 
-First, you will need to get access to the RIS Cluster. Each faculty gets 5TB of free storage on the RIS Storage Cluster and access to open CPUs and GPUs on the Compute Cluster (which is currently free, but will eventually be $100 per person per year) . If you're a student, you will simply be assigned access to your advisor's resources. To request access, submit a ticket at [https://jira.wustl.edu/servicedesk/customer/portal/2/](https://jira.wustl.edu/servicedesk/customer/portal/2/). This process will probably take a few days, and you'll need your advisor to oversee the process.
+First, you will need to get access to the RIS Cluster. Each faculty gets 5TB of free storage on the RIS Storage Cluster and access to open CPUs and GPUs on the Compute Cluster (which is currently free, but will eventually be $100 per person per year) . If you're a student, you will simply be assigned access to your advisor's resources. To request access, submit a ticket at [https://jira.wustl.edu/servicedesk/customer/portal/2/](https://washu.atlassian.net/servicedesk/customer/portal/2). This process will probably take a few days, and you'll need your advisor to oversee the process.
 
 # Setting up Docker
 
@@ -53,7 +53,7 @@ dependencies:
       - chess
 ```
 
-For your `Dockerfile`, use the following code. If you haven't used Docker before, this is essentially a configuration which specifies what our computer environment will look like. The first line tells us that our base environment uses the Ubuntu 20.04 operating system, preinstalled with cuda. You can find this container at [https://hub.docker.com/r/nvidia/cuda](https://hub.docker.com/r/nvidia/cuda). The next block of code installs various commands that you likely need when using an operating system, like `wget`, `git`, and `vim`. If you have other requirements, feel free to add them to the `apt-get install` line. Next, we install [Mambaforge](https://web.archive.org/web/20241010005450/https://github.com/conda-forge/miniforge), which is a package manager almost identical to Anaconda, except it's smaller and faster. Finally, we add the packages defined in `environment.yml`.
+For your `Dockerfile`, use the following code. If you haven't used Docker before, this is essentially a configuration which specifies what our computer environment will look like. The first line tells us that our base environment uses the Ubuntu 20.04 operating system, preinstalled with cuda. You can find this container at [https://hub.docker.com/r/nvidia/cuda](https://hub.docker.com/r/nvidia/cuda). The next block of code installs various commands that you likely need when using an operating system, like `wget`, `git`, and `vim`. If you have other requirements, feel free to add them to the `apt-get install` line. Next, we install [Mambaforge](https://github.com/conda-forge/miniforge), which is a package manager almost identical to Anaconda, except it's smaller and faster. Finally, we add the packages defined in `environment.yml`.
 
 ```bash
 FROM nvidia/cuda:11.5.1-base-ubuntu20.04
@@ -85,7 +85,7 @@ Once you're on the VPN (and you have access to the compute cluster , you can SSH
 
 Once you've logged in, you are placed into a login node. This is essentially a server where you can launch and view jobs which run your code. However, the login node isn't intended as a computer to run intensive code directly, so you'll have to learn how to submit jobs. I'll go over that in the next section.
 
-While you're in the compute environment, you'll have to get used to all the commands and options. Personally, the commands I use most often are `bsub` which creates a new job, `bjobs` which displays your running jobs, and `bkill` which kills a running job. To see the options for these commands, go to the [IBM LSF documentation](https://web.archive.org/web/20241010005450/https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=reference-command).
+While you're in the compute environment, you'll have to get used to all the commands and options. Personally, the commands I use most often are `bsub` which creates a new job, `bjobs` which displays your running jobs, and `bkill` which kills a running job. To see the options for these commands, go to the [IBM LSF documentation](https://www.ibm.com/docs/en/spectrum-lsf/10.1.0?topic=reference-command).
 
 The other thing to note is that your RIS Storage Cluster is available at `/storage1/fs1/<faculty-key>/Active`, where `<faculty-key>` is your advisor's WUSTL key.
 
@@ -154,11 +154,11 @@ As long as you're on the WashU VPN, you can access your job by going to the firs
 
 # Other Details
 
-If you want to submit other types of jobs than the Jupyter Lab script from above, check out the [RIS documentation](https://docs.ris.wustl.edu/doc/compute/recipes/job-execution-examples.html) on the `bsub` command. In general, the RIS docs page is a good resource for help. If you ever need additional help with the cluster that the docs don't cover, you can submit a Jira ticket [here](https://jira.wustl.edu/servicedesk/customer/portal/2), and you'll usually get a response within a business day.
+If you want to submit other types of jobs than the Jupyter Lab script from above, check out the [RIS documentation](https://washu.atlassian.net/wiki/spaces/RUD/overview) on the `bsub` command. In general, the RIS docs page is a good resource for help. If you ever need additional help with the cluster that the docs don't cover, you can submit a Jira ticket [here](https://washu.atlassian.net/servicedesk/customer/portal/2), and you'll usually get a response within a business day.
 
 ![Dashboard](/uploads/optimized/image-1668720856984.webp)
 
-There is an extra option for viewing the status of your GPU memory and utilization in a live dashboard, using [Jupyterlab-nvdashboard](https://github.com/rapidsai/jupyterlab-nvdashboard). ~~However, this seems to be broken in newer Docker containers (see [issue](https://web.archive.org/web/20241010005450/https://github.com/rapidsai/jupyterlab-nvdashboard/issues/139))~~. This issue has now been solved, as long as you specify `bokeh=2.4.1` in your `environment.yml` as I did above.
+There is an extra option for viewing the status of your GPU memory and utilization in a live dashboard, using [Jupyterlab-nvdashboard](https://github.com/rapidsai/jupyterlab-nvdashboard). ~~However, this seems to be broken in newer Docker containers (see [issue](https://github.com/rapidsai/jupyterlab-nvdashboard/issues/139))~~. This issue has now been solved, as long as you specify `bokeh=2.4.1` in your `environment.yml` as I did above.
 
 ![Tensorboard](/uploads/optimized/image-1668720929412.webp)
 

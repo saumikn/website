@@ -21,7 +21,7 @@ Before starting to apply for jobs, I knew that I needed to spend time learning m
 
 According to Wikipedia, “Kaggle is an online community of data scientists and machine learners, … [which] allows users to find and publish data sets, explore and build models in a web-based data-science environment, work with other data scientists and machine learning engineers, and enter competitions to solve data science challenges.” I had been introduced to Kaggle several years ago, and I had made an account, but I never got around to actually doing anything in Kaggle until recently.
 
-After graduating, I was looking for online resources for studying data science, and I stumbled upon [Kaggle Learn](https://kaggle.com/learn). Kaggle Learn is a platform where experienced data scientists teach practical data skills, and allow you to immediately use these skills in Kaggle’s version of Jupyter Notebooks, called Kaggle Kernels.
+After graduating, I was looking for online resources for studying data science, and I stumbled upon [Kaggle Learn](https://www.kaggle.com/learn). Kaggle Learn is a platform where experienced data scientists teach practical data skills, and allow you to immediately use these skills in Kaggle’s version of Jupyter Notebooks, called Kaggle Kernels.
 
 The list of courses offered on Kaggle is constantly evolving, with a new course coming every few months. Currently, the offered courses are:
 
@@ -59,7 +59,7 @@ Finally, I especially liked the Micro-challenges section. While it isn’t actua
 
 If you’re looking to go deeper in your understanding with machine learning, and learn a range of applications as well as what’s happening under the scenes, Kaggle Learn is probably not right for you, since it only covers a few important ideas without too much explanation. However, if you just want to get your feet wet with machine learning and data science, without putting in too much effort, or you’re focused on implantation instead of understanding, I would definitely recommend trying out Kaggle Learn.
 
-If you’re looking for more involved online courses, I’ll cover a few more that I took this summer in my upcoming blog posts! I’ll be talking about Mode’s [SQL course](https://web.archive.org/web/20240621054002/https://mode.com/resources/sql-tutorial/introduction-to-sql/), FastAI’s [Practical Deep Learning course](https://web.archive.org/web/20240621054002/https://course.fast.ai/), CommonLounge’s [Hadoop course](https://web.archive.org/web/20240621054002/https://www.commonlounge.com/discussion/fc3bd8555ff84dc284b1d8244dbdad6c), and Deeplearning.ai’s [Deep Learning specialization](https://web.archive.org/web/20240621054002/https://www.deeplearning.ai/deep-learning-specialization/). Make sure to check back in the next week or so to see my next post.
+If you’re looking for more involved online courses, I’ll cover a few more that I took this summer in my upcoming blog posts! I’ll be talking about Mode’s [SQL course](https://mode.com/resources/sql-tutorial/introduction-to-sql/), FastAI’s [Practical Deep Learning course](https://course.fast.ai/), CommonLounge’s [Hadoop course](https://web.archive.org/web/20240621054002/https://www.commonlounge.com/discussion/fc3bd8555ff84dc284b1d8244dbdad6c), and Deeplearning.ai’s [Deep Learning specialization](https://web.archive.org/web/20240621054002/https://www.deeplearning.ai/deep-learning-specialization/). Make sure to check back in the next week or so to see my next post.
 
 See you soon!
 Saumik

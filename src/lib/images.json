@@ -362,5 +362,77 @@
 	"/uploads/optimized/saumik.webp": {
 		"width": 1536,
 		"height": 2048
+	},
+	"/uploads/recovered/minimax-tic-tac-toe.png": {
+		"width": 756,
+		"height": 468
+	},
+	"/uploads/recovered/minimax.svg": {
+		"width": 900,
+		"height": 410
+	},
+	"/uploads/recovered/monte-carlo-tree-search.svg": {
+		"width": 1398,
+		"height": 430
+	},
+	"/uploads/recovered/stockfish-nnue-layers.png": {
+		"width": 3160,
+		"height": 2219
+	},
+	"/uploads/optimized/ai-and-chess.webp": {
+		"width": 1024,
+		"height": 571
+	},
+	"/uploads/optimized/airlinemaps-all-lax.webp": {
+		"width": 1600,
+		"height": 1000
+	},
+	"/uploads/optimized/airlinemaps-all-mci.webp": {
+		"width": 1600,
+		"height": 1000
+	},
+	"/uploads/optimized/airlinemaps-all-ord.webp": {
+		"width": 1600,
+		"height": 1000
+	},
+	"/uploads/optimized/airlinemaps-all.webp": {
+		"width": 1600,
+		"height": 902
+	},
+	"/uploads/optimized/airlinemaps-american.webp": {
+		"width": 1600,
+		"height": 902
+	},
+	"/uploads/optimized/airlinemaps-delta-msp.webp": {
+		"width": 1600,
+		"height": 1000
+	},
+	"/uploads/optimized/airlinemaps-delta.webp": {
+		"width": 1600,
+		"height": 902
+	},
+	"/uploads/optimized/airlinemaps-united.webp": {
+		"width": 1600,
+		"height": 902
+	},
+	"/uploads/optimized/alphago-architecture.webp": {
+		"width": 712,
+		"height": 930
+	},
+	"/uploads/optimized/minimax-tic-tac-toe.webp": {
+		"width": 756,
+		"height": 468
+	},
+	"/uploads/optimized/pacman-project.webp": {
+		"width": 934,
+		"height": 451
+	},
+	"/uploads/optimized/stockfish-nnue-layers.webp": {
+		"width": 1600,
+		"height": 1124
+	},
+	"/uploads/optimized/united-airlines.webp": {
+		"width": 927,
+		"height": 578
 	}
 }

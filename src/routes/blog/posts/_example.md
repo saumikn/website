@@ -9,7 +9,7 @@ published: false
 
 Please follow the formatting guidelines for markdown files. This is meant to be an example of what markdown files should look like, including formatting, images, code, and latex.
 
-We might have a link to an image like ![Example link to image](https://images.airlineroutemaps.com/maps/United_Airlines.gif).
+We might have a link to an image like ![Example link to image](/uploads/optimized/united-airlines.webp).
 
 We might have links inside of text like [Routes Maps Builder](https://github.com/kburchfiel/route_maps_builder/). We might have text in _italics_ or **bold**. We might have inline code like `print("Hello, world!")`. We might have a block of code like
 

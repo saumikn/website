@@ -24,11 +24,11 @@ If we are working backwards and it's our turn, we would select the best move tha
 
 That was quite an unwieldy explanation, so it might be better to look at some examples.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/400px-Minimax.svg.png)
+![](/uploads/recovered/minimax.svg)
 
 Here, we can see how this process works. Each of the even steps take place on our turn, and the odd steps take place on our opponent's turn. At the end of the tree, we select the moves with the highest score (since we are trying to get the highest value), and propagate that upwards. Then, we select the move with the lowest score (since our opponent is trying to get the lowest value possible), and propagate that. We continue this process until we get to the top. Once we've finished, we can select the move which gives us the best outcome (guaranteed).
 
-![](https://www.researchgate.net/publication/262672371/figure/fig1/AS:393455625883662@1470818539933/Game-tree-for-Tic-Tac-Toe-game-using-MiniMax-algorithm.png)
+![](/uploads/optimized/minimax-tic-tac-toe.webp)
 
 We can see this process in a simplified example using Tic-Tac-Toe. In this scenario, it's best for us to place the X in the bottom left, since it guarentees us a win. It's possible for us to win with the other options as well, but this isn't guaranteed if our opponent also plays perfectly.
 
@@ -46,7 +46,7 @@ Let's call this last number x. If `x>=4`, than this doesn't affect the minimum v
 
 Technically, this algorithm keeps track of all this information using values called \alpha and \beta, but all you need to know about Alpha Beta Pruning is that it provides a significant speedup to our algorithm. Just look at the following example.
 
-[Adversarial search](https://todo.com)
+[Adversarial search](https://inst.eecs.berkeley.edu/~cs188/archive/sp24/assets/notes/cs188-sp24-note05.pdf)
 
 Normally, evaluating this tree would require us to look at 5!=120 board states, since there are 5 open squares on the initial state. However, by pruning branches that we are never going to check, we have reduced the number of playouts to only 15!
 

@@ -34,7 +34,7 @@ The main output of Maia is a 1858-vector, which represents the move prediction m
 
 To predict these outputs, Maia was trained on millions of chess games played on Lichess.org. The biggest novelty of Maia's approach was that they actually segmented out the models, to predict moves played at different rating levels. Because of this, Maia could actually be thought of as a collection of models to predict moves at different levels. Maia-1 predicts moves played at the 1100-1199 range, Maia-2 predicts moves played at the 1200-1299 range, and so on.
 
-![Source](https://www.microsoft.com/en-us/research/uploads/prod/2020/11/Figure3_AIandChess_high-res-1024x571.jpg)
+![Source](/uploads/optimized/ai-and-chess.webp)
 
 As you can see from this graph, the different levels of Maia performed better at their own rating than the other ratings. For example, Maia-4 was the best predictor of 1400-1499 players, and Maia-4 predicted these players better than it predicted 1300 or 1500 rated players.
 

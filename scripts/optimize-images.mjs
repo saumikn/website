@@ -4,8 +4,11 @@ import path from 'node:path';
 
 const directory = 'src/routes/blog/posts';
 const posts = (await readdir(directory)).filter((file) => file.endsWith('.md'));
-const originals = (await readdir('static/uploads')).filter((file) =>
-	/\.(png|jpe?g|webp|gif)$/i.test(file)
+const originals = (await readdir('static/uploads', { recursive: true })).filter(
+	(file) =>
+		!file.startsWith('optimized/') &&
+		!file.startsWith('legacy/') &&
+		/\.(png|jpe?g|webp|gif)$/i.test(file)
 );
 const sources = new Map(
 	originals.map((file) => [`/uploads/${file}`, `/uploads/optimized/${path.parse(file).name}.webp`])
@@ -22,12 +25,12 @@ for (const file of posts) {
 }
 sources.set('/saumik.jpg', '/uploads/optimized/saumik.webp');
 await mkdir('static/uploads/optimized', { recursive: true });
-const metadata = {};
+const metadata = JSON.parse(await readFile('src/lib/images.json', 'utf8'));
 let before = 0,
 	after = 0;
 for (const [source, target] of sources) {
 	const input = await readFile(`static${source}`);
-	const { data, info } = await sharp(input)
+	const { data, info } = await sharp(input, { animated: true })
 		.rotate()
 		.resize({ width: 1600, withoutEnlargement: true })
 		.webp({ quality: 85 })

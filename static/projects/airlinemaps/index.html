@@ -1,132 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Mapping US Big-3 Airline Routes</title>
-    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./vendor/leaflet/leaflet.css" />
+    <script src="./vendor/leaflet/leaflet.js"></script>
     <link rel="stylesheet" href="./leaflet/map.css" />
   </head>
-
   <body>
-    <div id="map"></div>
-    <!-- <script src="../leaflet/map.js" type="module"></script> -->
-
+    <div id="map" aria-label="Airline routes map"></div>
+    <p id="map-status" role="status" hidden></p>
     <script type="module">
       import { getMap } from "./leaflet/map.js";
 
-      var map = L.map("map", {
-        zoomControl: false,
-        // attributionControl: false,
-      }).setView([38, -96], 5);
+      const map = L.map("map").setView([38, -96], 5);
       map.createPane("airports");
-      map.getPane("airports").style.zIndex = 998;
+      map.getPane("airports").style.zIndex = 450;
       map.createPane("circles");
-      map.getPane("circles").style.zIndex = 999;
+      map.getPane("circles").style.zIndex = 460;
 
-      var tiles = L.tileLayer(
-        "https://a.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png",
-        {
-          maxZoom: 19,
-          attribution:
-            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      const status = document.getElementById("map-status");
+      let routeError = false;
+      const showError = (message) => {
+        status.textContent = message;
+        status.hidden = false;
+      };
+      const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        className: "route-basemap",
+        keepBuffer: 0,
+        updateWhenIdle: true,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      });
+      let tileErrors = 0;
+      tiles.on("loading", () => { tileErrors = 0; });
+      tiles.on("tileerror", () => { tileErrors++; });
+      tiles.on("load", () => {
+        if (routeError) return;
+        if (tileErrors) {
+          showError("Some map background tiles could not load. Reload the page to try again.");
+        } else {
+          status.hidden = true;
         }
-      ).addTo(map);
+      });
+      tiles.addTo(map);
 
-      var all = await getMap(map, "all");
-      // all.addTo(map);
-      var american = await getMap(map, "american");
-      // american.addTo(map);
-      var delta = await getMap(map, "delta");
-      // delta.addTo(map);
-      var united = await getMap(map, "united");
-      united.addTo(map);
-
-      var mapLayers = {
-        All: all,
-        American: american,
-        Delta: delta,
-        United: united,
+      const legends = {
+        All: ["Airline Key", [
+          ["#6cff7d", "American"], ["#ff0000", "Delta"], ["#426ae1", "United"],
+        ]],
+        American: ["American Hubs", [
+          ["#ffa500", "Dallas"], ["#ff0000", "Charlotte"], ["#6cff7d", "Miami"],
+          ["#ffff00", "Chicago"], ["#fd68b3", "Philadelphia"], ["#426ae1", "Pheonix"],
+          ["#00ffff", "Los Angeles"], ["#6cff7d", "Washington"], ["#426ae1", "New York LGA"],
+        ]],
+        Delta: ["Delta Hubs", [
+          ["#ff0000", "Atlanta"], ["#fd68b3", "Minneapolis"], ["#ffa500", "Detroit"],
+          ["#6cff7d", "Salt Lake City"], ["#00ffff", "New York JFK"], ["#007f00", "Los Angeles"],
+          ["#426ae1", "Seattle"], ["#ffddad", "New York LGA"], ["#ffff00", "Boston"],
+        ]],
+        United: ["United Hubs", [
+          ["#ff0000", "Chicago"], ["#ffa500", "Houston"], ["#ffff00", "Denver"],
+          ["#6cff7d", "Newark"], ["#426ae1", "San Fransisco"], ["#fd68b3", "Washington DC"],
+          ["#00ffff", "Los Angeles"],
+        ]],
+      };
+      const legend = L.control({ position: "bottomright" });
+      let legendElement;
+      legend.onAdd = () => {
+        legendElement = L.DomUtil.create("div", "legend");
+        L.DomEvent.disableClickPropagation(legendElement);
+        L.DomEvent.disableScrollPropagation(legendElement);
+        return legendElement;
+      };
+      const updateLegend = (airline) => {
+        const [title, hubs] = legends[airline];
+        legendElement.innerHTML = `<h3>${title}</h3>` + hubs.map(([color, name]) =>
+          `<i style="background:${color}"></i><span>${name}</span><br>`
+        ).join("") + "<h4>saumikn.com</h4>";
       };
 
-      // var layerControl = L.control
-      //   .layers(mapLayers, null, {
-      //     collapsed: false,
-      //     position: "bottomleft",
-      //   })
-      //   .addTo(map);
-
-      var legend = L.control({ position: "bottomright" });
-
-      // All Airlines
-      legend.onAdd = function (map) {
-        var div = L.DomUtil.create("div", "legend");
-        div.innerHTML =
-          "<h3>Airline Key</h3>" +
-          '<i style="background: #6cff7d"></i><span>American</span><br>' +
-          '<i style="background: #ff0000"></i><span>Delta</span><br>' +
-          '<i style="background: #426ae1"></i><span>United</span><br>' +
-          "<h4>saumikn.com</h4>";
-        return div;
-      };
-
-      // American Airlines
-      legend.onAdd = function (map) {
-        var div = L.DomUtil.create("div", "legend");
-        div.innerHTML =
-          "<h3>American Hubs</h3>" +
-          '<i style="background: #ffa500"></i><span>Dallas</span><br>' +
-          '<i style="background: #ff0000"></i><span>Charlotte</span><br>' +
-          '<i style="background: #6cff7d"></i><span>Miami</span><br>' +
-          '<i style="background: #ffff00"></i><span>Chicago</span><br>' +
-          '<i style="background: #fd68b3"></i><span>Philadelphia</span><br>' +
-          '<i style="background: #426ae1"></i><span>Pheonix</span><br>' +
-          '<i style="background: #00ffff"></i><span>Los Angeles</span><br>' +
-          '<i style="background: #6cff7d"></i><span>Washington</span><br>' +
-          '<i style="background: #426ae1"></i><span>New York LGA</span><br>' +
-          "<h4>saumikn.com</h4>";
-        return div;
-      };
-
-      // Delta Airlines
-      legend.onAdd = function (map) {
-        var div = L.DomUtil.create("div", "legend");
-        div.innerHTML =
-          "<h3>Delta Hubs</h3>" +
-          '<i style="background: #ff0000"></i><span>Atlanta</span><br>' +
-          '<i style="background: #fd68b3"></i><span>Minneapolis</span><br>' +
-          '<i style="background: #ffa500"></i><span>Detroit</span><br>' +
-          '<i style="background: #6cff7d"></i><span>Salt Lake City</span><br>' +
-          '<i style="background: #00ffff"></i><span>New York JFK</span><br>' +
-          '<i style="background: #007f00"></i><span>Los Angeles</span><br>' +
-          '<i style="background: #426ae1"></i><span>Seattle</span><br>' +
-          '<i style="background: #ffddad"></i><span>New York LGA</span><br>' +
-          '<i style="background: #ffff00"></i><span>Boston</span><br>' +
-          "<h4>saumikn.com</h4>";
-        return div;
-      };
-
-      // United Airlines
-      legend.onAdd = function (map) {
-        var div = L.DomUtil.create("div", "legend");
-        div.innerHTML =
-          "<h3>United Hubs</h3>" +
-          '<i style="background: #ff0000"></i><span>Chicago</span><br>' +
-          '<i style="background: #ffa500"></i><span>Houston</span><br>' +
-          '<i style="background: #ffff00"></i><span>Denver</span><br>' +
-          '<i style="background: #6cff7d"></i><span>Newark</span><br>' +
-          '<i style="background: #426ae1"></i><span>San Fransisco</span><br>' +
-          '<i style="background: #fd68b3"></i><span>Washington DC</span><br>' +
-          '<i style="background: #00ffff"></i><span>Los Angeles</span><br>' +
-          "<h4>saumikn.com</h4>";
-        return div;
-      };
-
-      legend.addTo(map);
+      try {
+        const names = ["All", "American", "Delta", "United"];
+        const groups = await Promise.all(names.map(name => getMap(map, name.toLowerCase())));
+        const mapLayers = Object.fromEntries(names.map((name, index) => [name, groups[index]]));
+        mapLayers.United.addTo(map);
+        L.control.layers(mapLayers, null, { collapsed: false, position: "topright" }).addTo(map);
+        legend.addTo(map);
+        updateLegend("United");
+        map.on("baselayerchange", event => updateLegend(event.name));
+      } catch (error) {
+        routeError = true;
+        showError("Airline routes could not load. Reload the page to try again.");
+        console.error(error);
+      }
     </script>
   </body>
 </html>

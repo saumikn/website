@@ -68,6 +68,7 @@ for (const legacy of ['/cv', '/about', '/projects', '/experience', '/scc-schedul
 	assert(redirects.has(legacy), `Missing legacy redirect: ${legacy}`);
 
 let links = 0;
+const embeddedPages = new Set();
 const pages = [
 	'index.html',
 	'blog.html',
@@ -100,7 +101,7 @@ for (const file of pages) {
 		);
 	}
 	for (const [, reference] of html.matchAll(
-		/<(?:a|img|link|script)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/g
+		/<(?:a|img|link|script|iframe)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/g
 	)) {
 		const target = new URL(
 			reference.replaceAll('&amp;', '&'),
@@ -115,6 +116,22 @@ for (const file of pages) {
 				(await exists(`${filename}/index.html`))
 			: await exists('index.html');
 		assert(resolved, `Broken local reference in ${file}: ${reference}`);
+		if (reference.endsWith('.html') && target.pathname.startsWith('/projects/'))
+			embeddedPages.add(filename);
+		links++;
+	}
+}
+// Embedded projects are separate documents; their dependencies must be present too.
+for (const file of embeddedPages) {
+	const html = await read(file);
+	for (const [, reference] of html.matchAll(
+		/<(?:img|link|script|iframe)\b[^>]*?\b(?:href|src)=["']([^"']+)["']/g
+	)) {
+		const target = new URL(reference, `${origin}/${file}`);
+		if (target.origin !== origin) continue;
+		const filename = decodeURIComponent(target.pathname).slice(1);
+		assert(await exists(filename), `Broken embedded-project reference in ${file}: ${reference}`);
+		if (filename.endsWith('.html')) embeddedPages.add(filename);
 		links++;
 	}
 }
